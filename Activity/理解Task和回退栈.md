@@ -1,4 +1,4 @@
-# 理解Tasks和回退栈
+# 理解Task和回退栈
 
 [原文（英文）地址](https://developer.android.com/guide/components/activities/tasks-and-back-stack)
 
