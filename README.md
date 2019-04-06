@@ -14,6 +14,8 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [测试Fragment](./Activity/测试Fragment.md)
     - [构建灵活的UI](./Activity/Fragment/构建灵活的UI.md)
     - [与其他Fragment通信](./Activity/Fragment/与其他Fragment通信.md)
+  - [与其他应用交互](./Activity/Interacting-With-Other-Apps)
+    - [概述](./Activity/Interacting-With-Other-Apps/与其他APP交互——概述.md)
 
 
 
