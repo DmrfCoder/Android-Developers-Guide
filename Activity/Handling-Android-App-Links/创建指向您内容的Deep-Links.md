@@ -131,4 +131,3 @@ $ adb shell am start
 - [Intents and Intent Filters](https://developer.android.com/guide/components/intents-filters.html?hl=zh-cn)
 - [Allow Other Apps to Start Your Activity](https://developer.android.com/training/basics/intents/filters.html?hl=zh-cn)
 - [Add Android App Links with Android Studio](https://developer.android.com/studio/write/app-link-indexing.html?hl=zh-cn)
-

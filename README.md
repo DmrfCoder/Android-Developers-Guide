@@ -21,6 +21,9 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [允许其他应用启动您的Activity](./Activity/Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.md)
   - [处理Android APP链接](./Activity/Handling-Android-App-Links)
     - [概述](./Activity/Handling-Android-App-Links/概述.md)
+    - [创建指向您内容的DeepLinks](./Activity/Handling-Android-App-Links/创建指向您内容的Deep-Links.md)
+    - [验证App Links](./Activity/Handling-Android-App-Links/验证App-Links.md)
+    - [为Instant APPs创建App Links](./Activity/Handling-Android-App-Links/为Instant-APPs创建App-Links.md)
 
 
 
