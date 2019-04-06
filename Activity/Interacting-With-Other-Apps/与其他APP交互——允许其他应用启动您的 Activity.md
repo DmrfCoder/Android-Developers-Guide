@@ -8,29 +8,29 @@
 
 当您的应用安装在设备上时，系统会识别您的 Intent  filter 并添加信息至所有已安装应用支持的 Intent 内部目录。当应用通过隐含 Intent 调用 `startActivity()` 或 `startActivityForResult()` 时，系统会找到可以响应该 Intent 的 Activity。
 
-## 添加 Intent 过滤器
+## 添加 Intent filter
 
-为了正确定义您的 Activity 可处理的 Intent，您添加的每个 Intent filter在操作类型和 Activity 接受的数据方面应尽可能具体。
+为了正确定义您 Activity 可处理的 Intent，您添加的每个 Intent filter在操作类型和 Activity 接受的数据方面应尽可能具体。
 
 如果 Activity 具有满足以下 `Intent` 对象条件的 Intent filter，系统可能向 Activity 发送给定的 `Intent`：
 
 - 操作
 
-  对要执行的操作命名的字符串。通常是平台定义的值之一，比如 `ACTION_SEND` 或 `ACTION_VIEW`。使用<action\>元素在您的 Intent 过滤器中指定此值。您在此元素中指定的值必须是操作的完整字符串名称，而不是 API 常量（请参阅以下示例）。
+  一个描述要执行操作的字符串。通常是一个平台（platform-defined）定义的值，比如 `ACTION_SEND` 或 `ACTION_VIEW`。使用<action\>元素在您的 Intent finlter中指定此值。您在此元素中指定的值必须是操作的完整字符串名称，而不是 API 常量（请参阅以下示例）。
 
 - 数据
 
-  与 Intent 关联的数据描述。用<data\>元素在您的 Intent 过滤器中指定此内容。使用此元素中的一个或多个属性，您可以只指定 MIME 类型、URI 前缀、URI 架构或这些的组合以及其他指示所接受数据类型的项。
+  与 Intent 关联的数据的一条描述。用<data\>元素在您的 Intent filter中指定此内容。使用此元素中的一个或多个属性，您可以单独指定 MIME 类型(MIME type）、URI 前缀（URI prefix）、URI 架构（URI scheme）或这些的组合，以及其他表名所接受数据类型的项。
 
   > **注意**：如果您无需声明关于数据的具体信息 `Uri`（比如，您的 Activity 处理其他类型的“额外”数据而不是 URI 时），您应只指定 `android:mimeType` 属性声明您的 Activity 处理的数据类型，比如 `text/plain` 或 `image/jpeg`。
 
 - 类别
 
-  提供另外一种表征处理 Intent 的 Activity 的方法，通常与用户手势或 Activity 启动的位置有关。 系统支持多种不同的类别，但大多数都很少使用。 但是，所有隐含 Intent 默认使用 `CATEGORY_DEFAULT` 进行定义。用<category\>元素在您的 Intent 过滤器中指定此内容。
+  提供另外一种表征处理 Intent 的 Activity 的方法，通常与用户手势或 Activity 启动的位置有关。 系统支持多种不同的类别，但大多数都很少使用。 但是，所有隐含 Intent 默认使用 `CATEGORY_DEFAULT` 进行定义。用<category\>元素在您的 Intent filter中指定此内容。
 
-在您的 Intent 过滤器中，您可以通过声明嵌套在<intent-filter\>元素中的具有相应 XML 元素的各项，来声明您的 Activity 接受的条件。
+在您的 Intent filter中，您可以通过声明嵌套在<intent-filter\>元素中的具有相应 XML 元素的各项，来声明您的 Activity 接受的条件。
 
-例如，此处有一个 Activity 与在数据类型为文本或图像时处理 `ACTION_SEND` Intent 的 Intent 过滤器：
+例如，此处有一个 Activity 与在数据类型为文本或图像时处理 `ACTION_SEND` Intent 的 Intent filter：
 
 ```xml
 <activity android:name="ShareActivity">
@@ -43,11 +43,11 @@
 </activity>
 ```
 
-每个入站 Intent 仅指定一项操作和一个数据类型，但可以在每个 <intent-filter\>中声明 <action\>,<category\>,<data\>元素的多个实例。
+每个传入的 Intent 仅指定一项操作和一个数据类型，但可以在每个 <intent-filter\>中声明 <action\>,<category\>,<data\>元素的多个实例。
 
-如果任何两对操作和数据的行为相斥，您应创建单独的 Intent 过滤器指定与哪种数据类型配对时哪些操作可接受。
+如果任何两对操作和数据的行为相斥，您应创建单独的 Intent filter指定与哪种数据类型配对时哪些操作可接受。
 
-比如，假定您的 Activity 同时处理 `ACTION_SEND` 和 `ACTION_SENDTO` Intent 的文本和图像。在这种情况下，您必须为两个操作定义两种不同的 Intent 过滤器，因为 `ACTION_SENDTO` Intent 必须使用数据 `Uri` 指定使用 `send` 或 `sendto` URI 架构的收件人地址。例如：
+比如，假定您的 Activity 同时处理 `ACTION_SEND` 和 `ACTION_SENDTO` Intent 的文本和图像。在这种情况下，您必须为两个操作定义两种不同的 Intent filter，因为 `ACTION_SENDTO` Intent 必须使用数据 `Uri` 指定使用 `send` 或 `sendto` URI 架构的收件人地址。例如：
 
 ```xml
 <activity android:name="ShareActivity">
@@ -68,7 +68,7 @@
 </activity>
 ```
 
-> **注意**：为了接收隐式 Intent，您必须在 Intent 过滤器中包含 `CATEGORY_DEFAULT` 类别。方法 `startActivity()` 和`startActivityForResult()` 将按照已声明 `CATEGORY_DEFAULT` 类别的方式处理所有 Intent。如果您不在 Intent 过滤器中声明它，则没有隐含 Intent 分解为您的 Activity。
+> **注意**：为了接收隐式 Intent，您必须在 Intent filter中包含 `CATEGORY_DEFAULT` 类别。方法 `startActivity()` 和`startActivityForResult()` 将按照已声明 `CATEGORY_DEFAULT` 类别的方式处理所有 Intent。如果您不在 Intent filter中声明它，则没有隐含 Intent 分解为您的 Activity。
 
 如需了解有关发送和接收 `ACTION_SEND` 执行社交共享行为的 Intent 的详细信息，请参阅有关[Receiving simple data from other apps](https://developer.android.com/training/sharing/receive.html?hl=zh-cn)的文档。
 
@@ -102,7 +102,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ### 返回结果
 
-如果您想要向调用您的 Activity 的 Activity 返回结果，只需调用 `setResult()` 指定结果代码和结果 `Intent`。当您的操作完成且用户应返回原始 Activity 时，调用 `finish()` 关闭（和销毁）您的 Activity。 例如：
+如果您想要向调用您的 Activity 的 Activity 返回结果，只需调用 `setResult()` 指定结果代码和结果 `Intent`。当您的操作完成且用户应返回原来的 Activity 时，调用 `finish()` 关闭（和销毁）您的 Activity。 例如：
 
 ```java
 // Create intent to deliver some kind of result data
@@ -111,9 +111,9 @@ setResult(Activity.RESULT_OK, result);
 finish();
 ```
 
-您必须始终为结果指定结果代码。通常，它是 `RESULT_OK` 或 `RESULT_CANCELED`。您之后可以根据需要为 `Intent` 提供额外的数据。
+您必须始终为结果指定结束代码。通常，它是 `RESULT_OK` 或 `RESULT_CANCELED`。您之后可以根据需要为 `Intent` 提供额外的数据。
 
-**注**：默认情况下，结果设置为 `RESULT_CANCELED`。因此，如果用户在完成操作动作或设置结果之前按了*返回*按钮，原始 Activity 会收到“已取消”的结果。
+> **注意**：默认情况下，结果设置为 `RESULT_CANCELED`。因此，如果用户在完成操作动作或设置结果之前按了*返回*按钮，原始 Activity 会收到“已取消”的结果。
 
 如果您只需返回指示若干结果选项之一的整数，您可以将结果代码设置为大于 0 的任何值。如果您使用结果代码传递整数，且无需包括 `Intent`，则可调用 `setResult()` 且仅传递结果代码。例如：
 
