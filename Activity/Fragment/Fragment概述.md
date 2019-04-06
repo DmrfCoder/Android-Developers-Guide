@@ -463,7 +463,7 @@ onListItemClick()中的形参id是被点击的item的缩在行的下标，宿主
 
 和Activity一样，您可以使用onSaveInstanceState（Bundle），ViewModel和持久化本地存储的组合，跨配置更改（across configuration changes ）保留Fragment的UI状态。要了解有关保留UI状态的更多信息，请参阅[Saving UI States](https://developer.android.com/topic/libraries/architecture/saving-states.html)。
 
-Activity和Fragment生命周期的最显着的差异是如何将其存储在其各自的后台堆栈中。默认情况下，Activity停止（stopped）时被置于由系统管理的Activity的后堆栈中（以便用户可以使用“Back”按钮导航回到它，如 [理解Task和回退栈](./Activity/理解Task和回退栈.md) 中所述）。但是，只有当您在执行删除Fragment的事务时通过调用addToBackStack（）显式请求保存实例时，系统才会将Fragment放入由宿主Activity管理的后台堆栈中。
+Activity和Fragment生命周期的最显着的差异是如何将其存储在其各自的后台堆栈中。默认情况下，Activity停止（stopped）时被置于由系统管理的Activity的后堆栈中（以便用户可以使用“Back”按钮导航回到它，如 [理解Task和回退栈](../Activity/理解Task和回退栈.md) 中所述）。但是，只有当您在执行删除Fragment的事务时通过调用addToBackStack（）显式请求保存实例时，系统才会将Fragment放入由宿主Activity管理的后台堆栈中。
 
 请参阅[Activity生命周期](./Activity/Activity的生命周期.md)和[Handling Lifecycles with Lifecycle-Aware Components](https://developer.android.com/topic/libraries/architecture/lifecycle.html)，以了解有关Activity生命周期和管理的更多信息。
 
@@ -471,7 +471,7 @@ Activity和Fragment生命周期的最显着的差异是如何将其存储在其�
 
 
 
-## 与Activity的声明周期进行协调
+## 与Activity的生命周期进行协调
 
 Fragment所在的宿主Activity的生命周期会直接影响Fragment的生命周期，因此Activity的每个生命周期回调都会为每个Fragment产生类似的回调。例如，当Activity收到onPause（）时，Activity中的每个Fragment都会收到onPause（）。
 
