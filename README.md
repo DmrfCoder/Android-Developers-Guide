@@ -18,6 +18,7 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [概述](./Activity/Interacting-With-Other-Apps/与其他APP交互——概述.md)
     - [将用户导航到另一个APP](/Activity/Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.md)
     - [接收另一个Activity返回的结果](./Activity/Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.md)
+    - [允许其他应用启动您的 Activity](./Activity/Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的 Activity.md)
 
 
 
