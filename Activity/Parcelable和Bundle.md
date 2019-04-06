@@ -1,5 +1,7 @@
 # Parcelable和Bundle
 
+[原文(英文)地址](https://developer.android.com/guide/components/activities/parcelables-and-bundles#java)
+
 Parcelable和Bundle对象旨在跨进程使用，例如IPC / Binder事务，具有Intent的Activity之间，以及跨配置更改存储瞬态。此文档介绍有关使用Parcelable和Bundle对象的建议和最佳实践。
 
 > 注意：Parcel不是通用的序列化机制，您绝不应将任何Parcel数据存储在磁盘上或通过网络发送。
