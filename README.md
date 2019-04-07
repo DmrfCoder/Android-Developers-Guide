@@ -40,6 +40,10 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
 
   - [Multi-Window Support(多窗口支持-分屏)](./Activity/多窗口支持(分屏).md)
 
+  - [App Short Cuts（App快捷启动方式)](./Activity/AppShortCuts)
+
+    - [Create shortcuts（创建快捷方式）](./Activity/AppShortCuts/创建快捷方式.md)
+
     
 
     
