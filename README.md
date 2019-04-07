@@ -24,6 +24,7 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [Enabling links to app content(创建指向您内容的DeepLinks)](./Activity/Handling-Android-App-Links/创建指向您内容的Deep-Links.md)
     - [Verify app Links(验证App Links)](./Activity/Handling-Android-App-Links/验证App-Links.md)
     - [Create App links for instant app(为Instant APPs创建App Links)](./Activity/Handling-Android-App-Links/为Instant-APPs创建App-Links.md)
+  - [Loaders(加载器)](./Activity/加载器.md)
 
 
 
