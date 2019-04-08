@@ -47,6 +47,11 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [Manage shortcuts(管理快捷方式)](./Activity/AppShortCuts/管理快捷方式.md)
     - [Best practices for shortcuts(快捷方式的最佳做法)](./Activity/AppShortCuts/快捷方式的最佳做法.md)
 
+  - [App Widgets(应用小部件)](./Activity/AppWidgets)
+
+    - [OverView(概述)](./Activity/AppWidgets/App小部件概述.md)
+    - [Build an App Widget(构建应用程序小部件)](./Activity/AppWidgets/构建应用程序小部件.md)
+
     
 
     
