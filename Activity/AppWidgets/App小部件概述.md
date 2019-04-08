@@ -63,7 +63,7 @@
 
 鉴于上述交互方式的限制，依赖于受限制的手势的一些UI构建块（ UI building blocks）也不可用于窗口小部件。有关支持的构建块的完整列表以及有关布局限制的更多信息，请参阅构建应用程序小部件中[创建应用程序布局](./构建应用程序小部件.md#Creating-the-App-Widget-Layout)部分。
 
-## 设计原则
+## <span id="design-guidline">设计原则</span>
 
 ### 小部件内容
 
