@@ -42,6 +42,7 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
 
   - [App Short Cuts（App快捷启动方式)](./Activity/AppShortCuts)
 
+    - [OverView(概述)](./Activity/AppShortCuts/概述.md)
     - [Create shortcuts（创建快捷方式）](./Activity/AppShortCuts/创建快捷方式.md)
     - [Manage shortcuts(管理快捷方式)](./Activity/AppShortCuts/管理快捷方式.md)
 
