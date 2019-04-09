@@ -53,6 +53,10 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [Build an App Widget(构建应用程序小部件)](./Activity/AppWidgets/构建应用程序小部件.md)
     - [Build an App Widget Host(构建应用程序小部件主机)](./Activity/AppWidgets/构建应用程序小部件主机(Host).md)
 
+  - [Architecture Components(架构组件)](./ArchitectureComponents)
+
+    - [OverView(概述)](./ArchitectureComponents/Android架构组件——概述.md)
+
     
 
     
