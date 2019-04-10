@@ -60,6 +60,7 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [OverView(概述)](./ArchitectureComponents/Android架构组件-概述.md)
     - [Adding Components to your Project(给你的项目中添加架构组件)](./ArchitectureComponents/Android架构组件-给你的项目中添加组件.md)
     - [Layouts and binding expressions(布局和绑定表达式)](./ArchitectureComponents/Android架构组件-布局和绑定表达式.md)
+    - [Work with observable data objects(使用可观察的数据对象)](./ArchitectureComponents/Android架构组件-使用可观察的数据对象.md)
 
     
 
