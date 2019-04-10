@@ -58,7 +58,7 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
   - [Architecture Components(架构组件)](./ArchitectureComponents)
 
     - [OverView(概述)](./ArchitectureComponents/Android架构组件-概述.md)
-    - [Adding Components to your Project(给你的项目中添加架构组件)](./ArchitectureComponents /Android架构组件-给你的项目中添加组件.md)
+    - [Adding Components to your Project(给你的项目中添加架构组件)](./ArchitectureComponents/Android架构组件-给你的项目中添加组件.md)
 
     
 
