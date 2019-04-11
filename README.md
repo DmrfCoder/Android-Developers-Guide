@@ -19,7 +19,7 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
   - [Fragment](./Activity/Fragment)
     - [Overview(Fragment(概述)](./Activity/Fragment/Fragment概述.md)
     - [Create a Fragment(创建Fragment)](./Activity/Fragment/创建Fragment.md)
-    - [Test your fragments(测试Fragment)](./Activity/测试Fragment.md)
+    - [Test your fragments(测试Fragment)](./Activity/Fragment/测试Fragment.md)
     - [Build a flexible UI(构建灵活的UI)](./Activity/Fragment/构建灵活的UI.md)
     - [Communicate with other fragments(与其他Fragment通信)](./Activity/Fragment/与其他Fragment通信.md)
 
