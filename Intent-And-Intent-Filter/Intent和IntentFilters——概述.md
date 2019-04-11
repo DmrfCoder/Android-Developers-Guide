@@ -150,7 +150,7 @@ IIntent filter（过滤器）是应用清单文件中的一个表达式，它指
 
   如需了解详细信息，请参阅 [setFlags()](https://developer.android.com/reference/android/content/Intent.html#setFlags(int)) 方法。
 
-## 显式 Intent 示例
+### 显式 Intent 示例
 
 显式 Intent 是指用于启动某个特定应用组件（例如，应用中的某个特定 Activity 或Service）的 Intent。 要创建显式 Intent，请为 `Intent` 对象定义组件名称 — Intent 的所有其他属性均为可选属性。
 
@@ -181,7 +181,7 @@ IIntent filter（过滤器）是应用清单文件中的一个表达式，它指
 
 如需了解有关构建和启动服务的详细信息，请参阅[服务](../Service)指南。
 
-## 隐式 Intent 示例
+### 隐式 Intent 示例
 
 隐式 Intent 指定能够在可以执行相应操作的设备上调用任何应用的操作。 如果您的应用无法执行该操作而其他应用可以，且您希望用户选取要使用的应用，则使用隐式 Intent 非常有用。
 
@@ -225,7 +225,9 @@ IIntent filter（过滤器）是应用清单文件中的一个表达式，它指
 ![intent-chooser](https://ws2.sinaimg.cn/large/006tNc79gy1g1z0drvnibj308c0gogmz.jpg)
 
 <center>图 2. 选择器对话框
-## 强制使用应用选择器
+
+
+### 强制使用应用选择器
 
 如果有多个应用响应隐式 Intent，则用户可以选择要使用的应用，并将其设置为该操作的默认选项。 如果用户可能希望今后一直使用相同的应用执行某项操作（例如，打开网页时，用户往往倾向于仅使用一种网络浏览器），则这一点十分有用。
 
@@ -508,7 +510,7 @@ Data测试会将 Intent 中的 URI 和 MIME 类型与过滤器中指定的 URI �
 </intent-filter>
 ```
 
-## Intent 匹配
+### Intent 匹配
 
 通过 Intent 过滤器匹配 Intent，这不仅有助于发现要激活的目标组件，还有助于发现设备上组件集的相关信息。 例如，主页应用通过使用指定 `ACTION_MAIN` 操作和 `CATEGORY_LAUNCHER` 类别的 Intent 过滤器查找所有 Activity，以此填充应用启动器。
 
