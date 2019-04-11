@@ -1,5 +1,7 @@
 # Intent和Intent filters——概述
 
+[原文(英文)地址](https://developer.android.com/guide/components/intents-filters#kotlin)
+
 `Intent` 是一个消息传递对象，您可以使用它从其他[应用组件](https://developer.android.com/guide/components/fundamentals.html?hl=zh-cn#Components)请求操作。尽管 Intent 可以通过多种方式促进组件之间的通信，但其基本用途主要包括以下三个：
 
 - 启动 Activity
@@ -273,7 +275,7 @@ IIntent filter（过滤器）是应用清单文件中的一个表达式，它指
 
 这将显示一个对话框，其中有响应传递给 `createChooser()` 方法的 Intent 的应用列表，并且将提供的文本用作对话框标题。
 
-## 接收隐式 Intent
+## <span id="Receiving">接收隐式 Intent</span>
 
 要公布应用可以接收哪些隐式 Intent，请在[清单文件](https://developer.android.com/guide/topics/manifest/manifest-intro.html?hl=zh-cn)中使用 <intent-filter\>元素为每个应用组件声明一个或多个 Intent 过滤器。每个 Intent 过滤器均根据 Intent 的action、data和category指定自身接受的 Intent 类型。 仅当隐式 Intent 可以通过某一个 Intent 过滤器传递时，系统才会将该 Intent 传递给应用组件。
 
@@ -468,11 +470,11 @@ content://com.example.project:200/folder/subfolder/etc
 - 如果未指定host，则会忽略port。
 - 如果未指定scheme和host，则会忽略path。
 
-将 Intent 中的 URI 与过滤器中的 URI 进行比较时，它仅与过滤器中包含的部分 URI 进行比较。 例如：
+将 Intent 中的 URI 与过滤器中的 URI 进行比较时，它仅与过滤器中包含的 URI 的一部分进行比较。 例如：
 
-- 如果过滤器仅指定scheme，则具有该scheme的所有 URI 均与该过滤器匹配。
-- 如果过滤器指定scheme和authority，但未指定path，则具有相同scheme和authority的所有 URI 都会通过过滤器，无论其path如何均是如此。
-- 如果过滤器指定scheme, authority, 和 path，则仅具有相同scheme, authority, 和 path的 URI 才会通过过滤器。
+- 如果过滤器仅指定scheme，则具有该scheme的所有Intent URI 均与该过滤器匹配。
+- 如果过滤器指定scheme和authority，但未指定path，则具有相同scheme和authority的所有Intent URI 都会通过（passing）过滤器，无论其path如何均是如此。
+- 如果过滤器指定scheme, authority, 和 path，则仅具有相同scheme, authority, 和 path的Intent URI 才会通过过滤器。
 
 > **注：**path规范可以包含星号通配符 (*)，因此仅需部分匹配路径名即可。
 
@@ -484,13 +486,13 @@ Data测试会将 Intent 中的 URI 和 MIME 类型与过滤器中指定的 URI �
 
 3. 仅当过滤器列出相同的 MIME 类型且未指定 URI 格式时，包含 MIME 类型、但不含 URI 的 Intent 才会通过测试。
 
-4. 仅当 MIME 类型与过滤器中列出的category匹配，同时包含 URI 类型和 MIME 类型（通过显式声明，或可以通过 URI 推断得出）的 Intent 才会通过测试的 MIME category部分。 如果 Intent 的 URI 与过滤器中的 URI 匹配，或者如果 Intent 具有`content:`或
+4. 仅当 MIME 类型与过滤器中列出的category匹配，同时包含 URI 类型和 MIME 类型（通过显式声明，或可以通过 URI 推断得出）的 Intent 才会通过 MIME category部分的测试。 如果 Intent 的 URI 与过滤器中的 URI 匹配，或者如果 Intent 具有`content:`或
 
    `file: URI` 且过滤器未指定 URI，则 Intent 会通过测试的 URI 部分。 换言之，如果过滤器只是列出 MIME 类型，则假定组件支持`content:`或`file: data` 
 
 > 注意：如果intent指定URI或MIME类型，当<intent-filter\>中没有<data\>元素时，data测试将失败。
 
-最后一条规则，即规则 (d)，反映了期望组件能够从文件中或ContentProvider获得本地数据。因此，其过滤器可以仅列出数据类型，而不必显式命名 `content:` 和 `file:` schemes。这是一个典型的案例。 例如，下文中的<data\>元素向 Android 指出，组件可从ContentProvider处获得并显示图像数据：
+最后一条规则，即rule (d)，反映了期望组件能够从文件中或ContentProvider获得本地数据。因此，其过滤器可以仅列出数据类型，而不必显式命名 `content:` 和 `file:` schemes。这是一个典型的案例。 例如，下文中的<data\>元素向 Android 指出，组件可从ContentProvider处获得并显示图像数据：
 
 ```xml
 <intent-filter>
