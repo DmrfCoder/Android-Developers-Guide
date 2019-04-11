@@ -1,6 +1,7 @@
-Android Developer Guide翻译项目，主要翻译[这个地址](https://developer.android.com/guide)的英文文档，目前已翻译的文档有：
+Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方文档](https://developer.android.com/guide)，会不断更新。同时由于本人个人时间精力有限，欢迎大家一起参与这个项目，对于已经翻译完成的部分，如果有不妥之处，欢迎大家即使反馈。目前已翻译完成的文档有：
 
 - [Activities](./Activity)
+
   - [Introduction to activities(Activity介绍)](./Activity/Activity介绍.md)
 
   - [The activity lifecycle(Activity的生命周期)](./Activity/Activity的生命周期.md)
@@ -62,6 +63,15 @@ Android Developer Guide翻译项目，主要翻译[这个地址](https://develop
     - [Layouts and binding expressions(布局和绑定表达式)](./ArchitectureComponents/Android架构组件-布局和绑定表达式.md)
     - [Work with observable data objects(使用可观察的数据对象)](./ArchitectureComponents/Android架构组件-使用可观察的数据对象.md)
     - [Generated binding classes(生成的绑定类)](./ArchitectureComponents/Android架构组件-生成的绑定类.md)
+
+  - [Intent and intent filters(Intent和Intent过滤器)](./Intent-And-Intent-Filter)
+
+    - [OverView(概述)](./Intent-And-Intent-Filter/Intent和IntentFilters——概述.md)
+    - [Common intents(通用Intent)](./Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.md)
+
+    
+
+    
 
     
 
