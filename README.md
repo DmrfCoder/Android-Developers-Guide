@@ -69,6 +69,11 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     - [OverView(概述)](./Intent-And-Intent-Filter/Intent和IntentFilters——概述.md)
     - [Common intents(通用Intent)](./Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.md)
 
+  - [BackGround Tasks(后台任务)](./BackGroundTasks)
+
+    - [Service(服务)](./BackGroundTasks/Service)
+      - [OverView(概述)](./BackGroundTasks/Service——概述.md)
+
     
 
     
