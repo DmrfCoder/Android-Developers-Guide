@@ -110,7 +110,7 @@ Service启动之后，其生命周期即独立于启动它的组件，并且可�
 
 下文介绍如何使用其中任一个类来实现Service。
 
-### 扩展 IntentService 类
+### <span id="extending-the-intentService-class">扩展 IntentService 类</span>
 
 由于大多数启动Service都不必同时处理多个请求（实际上，这种多线程情况可能很危险），因此使用 `IntentService` 类实现Service也许是最好的选择。
 
