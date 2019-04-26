@@ -1,5 +1,7 @@
 # Service——向后台Service发送工作请求
 
+[原文(英文)地址](https://developer.android.com/training/run-background-service/send-request#java)
+
 [上一篇文章](./Service——创建后台服务.md)介绍了如何创建一个[`JobIntentService`](https://developer.android.com/reference/android/support/v4/app/JobIntentService)类.这篇文章将介绍如何通过一个`Intent`来触发`JobIntentService`去执行一个操作，这个`Intent`中也可以用于`JobintentService`执行任务（操作）的一些数据。
 
 ## 创建工作请求并将其发送到`JobIntentService`
