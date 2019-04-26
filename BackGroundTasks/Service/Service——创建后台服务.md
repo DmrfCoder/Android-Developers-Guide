@@ -1,5 +1,7 @@
 # Service——创建后台服务
 
+[原文(英文)地址](https://developer.android.com/training/run-background-service/create-service)
+
 IntentService类提供了简单结构用于在单个后台线程运行操作。这使得它能够处理长时间运行的操作，而不会影响用户界面的响应能力。此外，IntentService不受大多数用户界面生命周期事件的影响，因此它会在关闭AsyncTask的情况下继续运行。
 
 IntentService有以下几点限制：
@@ -75,4 +77,3 @@ android：name属性唯一标识了该IntentService的类名。
 注意<service\>元素不含有intent filter，发送工作给IntentService执行的Activity需要使用显示Intent，所以没必要定义Intent filter。这也意味着只有同一个app中的组件或者其他含有相同user ID的应用中的组件才有权限访问该Service。
 
 现在你已经有了基本的IntentService类，你可以使用Intent对象向其发送工作请求。[下篇文章](./Service——向后台Service发送工作请求.md)将介绍如何构建这些Intent对象并将它们发送到IntentService。
-

@@ -48,7 +48,7 @@ IIntent filter（过滤器）是应用清单文件中的一个表达式，它指
 
 > **注意：**为了确保应用的安全性，启动 `Service` 时，请始终使用显式 Intent，且不要为Service声明 Intent 过滤器。使用隐式 Intent 启动Service存在安全隐患，因为您无法确定哪些Service将响应 Intent，且用户无法看到哪些Service已启动。从 Android 5.0（API 级别 21）开始，如果使用隐式 Intent 调用 `bindService()`，系统会引发异常。
 
-## 构建 Intent
+## <span id="Building-an-intent">构建 Intent</span>
 
 `Intent` 对象携带了 Android 系统用来确定要启动哪个组件的信息（例如，准确的组件名称或应当接收该 Intent 的组件类别），以及接收Intent的组件（就是Intent filter匹配上Intent的组件）为了正确执行操作而需要使用的信息（例如，要采取的操作以及要处理的数据）。
 
