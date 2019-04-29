@@ -2,7 +2,7 @@
 
 [原文(英文)地址](https://developer.android.com/guide/components/bound-services)
 
-`bound service`是客户端-服务器接口中的服务器。`bound service`可让组件（例如 `Activity`）绑定到`service`、发送请求、接收响应，甚至执行进程间通信 (`IPC`)。 `bound service`通常只在为其他应用组件服务时处于活动状态，不会无限期地在后台运行。
+[TOC]
 
 本文向您介绍如何创建`bound service`，包括如何绑定到来自其他应用组件的`service`。
 

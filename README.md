@@ -60,12 +60,9 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     - [OverView(概述)](./BackGroundTasks/Service/Service——概述.md)
     
     - [Create a background service(创建后台Service)](./BackGroundTasks/Service/Service——创建后台服务.md)
-    
-  - [Send work requests to the background service(向后台Service发送工作请求)](./BackGroundTasks/Service/Service——向后台Service发送工作请求.md)
-    
-  - [Bound Service(绑定Service)](./BackGroundTasks/Service/Service——绑定（bound）Service.md)
-    
-  - [Android Interface Definition Language (AIDL)](./BackGroundTasks/Service/Service——AIDL.md)
+    - [Send work requests to the background service(向后台Service发送工作请求)](./BackGroundTasks/Service/Service——向后台Service发送工作请求.md)
+    - [Bound Service(绑定Service)](./BackGroundTasks/Service/Service——绑定（bound）Service.md)
+    - [Android Interface Definition Language (AIDL)](./BackGroundTasks/Service/Service——AIDL.md)
     
   - [Broadcast](./BackGroundTasks/BroadCast.md)
     
