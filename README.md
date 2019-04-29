@@ -67,6 +67,8 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     
   - [Android Interface Definition Language (AIDL)](./BackGroundTasks/Service/Service——AIDL.md)
     
+  - [Broadcast](./BackGroundTasks/BroadCast.md)
+    
     
     
       
