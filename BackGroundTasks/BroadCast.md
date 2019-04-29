@@ -2,7 +2,7 @@
 
 [原文(英文)地址](https://developer.android.com/guide/components/broadcasts)
 
-`Android`应用程序可以从系统或者其他应用发送或者接收`broadcast`消息，类似于`订阅-发布者`设计模式。`broadcast`会在发生其关注的事件时被发送。比如，`Android`系统在发生一些系统事件时会发送`broadcast`（比如设备开机或者设备开始充电的时候）。再比如，当需要发生一些其他`app`可能关注的事件时也可发送`broadcast`(比如新的数据下载完成的时候)。
+[TOC]
 
 应用程序可以注册去接收特定的`broadcast`，当一个`broadcast`被发送，系统自动将该`broadcast`路由到已订阅接收该特定类型`broadcast`的应用程序。
 
@@ -20,21 +20,21 @@
 
 关于完整的系统`broadcast actions`信息，请参阅`Android SDK`中的`BROADCAST_ACTION.TXT`文件。每一个`broadcast action`都有一个常量值与之对应，比如[ACTION_AIRPLANE_MODE_CHANGED](https://developer.android.com/reference/android/content/Intent.html#ACTION_AIRPLANE_MODE_CHANGED)对应`android.intent.action.AIRPLANE_MODE`， `BROADCAST_ACTION.TXT`文档中有每一个`broadcast action`对应的常量值的信息。
 
-## 系统`broadcast`的更改
+### 系统`broadcast`的更改
 
 随着`Android`平台的发展，它会定期改变系统`broadcast`的行为方式。如果您的应用程序针对`Android 7.0`（`API`级别24）或更高版本，或者安装在运行`Android 7.0`或更高版本的设备上，请记住以下更改。
 
-### Android 9
+#### Android 9
 
 从`Android 9`（`API`级别28）开始，[`NETWORK_STATE_CHANGED_ACTION`](https://developer.android.com/reference/android/net/wifi/WifiManager.html#NETWORK_STATE_CHANGED_ACTION)不再接收用户的位置或用户个人数据的信息。
 此外，如果您的应用程序是安装`Android 9`或者更高版本的设备的上，从`WI-FI`发送的`broadcast`不再含有`SSIDs`、`BSSIDs`、连接信息、扫描结果等信息。想得到这些信息，应该调用[`getConnectionInfo()`](https://developer.android.com/reference/android/net/wifi/WifiManager.html#getConnectionInfo())方法。
 
-### Android 8.0
+#### Android 8.0
 
 从`Android8.0（API 26）`开始，系统对在`manifest`中声明的接受者添加了额外限制。
 如果你的应用程序的目标设备版本为`Android8.0`或更高，您无法使用`manifest`为大多数隐式`broadcast`（`broadcast`不专门针对您的应用）声明`receiver`。当用户主动使用您的应用时，您仍然可以使用`context`注册的接收器（[context-registered receiver](https://developer.android.com/guide/components/broadcasts#context-registered-recievers)）。
 
-### Android 7.0
+#### Android 7.0
 
 `Android 7.0`（`API`级别24）及更高版本不发送以下系统广播：
 
@@ -156,7 +156,7 @@
 
 请注意注册和取消注册`register`的位置，例如，如果使用`Activity context`在`onCreate（Bundle）`中注册`register`，则应在`onDestroy（）`中取消注册，以防止`register`泄漏到`Activity context`之外。如果在`onResume（）`中注册`register`，则应在`onPause（）`中注销它以防止多次注册（如果您不希望在`Paused`时接收广播，这可以减少不必要的系统开销）。不要在`onSaveInstanceState（Bundle）`中取消注册，因为如果用户在历史堆栈（`history stack`）中向后移动（`moves back`），则不会调用此方法。
 
-## <span id="effect-on-process-state">对进程生命状态的影响</span>
+### <span id="effect-on-process-state">对进程生命状态的影响</span>
 
 `BroadcastReceiver`的状态（无论是否正在运行）会影响其宿主进程的状态，从而影响该对应进程被系统杀死的可能性。例如，当进程执行`receiver`（即运行`onReceive（）`方法中的代码）时，它被认为是前台进程，除极端内存压力外，系统会维持其运行。
 

@@ -66,6 +66,10 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     
   - [Broadcast](./BackGroundTasks/BroadCast.md)
     
+  - [Sending Operations To Multiple Threads(将操作发送到多个线程)](./BackGroundTasks/SendingOperationsToMultipleThreads)
+    
+    - [OverView(概述)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——概述.md)
+    
     
     
       
