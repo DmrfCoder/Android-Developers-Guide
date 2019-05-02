@@ -68,7 +68,11 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     
   - [Sending Operations To Multiple Threads(将操作发送到多个线程)](./BackGroundTasks/SendingOperationsToMultipleThreads)
     
-    - [OverView(概述)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——概述.md)
+    - [OverView(概述)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.md)
+    - [Specify the code to run on a thread(指定线程中运行的代码)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.md)
+    - [Create a manager for multiple threads(为多线程创建管理者)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（3）为多线程创建管理者(manager).md)
+    - [Run code on a thread pool thread(在线程池中运行代码)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.md)
+    - [Communicate with the UI thread(与UI线程进行通信)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.md)
     
     
     
