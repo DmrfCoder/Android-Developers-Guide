@@ -71,11 +71,11 @@
 
 下一节将介绍如何通知`Handler`移动数据。
 
-## 从task中将数据移动到UI线程
+## 将数据从任务线程传送到UI线程
 
-要把运行在后台线程的任务对象中的数据移动到`UI`线程上的对象中，请首先在数据和任务对象中存储`UI`对象。接下来，将任务对象和状态代码传递给实例化`Handler`的对象。在此对象中，将包含状态和任务对象的`Message`发送到处理程序。因为`Handler`在`UI`线程上运行，所以它可以将数据移动到UI对象。
+要把运行在后台线程的任务中的数据传送到`UI`线程上中，请首先将后台任务中数据的引用以及UI对象的引用存储下来。接下来，将要传送的数据和状态代码传递给实例化`Handler`的对象，在此对象中，将含有状态和要发送数据的`Message`通过Handler对象发送到其`handleMessage（）`中。因为`Handler`在`UI`线程上运行，所以它可以将数据传送到UI对象。
 
-### 在任务对象中存储数据
+### 后台线程的对象中存储数据
 
 例如，这是一个在后台线程上运行的`Runnable`，它解码`Bitmap`并将其存储在其父对象`PhotoTask`中， `Runnable`还存储状态代码`DECODE_STATE_COMPLETED`。
 
@@ -148,11 +148,11 @@
   ...
   ```
 
-`PhotoTask`还包含一个显示`Bitmap`的`ImageView`的句柄。即使`Bitmap`和`ImageView`的引用位于同一对象中，也无法将`Bitmap`分配给`ImageView`，因为您当前没有在`UI`线程上运行。
+`PhotoTask`还包含一个显示`Bitmap`的`ImageView`的句柄。但即使`Bitmap`和`ImageView`的引用位于同一对象中，也无法将`Bitmap`分配给`ImageView`，因为您当前没有在`UI`线程上运行。
 
-所以，下一步是将此状态发送到`PhotoTask`对象。
+所以，下一步是将数据发送到`PhotoTask`对象。
 
-### 将状态发送到对象层
+### 将数据发送到对象层
 
 `PhotoTask`是层次结构中的下一个更高级的对象。它维护对已解码数据的引用以及显示数据的`View`对象。它从`PhotoDecodeRunnable`接收状态代码并将其传递给维护线程池的对象并实例化`Handler`：
 
@@ -223,9 +223,9 @@
   }
   ```
 
-### 将数据移动到UI
+### 将数据传送到UI
 
-`PhotoManager`对象从`PhotoTask`对象接收状态代码和`PhotoTask`对象的句柄。由于状态为`TASK_COMPLETE`，因此创建一个包含状态和任务对象的`Message`，并将其发送给`Handler`：
+`PhotoManager`对象从`PhotoTask`对象接收状态代码和`PhotoTask`对象的句柄。由于状态为`TASK_COMPLETE`，因此创建一个包含状态码和要传送数据的`Message`，并将其发送给`Handler`：
 
 - kotlin
 
@@ -253,7 +253,7 @@
 
 - java
 
-- ```java
+  ```java
   public class PhotoManager {
       ...
       // Handle status messages from tasks
@@ -276,7 +276,7 @@
       }
   ```
 
-最后，`Handler.handleMessage（）`检查每个传入消息的状态代码。如果状态代码为`TASK_COMPLETE`，则任务结束，`Message`中的`PhotoTask`对象包含`Bitmap`和`ImageView`。因为`Handler.handleMessage（）`在`UI`线程上运行，所以它可以安全地将`Bitmap`移动到`ImageView`：
+  最后，`Handler.handleMessage（）`检查每个传入消息的状态代码。如果状态代码为`TASK_COMPLETE`，则任务结束，`Message`中的`PhotoTask`对象包含`Bitmap`和`ImageView`，因为`Handler.handleMessage（）`在`UI`线程上运行，所以它可以安全地将`Bitmap`移动到`ImageView`：
 
 - kotlin
 
