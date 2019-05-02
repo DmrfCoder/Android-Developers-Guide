@@ -63,9 +63,7 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     - [Send work requests to the background service(向后台Service发送工作请求)](./BackGroundTasks/Service/Service——向后台Service发送工作请求.md)
     - [Bound Service(绑定Service)](./BackGroundTasks/Service/Service——绑定（bound）Service.md)
     - [Android Interface Definition Language (AIDL)](./BackGroundTasks/Service/Service——AIDL.md)
-    
   - [Broadcast](./BackGroundTasks/BroadCast.md)
-    
   - [Sending Operations To Multiple Threads(将操作发送到多个线程)](./BackGroundTasks/SendingOperationsToMultipleThreads)
     
     - [OverView(概述)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.md)
@@ -73,17 +71,20 @@ Android Developer Guide翻译项目，主要翻译[Android Developer Guide官方
     - [Create a manager for multiple threads(为多线程创建管理者)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（3）为多线程创建管理者(manager).md)
     - [Run code on a thread pool thread(在线程池中运行代码)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.md)
     - [Communicate with the UI thread(与UI线程进行通信)](./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.md)
+  
+- [Best Practices](./BestPractices)
+
+  - [Performance](./BestPractices/Performance)
+    - [进程和线程——概述](./BestPractices/Performance/进程和线程——概述.md)
+
     
-    
-    
-      
+
   
+
   
+
   
-  
-  
-  
-  
+
   
 
 
