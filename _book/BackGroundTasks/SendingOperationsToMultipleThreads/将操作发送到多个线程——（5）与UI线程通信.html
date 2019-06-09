@@ -1,0 +1,1486 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>与UI线程进行通信 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="将操作发送到多个线程——（4）在线程池中的线程中运行代码.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Activity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../Activity/Activity介绍.html">
+            
+                <a href="../../Activity/Activity介绍.html">
+            
+                    
+                    Activity介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../Activity/Activity的生命周期.html">
+            
+                <a href="../../Activity/Activity的生命周期.html">
+            
+                    
+                    Activity的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../Activity/Activity的状态变化.html">
+            
+                <a href="../../Activity/Activity的状态变化.html">
+            
+                    
+                    Activity的状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../Activity/测试你的Activity.html">
+            
+                <a href="../../Activity/测试你的Activity.html">
+            
+                    
+                    测试你的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../Activity/理解Task和回退栈.html">
+            
+                <a href="../../Activity/理解Task和回退栈.html">
+            
+                    
+                    理解Task和回退栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../Activity/进程和应用程序的生命周期.html">
+            
+                <a href="../../Activity/进程和应用程序的生命周期.html">
+            
+                    
+                    进程和应用程序的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../Activity/Parcelable和Bundle.html">
+            
+                <a href="../../Activity/Parcelable和Bundle.html">
+            
+                    
+                    Parcelable和Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    Fragment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../../Activity/Fragment/Fragment概述.html">
+            
+                <a href="../../Activity/Fragment/Fragment概述.html">
+            
+                    
+                    Fragment(概述)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../../Activity/Fragment/创建Fragment.html">
+            
+                <a href="../../Activity/Fragment/创建Fragment.html">
+            
+                    
+                    创建Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="../../Activity/Fragment/测试Fragment.html">
+            
+                <a href="../../Activity/Fragment/测试Fragment.html">
+            
+                    
+                    测试Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="../../Activity/Fragment/构建灵活的UI.html">
+            
+                <a href="../../Activity/Fragment/构建灵活的UI.html">
+            
+                    
+                    构建灵活的UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.5" data-path="../../Activity/Fragment/与其他Fragment通信.html">
+            
+                <a href="../../Activity/Fragment/与其他Fragment通信.html">
+            
+                    
+                    与其他Fragment通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    与其他应用交互
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../../Activity/Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                <a href="../../Activity/Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="../../Activity/Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                <a href="../../Activity/Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                    
+                    将用户导航到另一个APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="../../Activity/Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                <a href="../../Activity/Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                    
+                    接收另一个Activity返回的结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="../../Activity/Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                <a href="../../Activity/Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                    
+                    允许其他应用启动您的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" >
+            
+                <span>
+            
+                    
+                    处理Android APP Link
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="../../Activity/Handling-Android-App-Links/概述.html">
+            
+                <a href="../../Activity/Handling-Android-App-Links/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="../../Activity/Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                <a href="../../Activity/Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                    
+                    创建指向您内容的DeepLinks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="../../Activity/Handling-Android-App-Links/验证App-Links.html">
+            
+                <a href="../../Activity/Handling-Android-App-Links/验证App-Links.html">
+            
+                    
+                    验证App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="../../Activity/Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                <a href="../../Activity/Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                    
+                    为Instant APPs创建App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../Activity/加载器.html">
+            
+                <a href="../../Activity/加载器.html">
+            
+                    
+                    加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../Activity/最近任务界面.html">
+            
+                <a href="../../Activity/最近任务界面.html">
+            
+                    
+                    最近任务界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../Activity/多窗口支持(分屏">
+            
+                <span>
+            
+                    
+                    多窗口支持-分屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" >
+            
+                <span>
+            
+                    
+                    App快捷启动方式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.14.1" data-path="../../Activity/AppShortCuts/概述.html">
+            
+                <a href="../../Activity/AppShortCuts/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.2" data-path="../../Activity/AppShortCuts/创建快捷方式.html">
+            
+                <a href="../../Activity/AppShortCuts/创建快捷方式.html">
+            
+                    
+                    创建快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.3" data-path="../../Activity/AppShortCuts/管理快捷方式.html">
+            
+                <a href="../../Activity/AppShortCuts/管理快捷方式.html">
+            
+                    
+                    管理快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.4" data-path="../../Activity/AppShortCuts/快捷方式的最佳做法.html">
+            
+                <a href="../../Activity/AppShortCuts/快捷方式的最佳做法.html">
+            
+                    
+                    快捷方式的最佳做法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" >
+            
+                <span>
+            
+                    
+                    应用小部件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.15.1" data-path="../../Activity/AppWidgets/App小部件概述.html">
+            
+                <a href="../../Activity/AppWidgets/App小部件概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.2" data-path="../../Activity/AppWidgets/构建应用程序小部件.html">
+            
+                <a href="../../Activity/AppWidgets/构建应用程序小部件.html">
+            
+                    
+                    构建应用程序小部件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.3" data-path="../../Activity/AppWidgets/构建应用程序小部件主机(Host">
+            
+                <span>
+            
+                    
+                    构建应用程序小部件主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../应用程序架构指南.html">
+            
+                <a href="../../应用程序架构指南.html">
+            
+                    
+                    应用程序架构指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    架构组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../ArchitectureComponents/Android架构组件-概述.html">
+            
+                <a href="../../ArchitectureComponents/Android架构组件-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                <a href="../../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                    
+                    给你的项目中添加架构组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                <a href="../../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                    
+                    布局和绑定表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                <a href="../../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                    
+                    使用可观察的数据对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                <a href="../../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                    
+                    生成的绑定类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    Intent和Intent过滤器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                <a href="../../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                <a href="../../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                    
+                    通用Intent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    用户界面
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../UserInterface/使用RecyclerView创建列表.html">
+            
+                <a href="../../UserInterface/使用RecyclerView创建列表.html">
+            
+                    
+                    使用RecyclerView创建列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    后台任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Service
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../Service/Service——概述.html">
+            
+                <a href="../Service/Service——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../Service/Service——创建后台服务.html">
+            
+                <a href="../Service/Service——创建后台服务.html">
+            
+                    
+                    创建后台Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../Service/Service——向后台Service发送工作请求.html">
+            
+                <a href="../Service/Service——向后台Service发送工作请求.html">
+            
+                    
+                    向后台Service发送工作请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../Service/Service——绑定（bound）Service.html">
+            
+                <a href="../Service/Service——绑定（bound）Service.html">
+            
+                    
+                    绑定Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../Service/Service——AIDL.html">
+            
+                <a href="../Service/Service——AIDL.html">
+            
+                    
+                    AIDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../BroadCast.html">
+            
+                <a href="../BroadCast.html">
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    将操作分配到多个线程执行
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="将操作发送到多个线程——（1）概述.html">
+            
+                <a href="将操作发送到多个线程——（1）概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                <a href="将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                    
+                    指定线程中运行的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="将操作发送到多个线程——（3）为多线程创建管理者(manager">
+            
+                <span>
+            
+                    
+                    为多线程创建管理者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                <a href="将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                    
+                    在线程池中运行代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3.5" data-path="将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                <a href="将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                    
+                    与UI线程进行通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    最佳实践
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Performance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../BestPractices/Performance/进程和线程——概述.html">
+            
+                <a href="../../BestPractices/Performance/进程和线程——概述.html">
+            
+                    
+                    进程和线程——概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >与UI线程进行通信</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5C06;&#x64CD;&#x4F5C;&#x53D1;&#x9001;&#x5230;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x4E0E;ui&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;">&#x5C06;&#x64CD;&#x4F5C;&#x53D1;&#x9001;&#x5230;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x4E0E;UI&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;</h1>
+<p>&#x524D;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;<a href="&#x5C06;&#x64CD;&#x4F5C;&#x53D1;&#x9001;&#x5230;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x5728;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;.md">&#x5C06;&#x64CD;&#x4F5C;&#x53D1;&#x9001;&#x5230;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x5728;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x4EE3;&#x7801;</a>&#xFF0C;&#x5411;&#x60A8;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x5728;<code>ThreadPoolExecutor</code>&#x7BA1;&#x7406;&#x7684;&#x7EBF;&#x7A0B;&#x4E0A;&#x542F;&#x52A8;&#x4EFB;&#x52A1;&#x3002;&#x672C;&#x6587;&#x5C06;&#x5411;&#x60A8;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x5C06;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x7ED9;&#x5728;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF08;<code>UI</code>&#xFF09;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x60A8;&#x7684;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x540E;&#x53F0;&#x5DE5;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x5230;<code>UI</code>&#x5143;&#x7D20;&#xFF08;&#x5982;<code>bitmap</code>&#xFF09;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7279;&#x6B8A;&#x7EBF;&#x7A0B;&#x6765;&#x8FD0;&#x884C;<code>UI</code>&#x5BF9;&#x8C61;&#xFF08;&#x4F8B;&#x5982;<code>View</code>&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x79F0;&#x4E3A;<code>UI</code>&#x7EBF;&#x7A0B;&#x3002;&#x53EA;&#x6709;&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x5BF9;&#x8C61;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x8BE5;&#x7EBF;&#x7A0B;&#x4E0A;&#x7684;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x3002;&#x7531;&#x4E8E;&#x60A8;&#x5728;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x672A;&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x4EEC;&#x65E0;&#x6743;&#x8BBF;&#x95EE;<code>UI</code>&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8981;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x5230;<code>UI</code>&#x7EBF;&#x7A0B;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x7684;<code>Handler</code>&#x3002;</p>
+<h2 id="&#x5728;ui&#x7EBF;&#x7A0B;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;handler">&#x5728;UI&#x7EBF;&#x7A0B;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Handler</h2>
+<p><code>Handler</code>&#x662F;<code>Android</code>&#x7CFB;&#x7EDF;<code>Framework</code>&#x5C42;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4F5C;&#x7528;&#x662F;&#x7BA1;&#x7406;&#x7EBF;&#x7A0B;&#x3002; <code>Handler</code>&#x5BF9;&#x8C61;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x5E76;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x6765;&#x5904;&#x7406;&#x6D88;&#x606F;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x60A8;&#x4E3A;&#x65B0;&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>Handler</code>&#xFF0C;&#x4F46;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5230;&#x73B0;&#x6709;&#x7EBF;&#x7A0B;&#x7684;<code>Handler</code>&#x3002;&#x5C06;<code>Handler</code>&#x8FDE;&#x63A5;&#x5230;<code>UI</code>&#x7EBF;&#x7A0B;&#x65F6;&#xFF0C;&#x5904;&#x7406;&#x6D88;&#x606F;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x5728;&#x6784;&#x9020;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7C7B;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5B9E;&#x4F8B;&#x5316;<code>Handler</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x5728;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>Handler&#xFF08;Looper&#xFF09;</code>&#x6784;&#x9020;&#x51FD;&#x6570;&#x5C06;&#x5176;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x5C06;&#x5176;&#x8FDE;&#x63A5;&#x5230;<code>UI</code>&#x7EBF;&#x7A0B;&#x3002;&#x6B64;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4F7F;&#x7528;<code>Looper</code>&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x662F;<code>Android</code>&#x7CFB;&#x7EDF;&#x7684;&#x7EBF;&#x7A0B;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#x7684;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5F53;&#x60A8;&#x57FA;&#x4E8E;&#x7279;&#x5B9A;&#x7684;<code>Looper</code>&#x5B9E;&#x4F8B;&#x5B9E;&#x4F8B;&#x5316;<code>Handler</code>&#x65F6;&#xFF0C;<code>Handler</code>&#x5728;&#x4E0E;<code>Looper</code>&#x76F8;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin"><span class="hljs-keyword">object</span> PhotoManager {
+...
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span>: Handler = Handler(Looper.getMainLooper())
+    ...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+</li>
+<li><pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">PhotoManager</span><span class="hljs-params">()</span> </span>{
+...
+    <span class="hljs-comment">// Defines a Handler object that&apos;s attached to the UI thread</span>
+    handler = <span class="hljs-keyword">new</span> Handler(Looper.getMainLooper()) {
+    ...
+</code></pre>
+</li>
+</ul>
+<p>&#x5728;<code>Handler</code>&#x4E2D;&#xFF0C;&#x91CD;&#x5199;<code>handleMessage()</code>&#x65B9;&#x6CD5;&#xFF0C;<code>Android</code>&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;&#x63A5;&#x6536;&#x5230;&#x65B0;<code>message</code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;<code>handleMessage()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x6240;&#x6709;<code>Handler</code>&#x90FD;&#x4F1A;&#x63A5;&#x6536;&#x5230;&#x76F8;&#x540C;&#x7684;&#x6D88;&#x606F;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin"><span class="hljs-keyword">object</span> PhotoManager {
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span>: Handler = <span class="hljs-keyword">object</span> : Handler(Looper.getMainLooper()) {
+        <span class="hljs-comment">/*
+         * handleMessage() defines the operations to perform when
+         * the Handler receives a new Message to process.
+         */</span>
+        <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">handleMessage</span><span class="hljs-params">(inputMessage: <span class="hljs-type">Message</span>)</span> {</span>
+            <span class="hljs-comment">// Gets the image task from the incoming Message object.</span>
+            <span class="hljs-variable"><span class="hljs-keyword">val</span> photoTask</span> = inputMessage.obj <span class="hljs-keyword">as</span> PhotoTask
+            ...
+        }
+    }
+    ...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+</li>
+<li><pre><code class="lang-java">        <span class="hljs-comment">/*
+         * handleMessage() defines the operations to perform when
+         * the Handler receives a new Message to process.
+         */</span>
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleMessage</span><span class="hljs-params">(Message inputMessage)</span> </span>{
+            <span class="hljs-comment">// Gets the image task from the incoming Message object.</span>
+            PhotoTask photoTask = (PhotoTask) inputMessage.obj;
+            ...
+        }
+    ...
+    }
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x4E0B;&#x4E00;&#x8282;&#x5C06;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x901A;&#x77E5;<code>Handler</code>&#x79FB;&#x52A8;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x4EFB;&#x52A1;&#x7EBF;&#x7A0B;&#x4F20;&#x9001;&#x5230;ui&#x7EBF;&#x7A0B;">&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x4EFB;&#x52A1;&#x7EBF;&#x7A0B;&#x4F20;&#x9001;&#x5230;UI&#x7EBF;&#x7A0B;</h2>
+<p>&#x8981;&#x628A;&#x8FD0;&#x884C;&#x5728;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x7684;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9001;&#x5230;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x4E2D;&#xFF0C;&#x8BF7;&#x9996;&#x5148;&#x5C06;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5F15;&#x7528;&#x4EE5;&#x53CA;UI&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x5B58;&#x50A8;&#x4E0B;&#x6765;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C06;&#x8981;&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x548C;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x4F20;&#x9012;&#x7ED9;&#x5B9E;&#x4F8B;&#x5316;<code>Handler</code>&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x6B64;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x5C06;&#x542B;&#x6709;&#x72B6;&#x6001;&#x548C;&#x8981;&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;<code>Message</code>&#x901A;&#x8FC7;Handler&#x5BF9;&#x8C61;&#x53D1;&#x9001;&#x5230;&#x5176;<code>handleMessage&#xFF08;&#xFF09;</code>&#x4E2D;&#x3002;&#x56E0;&#x4E3A;<code>Handler</code>&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9001;&#x5230;UI&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;">&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;</h3>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x7684;<code>Runnable</code>&#xFF0C;&#x5B83;&#x89E3;&#x7801;<code>Bitmap</code>&#x5E76;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5728;&#x5176;&#x7236;&#x5BF9;&#x8C61;<code>PhotoTask</code>&#x4E2D;&#xFF0C; <code>Runnable</code>&#x8FD8;&#x5B58;&#x50A8;&#x72B6;&#x6001;&#x4EE3;&#x7801;<code>DECODE_STATE_COMPLETED</code>&#x3002;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin">const <span class="hljs-variable"><span class="hljs-keyword">val</span> DECODE_STATE_COMPLETED</span>: <span class="hljs-keyword">Int</span> = ...
+
+<span class="hljs-comment">// A class that decodes photo files into Bitmaps</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhotoDecodeRunnable</span></span>(
+        <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> photoTask</span>: PhotoTask,
+        <span class="hljs-comment">// Gets the downloaded byte array</span>
+        <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">var</span> imageBuffer</span>: ByteArray = photoTask.getByteBuffer()
+) : Runnable {
+    ...
+    <span class="hljs-comment">// Runs the code for this task</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> {</span>
+        ...
+        <span class="hljs-comment">// Tries to decode the image buffer</span>
+        BitmapFactory.decodeByteArray(
+                imageBuffer,
+                <span class="hljs-number">0</span>,
+                imageBuffer.size,
+                bitmapOptions
+        )?.also { returnBitmap -&gt;
+            ...
+            <span class="hljs-comment">// Sets the ImageView Bitmap</span>
+            photoTask.image = returnBitmap
+        }
+        <span class="hljs-comment">// Reports a status of &quot;completed&quot;</span>
+        photoTask.handleDecodeState(DECODE_STATE_COMPLETED)
+        ...
+    }
+    ...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+</li>
+<li><pre><code class="lang-java"><span class="hljs-comment">// A class that decodes photo files into Bitmaps</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhotoDecodeRunnable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+    ...
+    PhotoDecodeRunnable(PhotoTask downloadTask) {
+        photoTask = downloadTask;
+    }
+    ...
+    <span class="hljs-comment">// Gets the downloaded byte array</span>
+    <span class="hljs-keyword">byte</span>[] imageBuffer = photoTask.getByteBuffer();
+    ...
+    <span class="hljs-comment">// Runs the code for this task</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        ...
+        <span class="hljs-comment">// Tries to decode the image buffer</span>
+        returnBitmap = BitmapFactory.decodeByteArray(
+                imageBuffer,
+                <span class="hljs-number">0</span>,
+                imageBuffer.length,
+                bitmapOptions
+        );
+        ...
+        <span class="hljs-comment">// Sets the ImageView Bitmap</span>
+        photoTask.setImage(returnBitmap);
+        <span class="hljs-comment">// Reports a status of &quot;completed&quot;</span>
+        photoTask.handleDecodeState(DECODE_STATE_COMPLETED);
+        ...
+    }
+    ...
+}
+...
+</code></pre>
+</li>
+</ul>
+<p><code>PhotoTask</code>&#x8FD8;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x663E;&#x793A;<code>Bitmap</code>&#x7684;<code>ImageView</code>&#x7684;&#x53E5;&#x67C4;&#x3002;&#x4F46;&#x5373;&#x4F7F;<code>Bitmap</code>&#x548C;<code>ImageView</code>&#x7684;&#x5F15;&#x7528;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x5C06;<code>Bitmap</code>&#x5206;&#x914D;&#x7ED9;<code>ImageView</code>&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x5F53;&#x524D;&#x6CA1;&#x6709;&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x662F;&#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;<code>PhotoTask</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x5BF9;&#x8C61;&#x5C42;">&#x5C06;&#x6570;&#x636E;&#x53D1;&#x9001;&#x5230;&#x5BF9;&#x8C61;&#x5C42;</h3>
+<p><code>PhotoTask</code>&#x662F;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x7EF4;&#x62A4;&#x5BF9;&#x5DF2;&#x89E3;&#x7801;&#x6570;&#x636E;&#x7684;&#x5F15;&#x7528;&#x4EE5;&#x53CA;&#x663E;&#x793A;&#x6570;&#x636E;&#x7684;<code>View</code>&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x4ECE;<code>PhotoDecodeRunnable</code>&#x63A5;&#x6536;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x5E76;&#x5C06;&#x5176;&#x4F20;&#x9012;&#x7ED9;&#x7EF4;&#x62A4;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5BF9;&#x8C61;&#x5E76;&#x5B9E;&#x4F8B;&#x5316;<code>Handler</code>&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin"><span class="hljs-comment">// Gets a handle to the object that creates the thread pools</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhotoTask</span></span>() {
+    ...
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> photoManager</span>: PhotoManager = PhotoManager.getInstance()
+    ...
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">handleDecodeState</span><span class="hljs-params">(state: <span class="hljs-type">Int</span>)</span> {</span>
+        <span class="hljs-comment">// Converts the decode state to the overall state.</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> outState</span>: <span class="hljs-keyword">Int</span> = <span class="hljs-keyword">when</span>(state) {
+            PhotoDecodeRunnable.DECODE_STATE_COMPLETED -&gt; PhotoManager.TASK_COMPLETE
+            ...
+        }
+        ...
+        <span class="hljs-comment">// Calls the generalized state method</span>
+        handleState(outState)
+    }
+    ...
+    <span class="hljs-comment">// Passes the state to PhotoManager</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">handleState</span><span class="hljs-params">(state: <span class="hljs-type">Int</span>)</span> {</span>
+        <span class="hljs-comment">/*
+         * Passes a handle to this task and the
+         * current state to the class that created
+         * the thread pools
+         */</span>
+        PhotoManager.handleState(this, state)
+    }
+    ...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+</li>
+<li><pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhotoTask</span> </span>{
+    ...
+    <span class="hljs-comment">// Gets a handle to the object that creates the thread pools</span>
+    photoManager = PhotoManager.getInstance();
+    ...
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleDecodeState</span><span class="hljs-params">(<span class="hljs-keyword">int</span> state)</span> </span>{
+        <span class="hljs-keyword">int</span> outState;
+        <span class="hljs-comment">// Converts the decode state to the overall state.</span>
+        <span class="hljs-keyword">switch</span>(state) {
+            <span class="hljs-keyword">case</span> PhotoDecodeRunnable.DECODE_STATE_COMPLETED:
+                outState = PhotoManager.TASK_COMPLETE;
+                <span class="hljs-keyword">break</span>;
+            ...
+        }
+        ...
+        <span class="hljs-comment">// Calls the generalized state method</span>
+        handleState(outState);
+    }
+    ...
+    <span class="hljs-comment">// Passes the state to PhotoManager</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">handleState</span><span class="hljs-params">(<span class="hljs-keyword">int</span> state)</span> </span>{
+        <span class="hljs-comment">/*
+         * Passes a handle to this task and the
+         * current state to the class that created
+         * the thread pools
+         */</span>
+        photoManager.handleState(<span class="hljs-keyword">this</span>, state);
+    }
+    ...
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9001;&#x5230;ui">&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9001;&#x5230;UI</h3>
+<p><code>PhotoManager</code>&#x5BF9;&#x8C61;&#x4ECE;<code>PhotoTask</code>&#x5BF9;&#x8C61;&#x63A5;&#x6536;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x548C;<code>PhotoTask</code>&#x5BF9;&#x8C61;&#x7684;&#x53E5;&#x67C4;&#x3002;&#x7531;&#x4E8E;&#x72B6;&#x6001;&#x4E3A;<code>TASK_COMPLETE</code>&#xFF0C;&#x56E0;&#x6B64;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x72B6;&#x6001;&#x7801;&#x548C;&#x8981;&#x4F20;&#x9001;&#x6570;&#x636E;&#x7684;<code>Message</code>&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x53D1;&#x9001;&#x7ED9;<code>Handler</code>&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin"><span class="hljs-keyword">object</span> PhotoManager {
+    ...
+    <span class="hljs-comment">// Handle status messages from tasks</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">handleState</span><span class="hljs-params">(photoTask: <span class="hljs-type">PhotoTask, state: Int</span>)</span> {</span>
+        <span class="hljs-keyword">when</span>(state) {
+            ...
+            TASK_COMPLETE -&gt; { <span class="hljs-comment">// The task finished downloading and decoding the image</span>
+                <span class="hljs-comment">/*
+                 * Creates a message for the Handler
+                 * with the state and the task object
+                 */</span>
+                handler.obtainMessage(state, photoTask)?.apply {
+                    sendToTarget()
+                }
+            }
+            ...
+        }
+        ...
+    }
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhotoManager</span> </span>{
+    ...
+    <span class="hljs-comment">// Handle status messages from tasks</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleState</span><span class="hljs-params">(PhotoTask photoTask, <span class="hljs-keyword">int</span> state)</span> </span>{
+        <span class="hljs-keyword">switch</span> (state) {
+            ...
+            <span class="hljs-comment">// The task finished downloading and decoding the image</span>
+            <span class="hljs-keyword">case</span> TASK_COMPLETE:
+                <span class="hljs-comment">/*
+                 * Creates a message for the Handler
+                 * with the state and the task object
+                 */</span>
+                Message completeMessage =
+                        handler.obtainMessage(state, photoTask);
+                completeMessage.sendToTarget();
+                <span class="hljs-keyword">break</span>;
+            ...
+        }
+        ...
+    }
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;<code>Handler.handleMessage&#xFF08;&#xFF09;</code>&#x68C0;&#x67E5;&#x6BCF;&#x4E2A;&#x4F20;&#x5165;&#x6D88;&#x606F;&#x7684;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x3002;&#x5982;&#x679C;&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x4E3A;<code>TASK_COMPLETE</code>&#xFF0C;&#x5219;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#xFF0C;<code>Message</code>&#x4E2D;&#x7684;<code>PhotoTask</code>&#x5BF9;&#x8C61;&#x5305;&#x542B;<code>Bitmap</code>&#x548C;<code>ImageView</code>&#xFF0C;&#x56E0;&#x4E3A;<code>Handler.handleMessage&#xFF08;&#xFF09;</code>&#x5728;<code>UI</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x5730;&#x5C06;<code>Bitmap</code>&#x79FB;&#x52A8;&#x5230;<code>ImageView</code>&#xFF1A;</p>
+</li>
+<li><p>kotlin</p>
+</li>
+<li><pre><code class="lang-kotlin">    <span class="hljs-keyword">object</span> PhotoManager {
+        ...
+        <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> handler</span>: Handler = <span class="hljs-keyword">object</span> : Handler(Looper.getMainLooper()) {
+
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">handleMessage</span><span class="hljs-params">(inputMessage: <span class="hljs-type">Message</span>)</span> {</span>
+                <span class="hljs-comment">// Gets the image task from the incoming Message object.</span>
+                <span class="hljs-variable"><span class="hljs-keyword">val</span> photoTask</span> = inputMessage.obj <span class="hljs-keyword">as</span> PhotoTask
+                <span class="hljs-comment">// Gets the ImageView for this task</span>
+                <span class="hljs-variable"><span class="hljs-keyword">val</span> localView</span>: PhotoView = photoTask.getPhotoView()
+                ...
+                <span class="hljs-keyword">when</span> (inputMessage.what) {
+                    ...
+                    TASK_COMPLETE -&gt; localView.setImageBitmap(photoTask.image)
+                    ...
+                    <span class="hljs-keyword">else</span> -&gt; super.handleMessage(inputMessage)
+                }
+                ...
+            }
+            ...
+        }
+        ...
+    ...
+    }
+...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+</li>
+<li><pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">PhotoManager</span><span class="hljs-params">()</span> </span>{
+        ...
+            handler = <span class="hljs-keyword">new</span> Handler(Looper.getMainLooper()) {
+                <span class="hljs-meta">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">handleMessage</span><span class="hljs-params">(Message inputMessage)</span> </span>{
+                    <span class="hljs-comment">// Gets the task from the incoming Message object.</span>
+                    PhotoTask photoTask = (PhotoTask) inputMessage.obj;
+                    <span class="hljs-comment">// Gets the ImageView for this task</span>
+                    PhotoView localView = photoTask.getPhotoView();
+                    ...
+                    <span class="hljs-keyword">switch</span> (inputMessage.what) {
+                        ...
+                        <span class="hljs-comment">// The decoding is done</span>
+                        <span class="hljs-keyword">case</span> TASK_COMPLETE:
+                            <span class="hljs-comment">/*
+                             * Moves the Bitmap from the task
+                             * to the View
+                             */</span>
+                            localView.setImageBitmap(photoTask.getImage());
+                            <span class="hljs-keyword">break</span>;
+                        ...
+                        <span class="hljs-keyword">default</span>:
+                            <span class="hljs-comment">/*
+                             * Pass along other messages from the UI
+                             */</span>
+                            <span class="hljs-keyword">super</span>.handleMessage(inputMessage);
+                    }
+                    ...
+                }
+                ...
+            }
+            ...
+    }
+...
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x66F4;&#x591A;&#x4FE1;&#x606F;">&#x66F4;&#x591A;&#x4FE1;&#x606F;</h2>
+<p>&#x5173;&#x4E8E;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="&#x2026;/BestPractices/Performance/&#x8FDB;&#x7A0B;&#x548C;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x6982;&#x8FF0;.md">&#x8FDB;&#x7A0B;&#x548C;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x6982;&#x8FF0;</a>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="将操作发送到多个线程——（4）在线程池中的线程中运行代码.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 在线程池中运行代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"与UI线程进行通信","level":"1.5.3.5","depth":3,"next":{"title":"最佳实践","level":"1.6","depth":1,"ref":"","articles":[{"title":"Performance","level":"1.6.1","depth":2,"ref":"","articles":[{"title":"进程和线程——概述","level":"1.6.1.1","depth":3,"path":"BestPractices/Performance/进程和线程——概述.md","ref":"./BestPractices/Performance/进程和线程——概述.md","articles":[]}]}]},"previous":{"title":"在线程池中运行代码","level":"1.5.3.4","depth":3,"path":"BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.md","ref":"./BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.md","mtime":"2019-06-06T13:16:58.721Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T04:32:08.722Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1733 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Activity的生命周期 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Activity的状态变化.html" />
+    
+    
+    <link rel="prev" href="Activity介绍.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Activity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Activity介绍.html">
+            
+                <a href="Activity介绍.html">
+            
+                    
+                    Activity介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="Activity的生命周期.html">
+            
+                <a href="Activity的生命周期.html">
+            
+                    
+                    Activity的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Activity的状态变化.html">
+            
+                <a href="Activity的状态变化.html">
+            
+                    
+                    Activity的状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="测试你的Activity.html">
+            
+                <a href="测试你的Activity.html">
+            
+                    
+                    测试你的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="理解Task和回退栈.html">
+            
+                <a href="理解Task和回退栈.html">
+            
+                    
+                    理解Task和回退栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="进程和应用程序的生命周期.html">
+            
+                <a href="进程和应用程序的生命周期.html">
+            
+                    
+                    进程和应用程序的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Parcelable和Bundle.html">
+            
+                <a href="Parcelable和Bundle.html">
+            
+                    
+                    Parcelable和Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    Fragment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="Fragment/Fragment概述.html">
+            
+                <a href="Fragment/Fragment概述.html">
+            
+                    
+                    Fragment(概述)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="Fragment/创建Fragment.html">
+            
+                <a href="Fragment/创建Fragment.html">
+            
+                    
+                    创建Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="Fragment/测试Fragment.html">
+            
+                <a href="Fragment/测试Fragment.html">
+            
+                    
+                    测试Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="Fragment/构建灵活的UI.html">
+            
+                <a href="Fragment/构建灵活的UI.html">
+            
+                    
+                    构建灵活的UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.5" data-path="Fragment/与其他Fragment通信.html">
+            
+                <a href="Fragment/与其他Fragment通信.html">
+            
+                    
+                    与其他Fragment通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    与其他应用交互
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                    
+                    将用户导航到另一个APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                    
+                    接收另一个Activity返回的结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                    
+                    允许其他应用启动您的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" >
+            
+                <span>
+            
+                    
+                    处理Android APP Link
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="Handling-Android-App-Links/概述.html">
+            
+                <a href="Handling-Android-App-Links/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                <a href="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                    
+                    创建指向您内容的DeepLinks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="Handling-Android-App-Links/验证App-Links.html">
+            
+                <a href="Handling-Android-App-Links/验证App-Links.html">
+            
+                    
+                    验证App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                <a href="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                    
+                    为Instant APPs创建App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="加载器.html">
+            
+                <a href="加载器.html">
+            
+                    
+                    加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="最近任务界面.html">
+            
+                <a href="最近任务界面.html">
+            
+                    
+                    最近任务界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="多窗口支持(分屏">
+            
+                <span>
+            
+                    
+                    多窗口支持-分屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" >
+            
+                <span>
+            
+                    
+                    App快捷启动方式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.14.1" data-path="AppShortCuts/概述.html">
+            
+                <a href="AppShortCuts/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.2" data-path="AppShortCuts/创建快捷方式.html">
+            
+                <a href="AppShortCuts/创建快捷方式.html">
+            
+                    
+                    创建快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.3" data-path="AppShortCuts/管理快捷方式.html">
+            
+                <a href="AppShortCuts/管理快捷方式.html">
+            
+                    
+                    管理快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.4" data-path="AppShortCuts/快捷方式的最佳做法.html">
+            
+                <a href="AppShortCuts/快捷方式的最佳做法.html">
+            
+                    
+                    快捷方式的最佳做法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" >
+            
+                <span>
+            
+                    
+                    应用小部件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.15.1" data-path="AppWidgets/App小部件概述.html">
+            
+                <a href="AppWidgets/App小部件概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.2" data-path="AppWidgets/构建应用程序小部件.html">
+            
+                <a href="AppWidgets/构建应用程序小部件.html">
+            
+                    
+                    构建应用程序小部件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.3" data-path="AppWidgets/构建应用程序小部件主机(Host">
+            
+                <span>
+            
+                    
+                    构建应用程序小部件主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../应用程序架构指南.html">
+            
+                <a href="../应用程序架构指南.html">
+            
+                    
+                    应用程序架构指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    架构组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                    
+                    给你的项目中添加架构组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                    
+                    布局和绑定表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                    
+                    使用可观察的数据对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                    
+                    生成的绑定类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    Intent和Intent过滤器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                    
+                    通用Intent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    用户界面
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../UserInterface/使用RecyclerView创建列表.html">
+            
+                <a href="../UserInterface/使用RecyclerView创建列表.html">
+            
+                    
+                    使用RecyclerView创建列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    后台任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Service
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../BackGroundTasks/Service/Service——概述.html">
+            
+                <a href="../BackGroundTasks/Service/Service——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                <a href="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                    
+                    创建后台Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                <a href="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                    
+                    向后台Service发送工作请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                <a href="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                    
+                    绑定Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                <a href="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                    
+                    AIDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../BackGroundTasks/BroadCast.html">
+            
+                <a href="../BackGroundTasks/BroadCast.html">
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    将操作分配到多个线程执行
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                    
+                    指定线程中运行的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（3）为多线程创建管理者(manager">
+            
+                <span>
+            
+                    
+                    为多线程创建管理者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                    
+                    在线程池中运行代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                    
+                    与UI线程进行通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    最佳实践
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Performance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../BestPractices/Performance/进程和线程——概述.html">
+            
+                <a href="../BestPractices/Performance/进程和线程——概述.html">
+            
+                    
+                    进程和线程——概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Activity的生命周期</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x7406;&#x89E3;activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF09;">Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x7406;&#x89E3;Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF09;</h1>
+<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle" target="_blank">&#x539F;&#x6587;&#xFF08;&#x82F1;&#x6587;&#xFF09;&#x5730;&#x5740;</a></p>
+<p>&#x5F53;&#x7528;&#x6237;&#x5BFC;&#x822A;&#xFF08;navigates through&#xFF09;&#xFF0C;&#x9000;&#x51FA;&#x548C;&#x8FD4;&#x56DE;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x65F6;&#xFF0C;&#x60A8;&#x5E94;&#x7528;&#x4E2D;&#x7684;Activity&#x5B9E;&#x4F8B;&#x4F1A;&#x5728;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x72B6;&#x6001;&#x4E2D;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002; Activity&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E9B;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x5141;&#x8BB8;Activity&#x77E5;&#x9053;&#x72B6;&#x6001;&#x5DF2;&#x88AB;&#x66F4;&#x6539;&#xFF1A;&#x7CFB;&#x7EDF;&#x6B63;&#x5728;&#x521B;&#x5EFA;&#xFF08;creating&#xFF09;&#xFF0C;&#x505C;&#x6B62;&#xFF08;stopping&#xFF09;&#x6216;&#x6062;&#x590D;&#xFF08;resuming&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x7834;&#x574F;&#xFF08;destroying&#xFF09;Activity&#x6240;&#x5728;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x548C;&#x91CD;&#x65B0;&#x8FDB;&#x5165;Activity&#x65F6;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x6B63;&#x5728;&#x6784;&#x5EFA;&#x6D41;&#x5F0F;&#x89C6;&#x9891;&#x64AD;&#x653E;&#x5668;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x7528;&#x6237;&#x5207;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x65F6;&#x6682;&#x505C;&#x89C6;&#x9891;&#x5E76;&#x7EC8;&#x6B62;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x3002;&#x5F53;&#x7528;&#x6237;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x5230;&#x7F51;&#x7EDC;&#x5E76;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4ECE;&#x540C;&#x4E00;&#x4F4D;&#x7F6E;&#x89C2;&#x770B;&#x89C6;&#x9891;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6BCF;&#x4E2A;&#x56DE;&#x8C03;&#x5141;&#x8BB8;&#x60A8;&#x6267;&#x884C;&#x9002;&#x5408;&#x4E8E;&#x7ED9;&#x5B9A;&#x72B6;&#x6001;&#x66F4;&#x6539;&#x7684;&#x7279;&#x5B9A;&#x5DE5;&#x4F5C;&#x3002;&#x5728;&#x6B63;&#x786E;&#x7684;&#x65F6;&#x95F4;&#x505A;&#x6B63;&#x786E;&#x7684;&#x5DE5;&#x4F5C;&#x5E76;&#x6B63;&#x786E;&#x5904;&#x7406;&#x8FC7;&#x6E21;&#x53EF;&#x4EE5;&#x4F7F;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x548C;&#x9AD8;&#x6548;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x826F;&#x597D;&#x5730;&#x5B9E;&#x73B0;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x56DE;&#x8C03;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x786E;&#x4FDD;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x907F;&#x514D;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x65F6;&#x63A5;&#x5230;&#x7535;&#x8BDD;&#x6216;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x5BFC;&#x81F4;&#x672C;&#x5E94;&#x7528;&#x5D29;&#x6E83;&#x3002;</li>
+<li>&#x5F53;&#x7528;&#x6237;&#x4E0D;&#x4E3B;&#x52A8;&#x4F7F;&#x7528;&#x5B83;&#x65F6;&#xFF0C;&#x6D88;&#x8017;&#x5B9D;&#x8D35;&#x7684;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x5E76;&#x7A0D;&#x540E;&#x8FD4;&#x56DE;&#x65F6;&#x4E22;&#x5931;&#x7528;&#x6237;&#x7684;&#x8FDB;&#x5EA6;&#x3002;</li>
+<li>&#x5F53;&#x5C4F;&#x5E55;&#x5728;&#x6A2A;&#x5411;&#x548C;&#x7EB5;&#x5411;&#x4E4B;&#x95F4;&#x65CB;&#x8F6C;&#x65F6;&#xFF0C;&#x5E94;&#x7528;&#x53D1;&#x751F;&#x5D29;&#x6E83;&#x6216;&#x4E22;&#x5931;&#x7528;&#x6237;&#x7684;&#x8FDB;&#x5EA6;&#x3002;</li>
+</ul>
+<p>&#x672C;&#x8282;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x4E86;Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;&#x9996;&#x5148;&#x63CF;&#x8FF0;&#x4E86;&#x751F;&#x547D;&#x5468;&#x671F;&#x8303;&#x4F8B;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x89E3;&#x91CA;&#x4E86;&#x6BCF;&#x4E2A;&#x56DE;&#x8C03;&#x5728;&#x6267;&#x884C;&#x65F6;&#x5185;&#x90E8;&#x53D1;&#x751F;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x4F60;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E2D;&#x5E94;&#x8BE5;&#x5B9E;&#x73B0;&#x7684;&#x903B;&#x8F91;&#x3002;&#x7136;&#x540E;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E86;Activity&#x72B6;&#x6001;&#x4E0E;&#x8FDB;&#x7A0B;&#x88AB;&#x7CFB;&#x7EDF;&#x6740;&#x6B7B;&#x7684;&#x6F0F;&#x6D1E;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x5B83;&#x8BA8;&#x8BBA;&#x4E86;&#x4E0E;Activity&#x4E0D;&#x540C;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x8F6C;&#x6362;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x5904;&#x7406;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x62EC;&#x6709;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x7684;&#x6307;&#x5BFC;&#xFF09;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank">Handling Lifecycles with Lifecycle-Aware Components</a> &#x548C; <a href="https://developer.android.com/topic/libraries/architecture/saving-states.html" target="_blank">Saving UI States</a>. &#x3002;&#x8981;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x4E0E;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x7EC4;&#x4EF6;&#x7ED3;&#x5408;&#x7684;Activity&#x6765;&#x6784;&#x5EFA;&#x5F3A;&#x5927;&#x7684;&#xFF0C;&#x751F;&#x4EA7;&#x8D28;&#x91CF;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/topic/libraries/architecture/guide.html" target="_blank">Guide to App Architecture.</a>&#x3002;</p>
+<h2 id="activity&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x6982;&#x5FF5;">Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x6982;&#x5FF5;</h2>
+<p>&#x4E3A;&#x4E86;&#x5728;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#xFF0C;Activity&#x63D0;&#x4F9B;&#x4E86;6&#x4E2A;&#x6838;&#x5FC3;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF1A;onCreate&#xFF08;&#xFF09;&#xFF0C;onStart&#xFF08;&#xFF09;&#xFF0C;onResume&#xFF08;&#xFF09;&#xFF0C;onPause&#xFF08;&#xFF09;&#xFF0C;onStop&#xFF08;&#xFF09;&#x548C;onDestroy&#xFF08;&#xFF09;&#x3002;&#x5F53;Activity&#x8FDB;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x56DE;&#x8C03;&#x5BF9;&#x5E94;&#x9636;&#x6BB5;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x76F4;&#x89C2;&#x7684;&#x753B;&#x51FA;&#x4E86;&#x5404;&#x4E2A;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#xFF1A;</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1pnxkgeq3j30e90ifjsc.jpg" alt="activity_lifecycle"></p>
+<p>&#x5F53;&#x7528;&#x6237;&#x5F00;&#x59CB;&#x79BB;&#x5F00;Activity&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x79FB;&#x9664;Activity&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x79CD;&#x62C6;&#x9664;&#x53EA;&#x662F;&#x90E8;&#x5206;&#x7684;&#xFF0C;Activity&#x4ECD;&#x7136;&#x9A7B;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF08;&#x4F8B;&#x5982;&#x5F53;&#x7528;&#x6237;&#x5207;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5230;&#x524D;&#x53F0;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x8FD4;&#x56DE;&#x8BE5;Activity&#xFF0C;&#x5219;Activity&#x5C06;&#x6062;&#x590D;&#x5230;&#x7528;&#x6237;&#x505C;&#x6B62;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x6740;&#x6B7B;&#x7ED9;&#x5B9A;&#x8FDB;&#x7A0B;&#x53CA;&#x5176;&#x4E2D;&#x7684;Activity&#x53D6;&#x51B3;&#x4E8E;&#x5F53;&#x65F6;Activity&#x7684;&#x72B6;&#x6001;&#x3002; <a href="https://developer.android.com/guide/components/activities/activity-lifecycle#asem" target="_blank">Activity state and ejection from memory</a> provides more information on the relationship between state and vulnerability to ejection.&#xFF08;&#x8FD9;&#x4E2A;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x7FFB;&#x8BD1;&#xFF1F;&#xFF09;</p>
+<p>&#x6839;&#x636E;Activity&#x7684;&#x4E0D;&#x540C;&#x7684;&#x590D;&#x6742;&#x7A0B;&#x5EA6;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x6240;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4E86;&#x89E3;&#x6BCF;&#x4E00;&#x4E2A;&#x6BC1;&#x6389;&#x65B9;&#x6CD5;&#x5E76;&#x638C;&#x63E1;&#x5176;&#x4F7F;&#x7528;&#x5BF9;&#x786E;&#x4FDD;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7B26;&#x5408;&#x7528;&#x6237;&#x671F;&#x671B;&#x7684;&#x884C;&#x4E3A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x672C;&#x6587;&#x6863;&#x7684;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0D;&#x540C;&#x72B6;&#x6001;&#x95F4;&#x8F6C;&#x6362;&#x5BF9;&#x5E94;&#x7684;&#x4E0D;&#x540C;&#x56DE;&#x8C03;&#x7684;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x3002;</p>
+<h2 id="&#x4E0D;&#x540C;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x56DE;&#x8C03;">&#x4E0D;&#x540C;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x56DE;&#x8C03;</h2>
+<p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x6709;&#x5173;&#x5728;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF08;&#x5982;&#x8C03;&#x7528;setContentView&#xFF08;&#xFF09;&#xFF09;&#x5C5E;&#x4E8E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x672C;&#x8EAB;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x7EC4;&#x4EF6;&#x64CD;&#x4F5C;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x653E;&#x5728;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x6B64;&#x76EE;&#x7684;&#xFF0C;&#x60A8;&#x5FC5;&#x987B;&#x4F7F;&#x4F9D;&#x8D56;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x53EF;&#x89C1;&#x3002;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank">Handling Lifecycles with Lifecycle-Aware Components</a>&#x4EE5;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x60A8;&#x7684;&#x4F9D;&#x8D56;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x53EF;&#x89C1;&#x6027;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x6BB5;&#x4E0D;&#x7406;&#x89E3;&#xFF0C;&#x539F;&#x6587;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>Some actions, such as calling <a href="https://developer.android.com/reference/android/app/Activity#setcontentview_12" target="_blank"><code>setContentView()</code></a>, belong in the activity lifecycle methods themselves. However, the code implementing the actions of a dependent component should be placed in the component itself. To achieve this, you must make the dependent component lifecycle-aware. See <a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank">Handling Lifecycles with Lifecycle-Aware Components</a> to learn how to make your dependent components lifecycle-aware.</p>
+<h3 id="oncreate&#xFF08;&#xFF09;">onCreate&#xFF08;&#xFF09;</h3>
+<p>&#x60A8;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x6B64;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x7CFB;&#x7EDF;&#x9996;&#x6B21;&#x521B;&#x5EFA;Activity&#x65F6;&#x89E6;&#x53D1;&#x3002;&#x5728;Activity&#x521B;&#x5EFA;&#x65F6;&#xFF0C;Activity&#x8FDB;&#x5165;&#x521B;&#x5EFA;&#x72B6;&#x6001;&#xFF08;Created state&#xFF09;&#x3002;&#x5728;onCreate&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x6267;&#x884C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x57FA;&#x672C;&#x7684;&#x542F;&#x52A8;&#x903B;&#x8F91;&#xFF0C;&#x8BE5;&#x903B;&#x8F91;&#x5728;Activity&#x7684;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x53EA;&#x5E94;&#x53D1;&#x751F;&#x4E00;&#x6B21;&#x3002;&#x4F8B;&#x5982;&#xFF0C;onCreate&#xFF08;&#xFF09;&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x5230;&#x5217;&#x8868;&#xFF08;list&#xFF09;&#xFF0C;&#x5C06;Activity&#x4E0E;ViewModel&#x76F8;&#x5173;&#x8054;&#xFF0C;&#x5E76;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E9B;&#x7C7B;&#x7EA7;&#x53D8;&#x91CF;&#xFF08;class-scope variables&#xFF09;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x53C2;&#x6570;savedInstanceState&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x53C2;&#x6570;&#x662F;Activity&#x5148;&#x524D;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x7684;Bundle&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;Activity&#x4EE5;&#x524D;&#x4ECE;&#x672A;&#x5B58;&#x5728;&#x8FC7;&#xFF0C;&#x5219;Bundle&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x4E3A;null&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x6709;&#x4E00;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#xFF08;lifecycle-aware component &#xFF09;&#x4E0E;&#x60A8;&#x7684;Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x8054;&#xFF0C;&#x5B83;&#x5C06;&#x6536;&#x5230;ON_CREATE&#x4E8B;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x8C03;&#x7528;&#x4F7F;&#x7528;@OnLifecycleEvent&#x6CE8;&#x91CA;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x60A8;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x521B;&#x5EFA;&#x72B6;&#x6001;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;onCreate&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x793A;&#x4F8B;&#x663E;&#x793A;&#x4E86;Activity&#x7684;&#x57FA;&#x672C;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F8B;&#x5982;&#x58F0;&#x660E;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF08;&#x5728;XML&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#xFF09;&#xFF0C;&#x5B9A;&#x4E49;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x67D0;&#x4E9B;UI&#x3002;&#x5728;&#x6B64;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x8D44;&#x6E90;ID R.layout.main_activity&#x4F20;&#x9012;&#x7ED9;setContentView&#xFF08;&#xFF09;&#x6765;&#x6307;&#x5B9A;XML&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><p>Kotlin</p>
+<pre><code class="lang-kotlin">lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> textView</span>: TextView
+
+<span class="hljs-comment">// some transient state for the activity instance</span>
+<span class="hljs-variable"><span class="hljs-keyword">var</span> gameState</span>: String? = <span class="hljs-literal">null</span>
+
+<span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+    <span class="hljs-comment">// call the super class onCreate to complete the creation of activity like</span>
+    <span class="hljs-comment">// the view hierarchy</span>
+    super.onCreate(savedInstanceState)
+
+    <span class="hljs-comment">// recovering the instance state</span>
+    gameState = savedInstanceState?.getString(GAME_STATE_KEY)
+
+    <span class="hljs-comment">// set the user interface layout for this activity</span>
+    <span class="hljs-comment">// the layout file is defined in the project res/layout/main_activity.xml file</span>
+    setContentView(R.layout.activity_main)
+
+    <span class="hljs-comment">// initialize member TextView so we can manipulate it later</span>
+    textView = findViewById(R.id.text_view)
+}
+
+<span class="hljs-comment">// This callback is called only when there is a saved instance that is previously saved by using</span>
+<span class="hljs-comment">// onSaveInstanceState(). We restore some state in onCreate(), while we can optionally restore</span>
+<span class="hljs-comment">// other state here, possibly usable after onStart() has completed.</span>
+<span class="hljs-comment">// The savedInstanceState Bundle is same as the one used in onCreate().</span>
+<span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onRestoreInstanceState</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+    textView.text = savedInstanceState?.getString(TEXT_VIEW_KEY)
+}
+
+<span class="hljs-comment">// invoked when the activity may be temporarily destroyed, save the instance state here</span>
+<span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+    outState?.run {
+        putString(GAME_STATE_KEY, gameState)
+        putString(TEXT_VIEW_KEY, textView.text.toString())
+    }
+    <span class="hljs-comment">// call superclass to save any view hierarchy</span>
+    super.onSaveInstanceState(outState)
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>Java</p>
+<pre><code class="lang-java">TextView textView;
+
+<span class="hljs-comment">// some transient state for the activity instance</span>
+String gameState;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-comment">// call the super class onCreate to complete the creation of activity like</span>
+    <span class="hljs-comment">// the view hierarchy</span>
+    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+    <span class="hljs-comment">// recovering the instance state</span>
+    <span class="hljs-keyword">if</span> (savedInstanceState != <span class="hljs-keyword">null</span>) {
+        gameState = savedInstanceState.getString(GAME_STATE_KEY);
+    }
+
+    <span class="hljs-comment">// set the user interface layout for this activity</span>
+    <span class="hljs-comment">// the layout file is defined in the project res/layout/main_activity.xml file</span>
+    setContentView(R.layout.main_activity);
+
+    <span class="hljs-comment">// initialize member TextView so we can manipulate it later</span>
+    textView = (TextView) findViewById(R.id.text_view);
+}
+
+<span class="hljs-comment">// This callback is called only when there is a saved instance that is previously saved by using</span>
+<span class="hljs-comment">// onSaveInstanceState(). We restore some state in onCreate(), while we can optionally restore</span>
+<span class="hljs-comment">// other state here, possibly usable after onStart() has completed.</span>
+<span class="hljs-comment">// The savedInstanceState Bundle is same as the one used in onCreate().</span>
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRestoreInstanceState</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    textView.setText(savedInstanceState.getString(TEXT_VIEW_KEY));
+}
+
+<span class="hljs-comment">// invoked when the activity may be temporarily destroyed, save the instance state here</span>
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(Bundle outState)</span> </span>{
+    outState.putString(GAME_STATE_KEY, gameState);
+    outState.putString(TEXT_VIEW_KEY, textView.getText());
+
+    <span class="hljs-comment">// call superclass to save any view hierarchy</span>
+    <span class="hljs-keyword">super</span>.onSaveInstanceState(outState);
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x76F8;&#x6BD4;&#x4E8E;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;xml&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x89C6;&#x56FE;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;&#x5728;Activity&#x4E2D;&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x65B0;&#x7684;View&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x5C06;&#x8BE5;View&#x5BF9;&#x8C61;&#x63D2;&#x5165;&#x5230;ViewGroup&#x4E2D;&#x6765;&#x6784;&#x5EFA;&#x89C6;&#x56FE;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x5C06;&#x6839;ViewGroup&#x4F20;&#x9012;&#x7ED9;setContentView&#xFF08;&#xFF09;&#x6765;&#x4F7F;&#x7528;&#x8BE5;&#x5E03;&#x5C40;&#x3002;&#x6709;&#x5173;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x754C;&#x9762;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/guide/topics/ui/index.html" target="_blank">User Interface</a> &#x6587;&#x6863;&#x3002;</p>
+<p> onCreate&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x6267;&#x884C;&#x540E;Activity&#x5C31;&#x4E0D;&#x662F;Created&#x72B6;&#x6001;&#x4E86;&#xFF0C;Activity&#x4F1A;&#x8FDB;&#x5165;Started&#x72B6;&#x6001;&#xFF0C;&#x7CFB;&#x7EDF;&#x5FEB;&#x901F;&#x8FDE;&#x7EED;&#x8C03;&#x7528;onStart&#xFF08;&#xFF09;&#x548C;onResume&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002;&#x4E0B;&#x4E00;&#x8282;&#x5C06;&#x4ECB;&#x7ECD;onStart&#xFF08;&#xFF09;&#x3002;</p>
+<h3 id="onstart&#xFF08;&#xFF09;">onStart&#xFF08;&#xFF09;</h3>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;Started&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x8C03;&#x7528;&#x6B64;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002; onStart&#xFF08;&#xFF09;&#x4F7F;Activity&#x5BF9;&#x7528;&#x6237;&#x53EF;&#x89C1;&#xFF0C;&#x540C;&#x65F6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E3A;Activity&#x8FDB;&#x5165;&#x524D;&#x53F0;&#x53CA;Activity&#x53D8;&#x6210;&#x53EF;&#x4EA4;&#x4E92;&#x7684;&#x505A;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x7EF4;&#x62A4;UI&#x7684;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;&#x542F;&#x52A8;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x4EFB;&#x4F55;&#x4E0E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#xFF08;lifecycle-aware component&#xFF09;&#x90FD;&#x5C06;&#x6536;&#x5230;ON_START&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>onStart&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x975E;&#x5E38;&#x5FEB;&#x901F;&#x5730;&#x5B8C;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x4E0E;Created&#x72B6;&#x6001;&#x4E00;&#x6837;&#xFF0C;Activity&#x4E0D;&#x4F1A;&#x4FDD;&#x6301;&#x9A7B;&#x7559;&#x5728;Started&#x72B6;&#x6001;&#x3002;&#x4E00;&#x65E6;&#x6B64;&#x56DE;&#x8C03;&#x7ED3;&#x675F;&#xFF0C;Activity&#x5C31;&#x8FDB;&#x5165;Resumed&#x72B6;&#x6001;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x8C03;&#x7528;onResume&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="onresume&#xFF08;&#xFF09;">onResume&#xFF08;&#xFF09;</h3>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;Resumed&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x5B83;&#x8FDB;&#x5165;&#x524D;&#x53F0;&#xFF0C;&#x7136;&#x540E;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;onResume&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x72B6;&#x6001;&#x3002;&#x8BE5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4FDD;&#x6301;&#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x76F4;&#x5230;&#x67D0;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x4EF6;&#x4F7F;&#x5F53;&#x524D;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x4E8B;&#x4EF6;&#x53EF;&#x80FD;&#x662F;&#x63A5;&#x6536;&#x7535;&#x8BDD;&#xFF0C;&#x7528;&#x6237;&#x5BFC;&#x822A;&#x5230;&#x53E6;&#x4E00;&#x4E2A;Activity&#xFF0C;&#x6216;&#x8005;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x5173;&#x95ED;&#x3002;</p>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;&#x6062;&#x590D;&#x72B6;&#x6001;&#xFF08;Resume state&#xFF09;&#x65F6;&#xFF0C;&#x4EFB;&#x4F55;&#x4E0E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x90FD;&#x5C06;&#x6536;&#x5230;ON_RESUME&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x4EFB;&#x4F55;&#x9700;&#x8981;&#x5728;&#x7EC4;&#x4EF6;&#x53EF;&#x89C1;&#x4E14;&#x5728;&#x524D;&#x53F0;&#x8FD0;&#x884C;&#x65F6;&#x8FD0;&#x884C;&#x7684;&#x529F;&#x80FD;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F8B;&#x5982;&#x542F;&#x52A8;&#x6444;&#x50CF;&#x5934;&#x9884;&#x89C8;&#x3002;</p>
+<p>&#x5F53;&#x53D1;&#x751F;&#x4E2D;&#x65AD;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;Activity&#x8FDB;&#x5165;Paused&#x72B6;&#x6001;&#xFF0C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;onPause&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x3002;</p>
+<p>&#x5982;&#x679C;Activity&#x4ECE;Paused&#x72B6;&#x6001;&#x8FD4;&#x56DE;Resumed&#x72B6;&#x6001;&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x518D;&#x6B21;&#x8C03;&#x7528;onResume&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5B9E;&#x73B0;onResume&#xFF08;&#xFF09;&#x6765;&#x521D;&#x59CB;&#x5316;&#x5728;onPause&#xFF08;&#xFF09;&#x671F;&#x95F4;&#x91CA;&#x653E;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x6BCF;&#x6B21;Activity&#x8FDB;&#x5165;Resumed&#x72B6;&#x6001;&#x65F6;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x7684;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5728;&#x7EC4;&#x4EF6;&#x6536;&#x5230;ON_RESUME&#x4E8B;&#x4EF6;&#x65F6;&#x8BBF;&#x95EE;&#x6444;&#x50CF;&#x5934;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><p>Kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CameraComponent</span> : <span class="hljs-type">LifecycleObserver {</span></span>
+
+    ...
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">initializeCamera</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">if</span> (camera == <span class="hljs-literal">null</span>) {
+            getCamera()
+        }
+    }
+
+    ...
+}
+</code></pre>
+</li>
+<li><p>Java</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CameraComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LifecycleObserver</span> </span>{
+
+    ...
+
+    <span class="hljs-meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_RESUME)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initializeCamera</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (camera == <span class="hljs-keyword">null</span>) {
+            getCamera();
+        }
+    }
+
+    ...
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x4E00;&#x65E6;LifecycleObserver&#x6536;&#x5230;ON_RESUME&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x521D;&#x59CB;&#x5316;&#x76F8;&#x673A;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#xFF08;multi-window mode&#xFF09;&#x4E0B;&#xFF0C;&#x5373;&#x4F7F;Activity&#x5904;&#x4E8E;&#x6682;&#x505C;&#x72B6;&#x6001;&#xFF0C;&#x60A8;&#x7684;Activity&#x4E5F;&#x53EF;&#x80FD;&#x5B8C;&#x5168;&#x53EF;&#x89C1;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5904;&#x4E8E;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x5E76;&#x70B9;&#x51FB;&#x4E0D;&#x5305;&#x542B;&#x60A8;&#x7684;Activity&#x7684;&#x5176;&#x4ED6;&#x7A97;&#x53E3;&#x65F6;&#xFF0C;&#x60A8;&#x7684;Activity&#x5C06;&#x79FB;&#x81F3;&#x6682;&#x505C;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x4EC5;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;Resumed&#x72B6;&#x6001;&#xFF08;&#x5728;&#x524D;&#x53F0;&#x53EF;&#x89C1;&#x4E14;&#x62E5;&#x6709;&#x7126;&#x70B9;&#xFF09;&#x65F6;&#x4F7F;&#x60A8;&#x7684;&#x76F8;&#x673A;&#x751F;&#x6548;&#xFF0C;&#x5219;&#x5728;&#x4E0A;&#x9762;&#x6F14;&#x793A;&#x7684;ON_RESUME&#x4E8B;&#x4EF6;&#x540E;&#x521D;&#x59CB;&#x5316;&#x76F8;&#x673A;&#x3002;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x5728;Activity&#x6682;&#x505C;&#xFF08;Paused&#x72B6;&#x6001;&#xFF09;&#x4F46;&#x662F;&#x53EF;&#x89C1;&#x65F6;&#xFF08;&#x4F8B;&#x5982;&#x5728;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x4E0B;&#xFF09;&#x4FDD;&#x6301;&#x76F8;&#x673A;&#x5904;&#x4E8E;Activity&#x72B6;&#x6001;&#xFF0C;&#x5219;&#x5E94;&#x5728;ON_START&#x4E8B;&#x4EF6;&#x540E;&#x521D;&#x59CB;&#x5316;&#x76F8;&#x673A;&#x3002;&#x4F46;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728;Activity&#x6682;&#x505C;&#x65F6;&#x8BA9;&#x76F8;&#x673A;&#x5904;&#x4E8E;&#x751F;&#x6548;&#x72B6;&#x6001;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x4E0B;&#x62D2;&#x7EDD;&#x53E6;&#x4E00;&#x4E2A;&#x5DF2;&#x751F;&#x6548;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF08;Resumed&#x72B6;&#x6001;&#xFF09;&#x5BF9;&#x76F8;&#x673A;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728;Activity&#x6682;&#x505C;&#xFF08;Paused&#xFF09;&#x65F6;&#x4FDD;&#x6301;&#x76F8;&#x673A;&#x5904;&#x4E8E;&#x751F;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x53EF;&#x80FD;&#x4F1A;&#x964D;&#x4F4E;&#x6574;&#x4F53;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;&#x4ED4;&#x7EC6;&#x8003;&#x8651;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x66F4;&#x9002;&#x5408;&#x5728;&#x591A;&#x7A97;&#x53E3;&#x73AF;&#x5883;&#x4E2D;&#x63A7;&#x5236;&#x5171;&#x4EAB;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x3002;&#x8981;&#x4E86;&#x89E3;&#x6709;&#x5173;&#x652F;&#x6301;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/guide/topics/ui/multi-window.html" target="_blank">Multi-Window Support</a>.</p>
+<p>&#x65E0;&#x8BBA;&#x60A8;&#x9009;&#x62E9;&#x5728;&#x54EA;&#x4E2A;&#x6784;&#x5EFA;&#x4E8B;&#x4EF6;&#x4E2D;&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E8B;&#x4EF6;&#x6765;&#x91CA;&#x653E;&#x8D44;&#x6E90;&#x3002;&#x5982;&#x679C;&#x5728;ON_START&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x521D;&#x59CB;&#x5316;&#x67D0;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x5219;&#x5728;ON_STOP&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x91CA;&#x653E;&#x6216;&#x7EC8;&#x6B62;&#x5B83;&#x3002;&#x5982;&#x679C;&#x5728;ON_RESUME&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5219;&#x5728;ON_PAUSE&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x91CA;&#x653E;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x5C06;&#x76F8;&#x673A;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801;&#x653E;&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x6B64;&#x4EE3;&#x7801;&#x76F4;&#x63A5;&#x653E;&#x5165;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;onStart&#xFF08;&#xFF09;&#x548C;onStop&#xFF08;&#xFF09;&#xFF0C;&#x4F46;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x6837;&#x505A;&#x3002;&#x5C06;&#x6B64;&#x903B;&#x8F91;&#x6DFB;&#x52A0;&#x5230;&#x72EC;&#x7ACB;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x8DE8;&#x591A;&#x4E2A;Activity&#x91CD;&#x7528;&#x8BE5;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x91CD;&#x590D;&#x4EE3;&#x7801;&#x3002;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank">Handling Lifecycles with Lifecycle-Aware Components</a> &#x4EE5;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h3 id="onpause&#xFF08;&#xFF09;">onPause&#xFF08;&#xFF09;</h3>
+<p>&#x7CFB;&#x7EDF;&#x5C06;&#x6B64;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x60A8;&#x7684;Activity&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x5FD7;&#xFF08;&#x5C3D;&#x7BA1;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x610F;&#x5473;&#x7740;Activity&#x6B63;&#x5728;&#x88AB;&#x9500;&#x6BC1;&#xFF09;&#xFF0C;&#x5B83;&#x8868;&#x793A;Activity&#x4E0D;&#x518D;&#x5728;&#x524D;&#x53F0;&#xFF08;&#x5C3D;&#x7BA1;&#x5982;&#x679C;&#x7528;&#x6237;&#x5904;&#x4E8E;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x53EF;&#x89C1;&#xFF09;&#x3002;</p>
+<p>&#x4F7F;&#x7528;onPause&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x6682;&#x505C;&#x6216;&#x8C03;&#x6574;Activity&#x5904;&#x4E8E;Paused&#x72B6;&#x6001;&#x65F6;&#x4E0D;&#x5E94;&#x7EE7;&#x7EED;&#xFF08;&#x6216;&#x5E94;&#x9002;&#x5EA6;&#x7EE7;&#x7EED;&#xFF09;&#x5E76;&#x4E14;&#x60A8;&#x5E0C;&#x671B;&#x5F88;&#x5FEB;&#x6062;&#x590D;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#xFF08;&#x8FD9;&#x53E5;&#x611F;&#x89C9;&#x7FFB;&#x8BD1;&#x7684;&#x4E0D;&#x592A;&#x597D;&#xFF0C;&#x539F;&#x6587;&#xFF1A;Use the <a href="https://developer.android.com/reference/android/app/Activity.html#onpause" target="_blank"><code>onPause()</code></a> method to pause or adjust operations that should not continue (or should continue in moderation) while the <a href="https://developer.android.com/reference/android/app/Activity.html" target="_blank"><code>Activity</code></a> is in the Paused state, and that you expect to resume shortly. &#xFF09;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x67D0;&#x4E9B;&#x4E8B;&#x4EF6;&#x4F1A;&#x4E2D;&#x65AD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x5982;onResume&#xFF08;&#xFF09;&#x90E8;&#x5206;&#x6240;&#x8FF0;&#x3002;&#x8FD9;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+<li>&#x5728;Android 7.0&#xFF08;API&#x7EA7;&#x522B;24&#xFF09;&#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4EE5;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x3002;&#x7531;&#x4E8E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF08;&#x7A97;&#x53E3;&#xFF09;&#x53EF;&#x4EE5;&#x5360;&#x6709;&#x7126;&#x70B9;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6682;&#x505C;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x5C06;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x534A;&#x900F;&#x660E;Activity&#xFF08;&#x5982;&#x5BF9;&#x8BDD;&#x6846;&#xFF09;&#x3002;&#x53EA;&#x8981;Activity&#x4ECD;&#x7136;&#x90E8;&#x5206;&#x53EF;&#x89C1;&#x4F46;&#x4E0D;&#x662F;&#x7126;&#x70B9;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x6682;&#x505C;&#x3002;</li>
+</ul>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;&#x6682;&#x505C;&#xFF08;paused&#xFF09;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x4EFB;&#x4F55;&#x4E0E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x90FD;&#x5C06;&#x6536;&#x5230;ON_PAUSE&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x505C;&#x6B62;Activity&#x4E0D;&#x5728;&#x524D;&#x53F0;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x529F;&#x80FD;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F8B;&#x5982;&#x505C;&#x6B62;&#x76F8;&#x673A;&#x9884;&#x89C8;&#x3002;</p>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;onPause&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x91CA;&#x653E;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x5904;&#x7406;&#x4F20;&#x611F;&#x5668;&#xFF08;&#x5982;GPS&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x60A8;&#x7684;Activity&#x6682;&#x505C;&#x4E14;&#x7528;&#x6237;&#x4E0D;&#x9700;&#x8981;&#x65F6;&#x53EF;&#x80FD;&#x5F71;&#x54CD;&#x7535;&#x6C60;&#x5BFF;&#x547D;&#x7684;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x4E0A;&#x9762;onResume&#xFF08;&#xFF09;&#x90E8;&#x5206;&#x6240;&#x8FF0;&#xFF0C;&#x5982;&#x679C;&#x5904;&#x4E8E;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#xFF0C;PausedActivity&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x53EF;&#x89C1;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x8003;&#x8651;&#x4F7F;&#x7528;onStop&#xFF08;&#xFF09;&#x800C;&#x4E0D;&#x662F;onPause&#xFF08;&#xFF09;&#x6765;&#x5B8C;&#x5168;&#x91CA;&#x653E;&#x6216;&#x8C03;&#x6574;&#x4E0E;UI&#x76F8;&#x5173;&#x7684;&#x8D44;&#x6E90;&#x548C;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x652F;&#x6301;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5BF9;On_PAUSE&#x4E8B;&#x4EF6;&#x505A;&#x51FA;&#x53CD;&#x5E94;&#x7684;LifecycleObserver&#x793A;&#x4F8B;&#x662F;&#x4E0A;&#x9762;ON_RESUME&#x4E8B;&#x4EF6;&#x793A;&#x4F8B;&#x7684;&#x5BF9;&#x5E94;&#x793A;&#x4F8B;&#xFF0C;&#x91CA;&#x653E;&#x4E86;&#x5728;&#x6536;&#x5230;ON_RESUME&#x4E8B;&#x4EF6;&#x540E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x6444;&#x50CF;&#x5934;&#xFF1A;</p>
+<ul>
+<li><p>Kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CameraComponent</span> : <span class="hljs-type">LifecycleObserver {</span></span>
+
+    ...
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">releaseCamera</span><span class="hljs-params">()</span> {</span>
+        camera?.release()
+        camera = <span class="hljs-literal">null</span>
+    }
+
+    ...
+}
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaCameraComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LifecycleObserver</span> </span>{
+
+    ...
+
+    <span class="hljs-meta">@OnLifecycleEvent</span>(Lifecycle.Event.ON_PAUSE)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">releaseCamera</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (camera != <span class="hljs-keyword">null</span>) {
+            camera.release();
+            camera = <span class="hljs-keyword">null</span>;
+        }
+    }
+
+    ...
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x5728;LifecycleObserver&#x6536;&#x5230;ON_PAUSE&#x4E8B;&#x4EF6;&#x91CA;&#x653E;&#x76F8;&#x673A;&#x8D44;&#x6E90;&#x3002;&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/topic/libraries/architecture/lifecycle.html" target="_blank">Handling Lifecycles with Lifecycle-Aware Components</a>&#x4EE5;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>onPause&#xFF08;&#xFF09;&#x6267;&#x884C;&#x975E;&#x5E38;&#x7B80;&#x77ED;&#xFF0C;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x65F6;&#x95F4;&#x6765;&#x6267;&#x884C;&#x4FDD;&#x5B58;&#x64CD;&#x4F5C;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x60A8;&#x4E0D;&#x5E94;&#x4F7F;&#x7528;onPause&#xFF08;&#xFF09;&#x6765;&#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x7528;&#x6237;&#x6570;&#x636E;&#xFF0C;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x6216;&#x6267;&#x884C;&#x6570;&#x636E;&#x5E93;&#x4E8B;&#x52A1;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x4E4B;&#x524D;&#xFF0C;&#x6B64;&#x7C7B;&#x5DE5;&#x4F5C;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x3002;&#x60A8;&#x5E94;&#x8BE5;&#x5728;onStop&#xFF08;&#xFF09;&#x4E2D;&#x6267;&#x884C;&#x91CD;&#x8D1F;&#x8F7D;&#x7684;&#x5173;&#x95ED;&#x64CD;&#x4F5C;&#x3002;&#x6709;&#x5173;&#x5728;onStop&#xFF08;&#xFF09;&#x671F;&#x95F4;&#x6267;&#x884C;&#x7684;&#x5408;&#x9002;&#x64CD;&#x4F5C;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;onStop&#xFF08;&#xFF09;&#x3002;&#x6709;&#x5173;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/guide/components/activities/activity-lifecycle#saras" target="_blank">Saving and restoring activity state</a>.</p>
+<p>&#x5B8C;&#x6210;onPause&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x610F;&#x5473;&#x7740;Activity&#x79BB;&#x5F00;Paused&#x72B6;&#x6001;&#x3002;&#x76F8;&#x53CD;&#xFF0C;Activity&#x4FDD;&#x6301;&#x5728;&#x6B64;&#x72B6;&#x6001;&#xFF0C;&#x76F4;&#x5230;Activity&#x6062;&#x590D;&#x6216;&#x53D8;&#x5F97;&#x5BF9;&#x7528;&#x6237;&#x5B8C;&#x5168;&#x4E0D;&#x53EF;&#x89C1;&#x3002;&#x5982;&#x679C;Activity&#x6062;&#x590D;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x518D;&#x6B21;&#x8C03;&#x7528;onResume&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x3002;&#x5982;&#x679C;Activity&#x4ECE;Paused&#x72B6;&#x6001;&#x8FD4;&#x56DE;&#x5230;Resumed&#x72B6;&#x6001;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5C06;Activity&#x5B9E;&#x4F8B;&#x9A7B;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;onResume&#xFF08;&#xFF09;&#x65F6;&#x8C03;&#x7528;&#x8BE5;&#x5B9E;&#x4F8B;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x65E0;&#x9700;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;&#x5728;&#x4EFB;&#x4F55;&#x5BFC;&#x81F4;Resumed&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x671F;&#x95F4;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x5982;&#x679C;Activity&#x53D8;&#x5F97;&#x5B8C;&#x5168;&#x4E0D;&#x53EF;&#x89C1;&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;onStop&#xFF08;&#xFF09;&#x3002;</p>
+<h3 id="onstop&#xFF08;&#xFF09;">onStop&#xFF08;&#xFF09;</h3>
+<p>&#x5F53;&#x60A8;&#x7684;Activity&#x4E0D;&#x518D;&#x5BF9;&#x7528;&#x6237;&#x53EF;&#x89C1;&#x65F6;&#xFF0C;&#x5B83;&#x5DF2;&#x8FDB;&#x5165;Stopped&#x72B6;&#x6001;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x8C03;&#x7528;onStop&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x65B0;&#x542F;&#x52A8;&#x7684;Activity&#x8986;&#x76D6;&#x6574;&#x4E2A;&#x5C4F;&#x5E55;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;&#x5F53;Activity&#x5B8C;&#x6210;&#x8FD0;&#x884C;&#x5E76;&#x4E14;&#x5373;&#x5C06;&#x7EC8;&#x6B62;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;onStop&#xFF08;&#xFF09;&#x3002;</p>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;&#x505C;&#x6B62;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x4EFB;&#x4F55;&#x4E0E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x90FD;&#x5C06;&#x6536;&#x5230;ON_STOP&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x505C;&#x6B62;Activity&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x4E0D;&#x53EF;&#x89C1;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x529F;&#x80FD;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<p>&#x5728;onStop&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E94;&#x91CA;&#x653E;&#x6216;&#x8C03;&#x6574;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5BF9;&#x7528;&#x6237;&#x4E0D;&#x53EF;&#x89C1;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x53EF;&#x80FD;&#x4F1A;&#x6682;&#x505C;&#x52A8;&#x753B;&#x6216;&#x4ECE;&#x7EC6;&#x7C92;&#x5EA6;&#x4F4D;&#x7F6E;&#x66F4;&#x65B0;&#x5207;&#x6362;&#x5230;&#x7C97;&#x7C92;&#x5EA6;&#x4F4D;&#x7F6E;&#x66F4;&#x65B0;&#x3002;&#x4F7F;&#x7528;onStop&#xFF08;&#xFF09;&#x800C;&#x4E0D;&#x662F;onPause&#xFF08;&#xFF09;&#x53EF;&#x786E;&#x4FDD;&#x4E0E;UI&#x76F8;&#x5173;&#x7684;&#x5DE5;&#x4F5C;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#xFF0C;&#x5373;&#x4F7F;&#x7528;&#x6237;&#x5728;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x4E0B;&#x67E5;&#x770B;&#x60A8;&#x7684;Activity&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+<p>&#x60A8;&#x8FD8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;onStop&#xFF08;&#xFF09;&#x6267;&#x884C;&#x76F8;&#x5BF9;CPU&#x5BC6;&#x96C6;&#x578B;&#x7684;&#x5173;&#x95ED;&#x64CD;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x66F4;&#x5408;&#x9002;&#x7684;&#x65F6;&#x95F4;&#x5C06;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5728;onStop&#xFF08;&#xFF09;&#x671F;&#x95F4;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x3002;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x663E;&#x793A;onStop&#xFF08;&#xFF09;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE5;&#x5B9E;&#x73B0;&#x5C06;&#x8349;&#x7A3F;&#x6CE8;&#x91CA;&#xFF08;draft note&#xFF09;&#x7684;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x5230;&#x6301;&#x4E45;&#x5B58;&#x50A8;&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// call the superclass method first</span>
+    super.onStop()
+
+    <span class="hljs-comment">// save the note&apos;s current draft, because the activity is stopping</span>
+    <span class="hljs-comment">// and we want to be sure the current note progress isn&apos;t lost.</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> values</span> = ContentValues().apply {
+        put(NotePad.Notes.COLUMN_NAME_NOTE, getCurrentNoteText())
+        put(NotePad.Notes.COLUMN_NAME_TITLE, getCurrentNoteTitle())
+    }
+
+    <span class="hljs-comment">// do this update in background on an AsyncQueryHandler or equivalent</span>
+    asyncQueryHandler.startUpdate(
+            token,     <span class="hljs-comment">// int token to correlate calls</span>
+            <span class="hljs-literal">null</span>,      <span class="hljs-comment">// cookie, not used here</span>
+            uri,       <span class="hljs-comment">// The URI for the note to update.</span>
+            values,    <span class="hljs-comment">// The map of column names and new values to apply to them.</span>
+            <span class="hljs-literal">null</span>,      <span class="hljs-comment">// No SELECT criteria are used.</span>
+            <span class="hljs-literal">null</span>       <span class="hljs-comment">// No WHERE columns are used.</span>
+    )
+}
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// call the superclass method first</span>
+    <span class="hljs-keyword">super</span>.onStop();
+
+    <span class="hljs-comment">// save the note&apos;s current draft, because the activity is stopping</span>
+    <span class="hljs-comment">// and we want to be sure the current note progress isn&apos;t lost.</span>
+    ContentValues values = <span class="hljs-keyword">new</span> ContentValues();
+    values.put(NotePad.Notes.COLUMN_NAME_NOTE, getCurrentNoteText());
+    values.put(NotePad.Notes.COLUMN_NAME_TITLE, getCurrentNoteTitle());
+
+    <span class="hljs-comment">// do this update in background on an AsyncQueryHandler or equivalent</span>
+    asyncQueryHandler.startUpdate (
+            mToken,  <span class="hljs-comment">// int token to correlate calls</span>
+            <span class="hljs-keyword">null</span>,    <span class="hljs-comment">// cookie, not used here</span>
+            uri,    <span class="hljs-comment">// The URI for the note to update.</span>
+            values,  <span class="hljs-comment">// The map of column names and new values to apply to them.</span>
+            <span class="hljs-keyword">null</span>,    <span class="hljs-comment">// No SELECT criteria are used.</span>
+            <span class="hljs-keyword">null</span>     <span class="hljs-comment">// No WHERE columns are used.</span>
+    );
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x76F4;&#x63A5;&#x4F7F;&#x7528;SQLite&#x3002;&#x60A8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Room&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x63D0;&#x4F9B;SQLite&#x62BD;&#x8C61;&#x5C42;&#x7684;&#x6301;&#x4E45;&#x6027;&#x5E93;&#x3002;&#x8981;&#x4E86;&#x89E3;&#x6709;&#x5173;&#x4F7F;&#x7528;Room&#x7684;&#x597D;&#x5904;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B9E;&#x73B0;Room&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/topic/libraries/architecture/room.html" target="_blank">Room Persistence Library</a> &#x6307;&#x5357;&#x3002;</p>
+<p>&#x5F53;&#x60A8;&#x7684;Activity&#x8FDB;&#x5165;Stopped&#x72B6;&#x6001;&#x65F6;&#xFF0C;Activity&#x5BF9;&#x8C61;&#x5C06;&#x4FDD;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF1A;&#x5B83;&#x7EF4;&#x62A4;&#x6240;&#x6709;&#x72B6;&#x6001;&#x548C;&#x6210;&#x5458;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x9644;&#x52A0;&#x5230;&#x7A97;&#x53E3;&#x7BA1;&#x7406;&#x5668;&#x3002;Activity&#x6062;&#x590D;&#x540E;&#xFF0C;Activity&#x4F1A;&#x6062;&#x590D;&#x6B64;&#x4FE1;&#x606F;&#x3002;&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;&#x4EFB;&#x4F55;&#x5728;&#x5BFC;&#x81F4;Resumed&#x72B6;&#x6001;&#x53D1;&#x751F;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E2D;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x67D0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;Activity&#x8FDB;&#x5165;&#x4E86;Resumed&#x72B6;&#x6001;&#xFF0C;&#x5219;&#x5F53;Activity&#x6062;&#x590D;&#x65F6;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x7684;&#x7EC4;&#x4EF6;&#xFF09;&#x3002;&#x7CFB;&#x7EDF;&#x8FD8;&#x4F1A;&#x8DDF;&#x8E2A;&#x5E03;&#x5C40;&#x4E2D;&#x6BCF;&#x4E2A;View&#x5BF9;&#x8C61;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x7528;&#x6237;&#x5728;EditText&#x5C0F;&#x90E8;&#x4EF6;&#x4E2D;&#x8F93;&#x5165;&#x7684;&#x6587;&#x672C;&#xFF0C;&#x5219;&#x4F1A;&#x4FDD;&#x7559;&#x8BE5;&#x5185;&#x5BB9;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x65E0;&#x9700;&#x4FDD;&#x5B58;&#x548C;&#x8FD8;&#x539F;&#x5B83;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x505C;&#x6B62;Activity&#x540E;&#xFF0C;&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x6062;&#x590D;&#x5185;&#x5B58;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x4F1A;&#x7834;&#x574F;&#x5305;&#x542B;Activity&#x7684;&#x8FDB;&#x7A0B;&#x3002;&#x5373;&#x4F7F;&#x7CFB;&#x7EDF;&#x5728;&#x6D3B;&#x52A8;&#x505C;&#x6B62;&#x65F6;&#x9500;&#x6BC1;&#x8FDB;&#x7A0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x4ECD;&#x4F1A;&#x4FDD;&#x7559;Bundle&#xFF08;&#x4E00;&#x5BF9;&#x952E;&#x503C;&#x5BF9;&#xFF09;&#x4E2D;&#x7684;View&#x5BF9;&#x8C61;&#xFF08;&#x4F8B;&#x5982;EditText&#x5C0F;&#x90E8;&#x4EF6;&#x4E2D;&#x7684;&#x6587;&#x672C;&#xFF09;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x5728;&#x7528;&#x6237;&#x6062;&#x590D;&#x5B83;&#x4EEC;&#x65F6;&#x5BFC;&#x822A;&#x56DE;Activity&#x3002;&#x6709;&#x5173;&#x8FD8;&#x539F;&#x7528;&#x6237;&#x8FD4;&#x56DE;&#x7684;&#x6D3B;&#x52A8;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/guide/components/activities/activity-lifecycle#saras" target="_blank">Saving and restoring activity state</a>.&#x3002;</p>
+</blockquote>
+<p>Stopped&#x72B6;&#x6001;&#x4E4B;&#x540E;&#xFF0C;Activity&#x8981;&#x4E48;&#x8FD4;&#x56DE;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#xFF0C;&#x8981;&#x4E48;Activity&#x5DF2;&#x5B8C;&#x6210;&#x8FD0;&#x884C;&#x5E76;&#x6D88;&#x5931;&#x3002;&#x5982;&#x679C;Activity&#x8FD4;&#x56DE;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x8C03;&#x7528;onRestart&#xFF08;&#xFF09;&#x3002;&#x5982;&#x679C;Activity&#x5DF2;&#x5B8C;&#x6210;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;onDestroy&#xFF08;&#xFF09;&#x3002;</p>
+<h3 id="ondestroy&#xFF08;&#xFF09;">onDestroy&#xFF08;&#xFF09;</h3>
+<p>onDestroy&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x5728;Activity&#x88AB;&#x7CFB;&#x7EDF;&#x9500;&#x6BC1;&#x4E4B;&#x524D;&#x56DE;&#x8C03;&#xFF0C;&#x4E00;&#x4E0B;&#x573A;&#x666F;&#x4F1A;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x56DE;&#x8C03;onDestroy&#xFF08;&#xFF09;&#xFF1A;</p>
+<ul>
+<li>Activity&#x6B63;&#x5728;&#x7ED3;&#x675F;&#xFF08;&#x7531;&#x4E8E;&#x7528;&#x6237;&#x5B8C;&#x5168;&#x79FB;&#x9664;Activity&#x6216;&#x7531;&#x4E8E;Activity&#x8C03;&#x7528;&#x5B8C;&#x6210;&#xFF09;</li>
+<li>&#x7531;&#x4E8E;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#xFF08;&#x4F8B;&#x5982;&#x8BBE;&#x5907;&#x65CB;&#x8F6C;&#x6216;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#xFF09;&#xFF0C;&#x7CFB;&#x7EDF;&#x6682;&#x65F6;&#x9500;&#x6BC1;Activity</li>
+</ul>
+<p>&#x5F53;Activity&#x8FDB;&#x5165;&#x9500;&#x6BC1;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x4EFB;&#x4F55;&#x4E0E;Activity&#x751F;&#x547D;&#x5468;&#x671F;&#x76F8;&#x5173;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x611F;&#x77E5;&#x7EC4;&#x4EF6;&#x90FD;&#x5C06;&#x6536;&#x5230;ON_DESTROY&#x4E8B;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x9500;&#x6BC1;&#x5728;&#x9500;&#x6BC1;Activity&#x4E4B;&#x524D;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x7684;&#x5730;&#x65B9;&#xFF08;&#x91CA;&#x653E;&#x6240;&#x6709;&#x8D44;&#x6E90;&#xFF09;&#x3002;</p>
+<p>&#x60A8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;ViewModel&#x5BF9;&#x8C61;&#x6765;&#x5305;&#x542B;Activity&#x7684;&#x76F8;&#x5173;&#x89C6;&#x56FE;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x60A8;&#x7684;Activity&#x4E2D;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x5224;&#x65AD;Activity&#x88AB;&#x9500;&#x6BC1;&#x7684;&#x539F;&#x56E0;&#x3002;&#x5982;&#x679C;&#x7531;&#x4E8E;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x800C;&#x5C06;&#x91CD;&#x65B0;&#x521B;&#x5EFA;Activity&#xFF0C;&#x5219;ViewModel&#x4E0D;&#x5FC5;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5C06;&#x88AB;&#x4FDD;&#x7559;&#x5E76;&#x63D0;&#x4F9B;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;Activity&#x5B9E;&#x4F8B;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x91CD;&#x65B0;&#x521B;&#x5EFA;Activity&#xFF0C;&#x5219;ViewModel&#x5C06;&#x8C03;&#x7528;onCleared&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x9500;&#x6BC1;&#x4E4B;&#x524D;&#x6E05;&#x9664;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;isFinishing&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x533A;&#x5206;&#x8FD9;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x5982;&#x679C;Activity&#x6B63;&#x5728;&#x5B8C;&#x6210;&#xFF08;is finishing&#xFF09;&#xFF0C;&#x5219;onDestroy&#xFF08;&#xFF09;&#x662F;Activity&#x63A5;&#x6536;&#x5230;&#x7684;&#x6700;&#x7EC8;&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03;&#x3002;&#x5982;&#x679C;&#x7531;&#x4E8E;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x800C;&#x8C03;&#x7528;onDestroy&#xFF08;&#xFF09;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x7ACB;&#x5373;&#x521B;&#x5EFA;&#x65B0;&#x7684;Activity&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x65B0;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x65B0;&#x5B9E;&#x4F8B;&#x4E0A;&#x8C03;&#x7528;onCreate&#xFF08;&#xFF09;&#x3002;</p>
+<p>onDestroy&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x5E94;&#x8BE5;&#x91CA;&#x653E;&#x65E9;&#x671F;&#x56DE;&#x8C03;&#xFF08;&#x4F8B;&#x5982;onStop&#xFF08;&#xFF09;&#xFF09;&#x5C1A;&#x672A;&#x91CA;&#x653E;&#x7684;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x3002;</p>
+<h2 id="activity&#x7684;&#x72B6;&#x6001;&#x4E0E;&#x53CA;&#x5185;&#x5B58;&#x56DE;&#x6536;&#xFF08;ejection-from-memory&#xFF09;">Activity&#x7684;&#x72B6;&#x6001;&#x4E0E;&#x53CA;&#x5185;&#x5B58;&#x56DE;&#x6536;&#xFF08;ejection from memory&#xFF09;</h2>
+<p>&#x7CFB;&#x7EDF;&#x5728;&#x9700;&#x8981;&#x91CA;&#x653E;RAM&#x65F6;&#x4F1A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x6740;&#x6B7B;&#x7ED9;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x53D6;&#x51B3;&#x4E8E;&#x5F53;&#x65F6;&#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x3002;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x53D6;&#x51B3;&#x4E8E;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x7684;Activity&#x7684;&#x72B6;&#x6001;&#x3002;&#x8868;1&#x663E;&#x793A;&#x4E86;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#xFF0C;Activity&#x72B6;&#x6001;&#x548C;&#x7CFB;&#x7EDF;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8FDB;&#x7A0B;&#x88AB;&#x7EC8;&#x6B62;&#x7684;&#x53EF;&#x80FD;&#x6027;</th>
+<th>&#x8FDB;&#x7A0B;&#x72B6;&#x6001;</th>
+<th>Activity&#x72B6;&#x6001;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5C0F;</td>
+<td>&#x524D;&#x53F0;&#xFF08;&#x62E5;&#x6709;&#x6216;&#x5373;&#x5C06;&#x62E5;&#x6709;&#x7126;&#x70B9;&#xFF09;</td>
+<td>Created&#xFF0C;Started&#xFF0C;Resumed</td>
+</tr>
+<tr>
+<td>&#x4E2D;</td>
+<td>&#x540E;&#x53F0;&#xFF08;&#x5931;&#x53BB;&#x7126;&#x70B9;&#xFF09;</td>
+<td>Paused</td>
+</tr>
+<tr>
+<td>&#x5927;</td>
+<td>&#x540E;&#x53F0;&#xFF08;&#x5931;&#x53BB;&#x7126;&#x70B9;&#xFF09;</td>
+<td>Stopped</td>
+</tr>
+<tr>
+<td>&#x5927;</td>
+<td>&#x7A7A;</td>
+<td>Destroyed</td>
+</tr>
+</tbody>
+</table>
+<p>&#x7CFB;&#x7EDF;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x6740;&#x6B7B;Activity&#x4EE5;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF0C;&#x5B83;&#x4F1A;&#x6740;&#x6B7B;Activity&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E0D;&#x4EC5;&#x4F1A;&#x7834;&#x574F;&#x5F53;&#x524D;Activity&#xFF0C;&#x8FD8;&#x4F1A;&#x7834;&#x574F;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x6240;&#x6709;&#x5176;&#x4ED6;Activity&#x3002;&#x8981;&#x4E86;&#x89E3;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;&#x88AB;&#x9500;&#x6BC1;&#x65F6;&#x5982;&#x4F55;&#x4FDD;&#x7559;&#x548C;&#x6062;&#x590D;Activity&#x7684;UI&#x72B6;&#x6001;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/guide/components/activities/activity-lifecycle#saras" target="_blank">Saving and restoring activity state</a>.</p>
+<p>&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;&#x8BBE;&#x7F6E;&#x201D;&#x4E0B;&#x7684;&#x201C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x5668;&#x201D;&#x7EC8;&#x6B62;&#x76F8;&#x5E94;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x4E00;&#x822C;&#x8FDB;&#x7A0B;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/guide/components/processes-and-threads.html" target="_blank">Processes and Threads</a>. &#x6709;&#x5173;&#x8FDB;&#x7A0B;&#x751F;&#x547D;&#x5468;&#x671F;&#x5982;&#x4F55;&#x4E0E;&#x5176;&#x4E2D;Activity&#x72B6;&#x6001;&#x76F8;&#x5173;&#x8054;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x8BE5;&#x9875;&#x9762;&#x7684;&#x201C; <a href="https://developer.android.com/guide/components/processes-and-threads.html#Lifecycle" target="_blank">Process Lifecycle</a>&#x201D;&#x90E8;&#x5206;&#x3002;</p>
+<h2 id="&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x77AC;&#x95F4;ui&#x72B6;&#x6001;">&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x77AC;&#x95F4;UI&#x72B6;&#x6001;</h2>
+<p>&#x7528;&#x6237;&#x671F;&#x671B;Activity&#x7684;UI&#x72B6;&#x6001;&#x5728;&#x6574;&#x4E2A;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x671F;&#x95F4;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF0C;&#x4F8B;&#x5982;&#x65CB;&#x8F6C;&#x6216;&#x5207;&#x6362;&#x5230;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5F53;&#x53D1;&#x751F;&#x6B64;&#x7C7B;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x9ED8;&#x8BA4;&#x9500;&#x6BC1;Activity&#xFF0C;&#x4ECE;&#x800C;&#x6D88;&#x9664;&#x5B58;&#x50A8;&#x5728;Activity&#x5B9E;&#x4F8B;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;UI&#x72B6;&#x6001;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x6682;&#x65F6;&#x4ECE;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x7A0D;&#x540E;&#x518D;&#x56DE;&#x5230;&#x60A8;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7528;&#x6237;&#x540C;&#x6837;&#x5E0C;&#x671B;UI&#x72B6;&#x6001;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5E76;&#x4E14;&#x60A8;&#x7684;Activity&#x505C;&#x6B62;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x4F1A;&#x91CA;&#x653E;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>&#x5F53;Activity&#x56E0;&#x7CFB;&#x7EDF;&#x9650;&#x5236;&#x800C;&#x88AB;&#x9500;&#x6BC1;&#x65F6;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;ViewModel&#xFF0C;onSaveInstanceState&#xFF08;&#xFF09;&#x548C;/&#x6216;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x7EC4;&#x5408;&#x6765;&#x4FDD;&#x7559;&#x7528;&#x6237;&#x7684;&#x77AC;&#x6001;UI&#x72B6;&#x6001;&#x3002;&#x8981;&#x4E86;&#x89E3;&#x6709;&#x5173;&#x7528;&#x6237;&#x671F;&#x671B;&#x4E0E;&#x7CFB;&#x7EDF;&#x884C;&#x4E3A;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;Activity&#x548C;&#x6D41;&#x7A0B;&#x6B7B;&#x4EA1;&#x4E2D;&#x6700;&#x597D;&#x5730;&#x4FDD;&#x7559;&#x590D;&#x6742;&#x7684;UI&#x72B6;&#x6001;&#x6570;&#x636E;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://developer.android.com/topic/libraries/architecture/saving-states.html" target="_blank">Saving UI State</a>.</p>
+<p>&#x4E0B;&#x4E00;&#x8282;&#x6982;&#x8FF0;&#x4E86;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#xFF08;instance state&#xFF09;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5B9E;&#x73B0;onSaveInstance&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x5BF9;Activity&#x672C;&#x8EAB;&#x7684;&#x56DE;&#x8C03;&#x3002;&#x5982;&#x679C;&#x60A8;&#x7684;UI&#x6570;&#x636E;&#x7B80;&#x5355;&#x800C;&#x8F7B;&#x91CF;&#x7EA7;&#xFF0C;&#x4F8B;&#x5982;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6216;&#x7B80;&#x5355;&#x5BF9;&#x8C61;&#xFF08;&#x5982;String&#xFF09;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x4F7F;&#x7528;onSaveInstanceState&#xFF08;&#xFF09;&#x6765;&#x4FDD;&#x6301;UI&#x72B6;&#x6001;&#x8DE8;&#x8D8A;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x548C;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;&#x6B7B;&#x4EA1;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;ViewModel&#x548C;onSaveInstanceState&#xFF08;&#xFF09;&#xFF08;&#x5982; <a href="https://developer.android.com/topic/libraries/architecture/saving-states.html" target="_blank">Saving UI State</a>&#x4E2D;&#x6240;&#x8FF0;&#xFF09;&#xFF0C;&#x56E0;&#x4E3A;onSaveInstanceState&#xFF08;&#xFF09;&#x4F1A;&#x5B58;&#x5728;&#x5E8F;&#x5217;&#x5316;/&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x6210;&#x672C;&#x3002;</p>
+<h3 id="&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#xFF08;instance-state&#xFF09;">&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#xFF08;Instance state&#xFF09;</h3>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x7684;Activity&#x4F1A;&#x56E0;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6B63;&#x5E38;&#x884C;&#x4E3A;&#x800C;&#x88AB;&#x9500;&#x6BC1;&#xFF0C;&#x4F8B;&#x5982;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x201C;&#x8FD4;&#x56DE;&#x201D;&#x6309;&#x94AE;&#x6216;&#x60A8;&#x7684;Activity&#x901A;&#x8FC7;&#x8C03;&#x7528;finish&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x53D1;&#x51FA;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x88AB;&#x7834;&#x574F;&#x4FE1;&#x53F7;&#x65F6;&#x3002;&#x5F53;&#x60A8;&#x7684;Activity&#x56E0;&#x7528;&#x6237;&#x6309;&#x4E0B;Back&#x6216;Activity&#x81EA;&#x884C;&#x5B8C;&#x6210;&#x800C;&#x88AB;&#x9500;&#x6BC1;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x548C;&#x7528;&#x6237;&#x5BF9;&#x8BE5;Activity&#x5B9E;&#x4F8B;&#x7684;&#x6982;&#x5FF5;&#x5C06;&#x6C38;&#x8FDC;&#x6D88;&#x5931;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x671F;&#x671B;&#x4E0E;&#x7CFB;&#x7EDF;&#x7684;&#x884C;&#x4E3A;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x60A8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7684;&#x5DE5;&#x4F5C;&#x8981;&#x505A;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x56E0;&#x7CFB;&#x7EDF;&#x7EA6;&#x675F;&#xFF08;&#x4F8B;&#x5982;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x6216;&#x5185;&#x5B58;&#x538B;&#x529B;&#xFF09;&#x800C;&#x7834;&#x574F;Activity&#xFF0C;&#x5219;&#x867D;&#x7136;&#x5B9E;&#x9645;&#x7684;Activity&#x5B9E;&#x4F8B;&#x5DF2;&#x6D88;&#x5931;&#xFF0C;&#x4F46;&#x7CFB;&#x7EDF;&#x4F1A;&#x8BB0;&#x4F4F;&#x5B83;&#x5DF2;&#x5B58;&#x5728;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x5C1D;&#x8BD5;&#x5BFC;&#x822A;&#x56DE;Activity&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x4F7F;&#x7528;&#x4E00;&#x7EC4;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x521B;&#x5EFA;&#x8BE5;Activity&#x7684;&#x65B0;&#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x4E86;Activity&#x5728;&#x9500;&#x6BC1;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x7CFB;&#x7EDF;&#x7528;&#x4E8E;&#x6062;&#x590D;&#x5148;&#x524D;&#x72B6;&#x6001;&#x7684;&#x5DF2;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x79F0;&#x4E3A;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#xFF0C;&#x662F;&#x5B58;&#x50A8;&#x5728;Bundle&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x96C6;&#x5408;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;Bundle&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x6765;&#x4FDD;&#x5B58;Activity&#x5E03;&#x5C40;&#x4E2D;&#x6BCF;&#x4E2A;View&#x5BF9;&#x8C61;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x4F8B;&#x5982;&#x8F93;&#x5165;EditText&#x5C0F;&#x90E8;&#x4EF6;&#x7684;&#x6587;&#x672C;&#x503C;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x7684;Activity&#x5B9E;&#x4F8B;&#x88AB;&#x9500;&#x6BC1;&#x5E76;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#xFF0C;&#x5219;&#x5E03;&#x5C40;&#x7684;&#x72B6;&#x6001;&#x5C06;&#x6062;&#x590D;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x60A8;&#x65E0;&#x9700;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x60A8;&#x7684;Activity&#x53EF;&#x80FD;&#x5305;&#x542B;&#x60A8;&#x8981;&#x6062;&#x590D;&#x7684;&#x66F4;&#x591A;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x8DDF;&#x8E2A;&#x7528;&#x6237;&#x5728;Activity&#x4E2D;&#x7684;&#x8FDB;&#x5EA6;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E3A;&#x4E86;&#x8BA9;Android&#x7CFB;&#x7EDF;&#x6062;&#x590D;Activity&#x4E2D;View&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6BCF;&#x4E2A;View&#x5FC5;&#x987B;&#x5177;&#x6709;&#x552F;&#x4E00;&#x7684;ID&#xFF0C;&#x7531;android&#xFF1A;id&#x5C5E;&#x6027;&#x63D0;&#x4F9B;&#x3002;</p>
+</blockquote>
+<p>Bundle&#x5BF9;&#x8C61;&#x4E0D;&#x9002;&#x5408;&#x4FDD;&#x7559;&#x8FC7;&#x5927;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x9700;&#x8981;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x5E76;&#x6D88;&#x8017;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x5185;&#x5B58;&#x3002;&#x8981;&#x4FDD;&#x7559;&#x8F83;&#x591A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x91C7;&#x7528;&#x7EC4;&#x5408;&#x65B9;&#x6CD5;&#x6765;&#x4FDD;&#x7559;&#x6570;&#x636E;&#xFF1A;&#x4F7F;&#x7528;&#x6301;&#x4E45;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;onSaveInstanceState&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x548C;ViewModel&#x7C7B;&#xFF0C;&#x5982;&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x77AC;&#x95F4;UI&#x72B6;&#x6001;&#xFF08;&#x4E0A;&#x4E00;&#x8282;&#xFF09;&#x4E2D;&#x6240;&#x8FF0;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;onsaveinstancestate&#xFF08;&#xFF09;&#x4FDD;&#x5B58;&#x7B80;&#x5355;&#x3001;&#x8F7B;&#x91CF;&#x7684;ui&#x72B6;&#x6001;">&#x4F7F;&#x7528;onSaveInstanceState&#xFF08;&#xFF09;&#x4FDD;&#x5B58;&#x7B80;&#x5355;&#x3001;&#x8F7B;&#x91CF;&#x7684;UI&#x72B6;&#x6001;</h3>
+<p>&#x5F53;&#x60A8;&#x7684;Activity&#x5F00;&#x59CB;&#x505C;&#x6B62;&#xFF08;begin stop&#xFF09;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x8C03;&#x7528;onSaveInstanceState&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x60A8;&#x7684;Activity&#x53EF;&#x4EE5;&#x5C06;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x7684;bundle&#x4E2D;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4F1A;&#x4FDD;&#x5B58;&#x6709;&#x5173;Activity&#x89C6;&#x56FE;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x72B6;&#x6001;&#x7684;&#x77AC;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;EditText&#x5C0F;&#x90E8;&#x4EF6;&#x4E2D;&#x7684;&#x6587;&#x672C;&#x6216;ListView&#x5C0F;&#x90E8;&#x4EF6;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x8981;&#x4FDD;&#x5B58;Activity&#x7684;&#x5176;&#x4ED6;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x91CD;&#x5199;onSaveInstanceState&#xFF08;&#xFF09;&#x5E76;&#x5C06;&#x952E;&#x503C;&#x5BF9;&#x6DFB;&#x52A0;&#x5230;Bundle&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5728;&#x60A8;&#x7684;Activity&#x610F;&#x5916;&#x9500;&#x6BC1;&#x65F6;&#x4FDD;&#x5B58;&#x3002;&#x5982;&#x679C;&#x91CD;&#x5199;onSaveInstanceState&#xFF08;&#xFF09;&#x65F6;&#x5E0C;&#x671B;&#x540C;&#x65F6;&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x7684;&#x4FDD;&#x5B58;&#x89C6;&#x56FE;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x7684;&#x72B6;&#x6001;&#x5219;&#x5FC5;&#x987B;&#x8C03;&#x7528;&#x8D85;&#x7C7B;&#x5B9E;&#x73B0;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+    <span class="hljs-comment">// Save the user&apos;s current game state</span>
+    outState?.run {
+        putInt(STATE_SCORE, currentScore)
+        putInt(STATE_LEVEL, currentLevel)
+    }
+
+    <span class="hljs-comment">// Always call the superclass so it can save the view hierarchy state</span>
+    super.onSaveInstanceState(outState)
+}
+
+<span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span> {
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> STATE_SCORE</span> = <span class="hljs-string">&quot;playerScore&quot;</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> STATE_LEVEL</span> = <span class="hljs-string">&quot;playerLevel&quot;</span>
+}
+</code></pre>
+</li>
+<li><p>java</p>
+<p>```java
+static final String STATE_SCORE = &quot;playerScore&quot;;
+static final String STATE_LEVEL = &quot;playerLevel&quot;;
+// ...</p>
+</li>
+</ul>
+<p>  @Override
+  public void onSaveInstanceState(Bundle savedInstanceState) {
+      // Save the user&apos;s current game state
+      savedInstanceState.putInt(STATE_SCORE, currentScore);
+      savedInstanceState.putInt(STATE_LEVEL, currentLevel);</p>
+<pre><code>  // Always call the superclass so it can save the view hierarchy state
+  super.onSaveInstanceState(savedInstanceState);
+</code></pre><p>  }</p>
+<pre><code>
+&gt; &#x6CE8;&#x610F;&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x663E;&#x5F0F;&#x5173;&#x95ED;Activity&#x65F6;&#x6216;&#x8C03;&#x7528;finish&#xFF08;&#xFF09;&#xFF0C;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;onSaveInstanceState&#xFF08;&#xFF09;&#x3002;
+
+&#x8981;&#x4FDD;&#x5B58;&#x6301;&#x4E45;&#x6027;&#x6570;&#x636E;&#xFF08;&#x4F8B;&#x5982;&#x7528;&#x6237;&#x9996;&#x9009;&#x9879;&#x6216;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5728;Activity&#x5904;&#x4E8E;&#x524D;&#x53F0;&#x72B6;&#x6001;&#x65F6;&#x5BFB;&#x627E;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x65F6;&#x673A;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5728;onStop&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x4E2D;&#x4FDD;&#x5B58;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x3002;
+
+### &#x4F7F;&#x7528;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x7684;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x6062;&#x590D;UI&#x72B6;&#x6001;
+
+&#x4E4B;&#x524D;&#x9500;&#x6BC1;Activity&#x540E;&#x91CD;&#x65B0;&#x521B;&#x5EFA;Activity&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x7CFB;&#x7EDF;&#x4F20;&#x9012;&#x7ED9;Activity&#x7684;Bundle&#x4E2D;&#x6062;&#x590D;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x3002; onCreate&#xFF08;&#xFF09;&#x548C;onRestoreInstanceState&#xFF08;&#xFF09;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x90FD;&#x63A5;&#x6536;&#x5305;&#x542B;&#x5B9E;&#x4F8B;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x7684;&#x76F8;&#x540C;Bundle&#x3002;
+
+&#x56E0;&#x4E3A;&#x65E0;&#x8BBA;&#x7CFB;&#x7EDF;&#x662F;&#x521B;&#x5EFA;Activity&#x7684;&#x65B0;&#x5B9E;&#x4F8B;&#x8FD8;&#x662F;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x524D;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;onCreate&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x5C1D;&#x8BD5;&#x8BFB;&#x53D6;&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x68C0;&#x67E5;&#x72B6;&#x6001;Bundle&#x662F;&#x5426;&#x4E3A;null&#x3002;&#x5982;&#x679C;&#x5B83;&#x4E3A;null&#xFF0C;&#x5219;&#x7CFB;&#x7EDF;&#x6B63;&#x5728;&#x521B;&#x5EFA;Activity&#x7684;&#x65B0;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6062;&#x590D;&#x5DF2;&#x9500;&#x6BC1;&#x7684;&#x5148;&#x524D;&#x5B9E;&#x4F8B;&#x3002;
+
+&#x4F8B;&#x5982;&#xFF0C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6BB5;&#x663E;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5728;onCreate&#xFF08;&#xFF09;&#x4E2D;&#x6062;&#x590D;&#x67D0;&#x4E9B;&#x72B6;&#x6001;&#x6570;&#x636E;&#xFF1A;
+
+- kotlin
+
+  ```kotlin
+  override fun onCreate(savedInstanceState: Bundle?) {
+      super.onCreate(savedInstanceState) // Always call the superclass first
+
+      // Check whether we&apos;re recreating a previously destroyed instance
+      if (savedInstanceState != null) {
+          with(savedInstanceState) {
+              // Restore value of members from saved state
+              currentScore = getInt(STATE_SCORE)
+              currentLevel = getInt(STATE_LEVEL)
+          }
+      } else {
+          // Probably initialize members with default values for a new instance
+      }
+      // ...
+  }
+</code></pre><ul>
+<li><p>java</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState); <span class="hljs-comment">// Always call the superclass first</span>
+
+    <span class="hljs-comment">// Check whether we&apos;re recreating a previously destroyed instance</span>
+    <span class="hljs-keyword">if</span> (savedInstanceState != <span class="hljs-keyword">null</span>) {
+        <span class="hljs-comment">// Restore value of members from saved state</span>
+        currentScore = savedInstanceState.getInt(STATE_SCORE);
+        currentLevel = savedInstanceState.getInt(STATE_LEVEL);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Probably initialize members with default values for a new instance</span>
+    }
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</li>
+</ul>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5B9E;&#x73B0;onRestoreInstanceState&#xFF08;&#xFF09;&#xFF0C;&#x5728;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x6062;&#x590D;&#x72B6;&#x6001;&#x800C;&#x4E0D;&#x662F;&#x5728;onCreate&#xFF08;&#xFF09;&#x4E2D;&#xFF0C;&#x7CFB;&#x7EDF;&#x5728;onStart&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x4F1A;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x4EC5;&#x5F53;&#x5B58;&#x5728;&#x8981;&#x8FD8;&#x539F;&#x7684;&#x5DF2;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x624D;&#x4F1A;&#x8C03;&#x7528;onRestoreInstanceState&#xFF08;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x65E0;&#x9700;&#x68C0;&#x67E5;Bundle&#x662F;&#x5426;&#x4E3A;null&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+</li>
+<li><p>```kotlin
+override fun onRestoreInstanceState(savedInstanceState: Bundle?) {</p>
+<pre><code>// Always call the superclass so it can restore the view hierarchy
+super.onRestoreInstanceState(savedInstanceState)
+
+// Restore state members from saved instance
+savedInstanceState?.run {
+    currentScore = getInt(STATE_SCORE)
+    currentLevel = getInt(STATE_LEVEL)
+}
+</code></pre><p>}</p>
+</li>
+</ul>
+<pre><code>
+- java
+
+  ```java
+  public void onRestoreInstanceState(Bundle savedInstanceState) {
+      // Always call the superclass so it can restore the view hierarchy
+      super.onRestoreInstanceState(savedInstanceState);
+
+      // Restore state members from saved instance
+      currentScore = savedInstanceState.getInt(STATE_SCORE);
+      currentLevel = savedInstanceState.getInt(STATE_LEVEL);
+  }
+</code></pre><blockquote>
+<p>&#x8B66;&#x544A;&#xFF1A;&#x5E94;&#x8BE5;&#x59CB;&#x7EC8;&#x8C03;&#x7528;onRestoreInstanceState&#xFF08;&#xFF09;&#x7684;&#x8D85;&#x7C7B;&#x5B9E;&#x73B0;&#xFF08;&#x5373;super.onRestireInstanceState(saveInstanceState)&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x6062;&#x590D;&#x89C6;&#x56FE;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5728;&#x4E0D;&#x540C;activity&#x4E4B;&#x95F4;&#x5BFC;&#x822A;">&#x5728;&#x4E0D;&#x540C;Activity&#x4E4B;&#x95F4;&#x5BFC;&#x822A;</h2>
+<p>&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x591A;&#x6B21;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;Activity&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x8BBE;&#x5907;&#x7684;&#x201C;&#x540E;&#x9000;&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x6216;&#x8005;Activity&#x53EF;&#x80FD;&#x9700;&#x8981;&#x542F;&#x52A8;&#x4E0D;&#x540C;&#x7684;Activity&#x3002;&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x5B9E;&#x73B0;Activity&#x8DF3;&#x8F6C;&#x6240;&#x9700;&#x4E86;&#x89E3;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x540D;&#x5305;&#x62EC;&#x4ECE;&#x5176;&#x4ED6;Activity&#x542F;&#x52A8;Activity&#xFF0C;&#x4FDD;&#x5B58;Activity&#x72B6;&#x6001;&#x4EE5;&#x53CA;&#x6062;&#x590D;Activity&#x72B6;&#x6001;&#x3002;</p>
+<h3 id="&#x5728;&#x53E6;&#x4E00;&#x4E2A;activity&#x542F;&#x52A8;&#x5F53;&#x524D;activity">&#x5728;&#x53E6;&#x4E00;&#x4E2A;Activity&#x542F;&#x52A8;&#x5F53;&#x524D;Activity</h3>
+<p>Activity&#x901A;&#x5E38;&#x9700;&#x8981;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x542F;&#x52A8;&#x53E6;&#x4E00;&#x4E2A;Activity&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x4ECE;&#x5F53;&#x524D;&#x5C4F;&#x5E55;&#x79FB;&#x52A8;&#x5230;&#x65B0;&#x5C4F;&#x5E55;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x9700;&#x6C42;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x60A8;&#x7684;Activity&#x662F;&#x5426;&#x5E0C;&#x671B;&#x4ECE;&#x5373;&#x5C06;&#x542F;&#x52A8;&#x7684;&#x65B0;Activity&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;startActivity&#xFF08;&#xFF09;&#x6216;startActivityForResult&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x542F;&#x52A8;&#x65B0;Activity&#x3002;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x90FD;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;Intent&#x5BF9;&#x8C61;&#x3002;</p>
+<p>Intent&#x5BF9;&#x8C61;&#x6307;&#x5B9A;&#x8981;&#x542F;&#x52A8;&#x7684;Activity&#xFF0C;&#x6216;&#x63CF;&#x8FF0;&#x60A8;&#x8981;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;&#xFF08;&#x7CFB;&#x7EDF;&#x4E3A;&#x60A8;&#x9009;&#x62E9;&#x9002;&#x5F53;&#x7684;Activity&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF09;&#x3002; Intent&#x5BF9;&#x8C61;&#x8FD8;&#x53EF;&#x4EE5;&#x643A;&#x5E26;&#x7531;&#x542F;&#x52A8;&#x7684;Activity&#x4F7F;&#x7528;&#x7684;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x3002;&#x6709;&#x5173;Intent&#x7C7B;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/guide/components/intents-filters.html" target="_blank">Intents and Intent Filters</a>.&#x3002;</p>
+<h3 id="startactivity">startActivity()</h3>
+<p>&#x5982;&#x679C;&#x65B0;&#x542F;&#x52A8;&#x7684;Activity&#x4E0D;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x5F53;&#x524D;Activity&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528;startActivity&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x542F;&#x52A8;&#x5B83;&#x3002;</p>
+<p>&#x5728;Activity&#x5DE5;&#x4F5C;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x65F6;&#xFF08;&#x672C;&#x5E94;&#x7528;&#x7684;Activity&#xFF09;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x7B80;&#x5355;&#x5730;&#x542F;&#x52A8;&#x5DF2;&#x77E5;Activity&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6BB5;&#x663E;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x542F;&#x52A8;&#x540D;&#x4E3A;SignInActivity&#x7684;Activity&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> intent</span> = Intent(this, SignInActivity::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>)</span>
+startActivity(intent)
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java">Intent intent = <span class="hljs-keyword">new</span> Intent(<span class="hljs-keyword">this</span>, SignInActivity.class);
+startActivity(intent);
+</code></pre>
+</li>
+</ul>
+<p>&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x8FD8;&#x5E0C;&#x671B;&#x4F7F;&#x7528;Activity&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x53D1;&#x9001;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#xFF0C;&#x77ED;&#x4FE1;&#x6216;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;Activity&#x6765;&#x6267;&#x884C;&#x6B64;&#x7C7B;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8BBE;&#x5907;&#x4E0A;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;Activity&#xFF0C;&#x8FD9;&#x4E9B;Activity&#x53EF;&#x4EE5;&#x4E3A;&#x60A8;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x662F;Intent&#x975E;&#x5E38;&#x6709;&#x4EF7;&#x503C;&#x7684;&#x5730;&#x65B9;&#xFF1A;&#x60A8;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x63CF;&#x8FF0;&#x60A8;&#x8981;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x7684;Intent&#xFF0C;&#x7CFB;&#x7EDF;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x76F8;&#x5E94;&#x7684;Activity&#x3002;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;Activity&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x610F;&#x56FE;&#xFF0C;&#x90A3;&#x4E48;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;Activity&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x53D1;&#x9001;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4EE5;&#x4E0B;Intent&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> intent</span> = Intent(Intent.ACTION_SEND).apply {
+    putExtra(Intent.EXTRA_EMAIL, recipientArray)
+}
+startActivity(intent)
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java">Intent intent = <span class="hljs-keyword">new</span> Intent(Intent.ACTION_SEND);
+intent.putExtra(Intent.EXTRA_EMAIL, recipientArray);
+startActivity(intent);
+</code></pre>
+</li>
+</ul>
+<p>&#x6DFB;&#x52A0;&#x5230;intent&#x4E2D;&#x7684;EXTRA_EMAIL Extra&#x662F;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5E94;&#x53D1;&#x9001;&#x5230;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;&#x5F53;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x54CD;&#x5E94;&#x6B64;&#x610F;&#x56FE;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x8BFB;&#x53D6;extra&#x4E2D;&#x63D0;&#x4F9B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x653E;&#x5728;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x64B0;&#x5199;&#x8868;&#x5355;&#x7684;&#x201C;to&#x201D;&#x5B57;&#x6BB5;&#x4E2D;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;Activity&#x5F00;&#x59CB;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x60A8;&#x7684;Activity&#x5C06;&#x6062;&#x590D;&#x3002;</p>
+<h3 id="startactivityforresult">startActivityForResult()</h3>
+<p>&#x6709;&#x65F6;&#x60A8;&#x5E0C;&#x671B;&#x5728;Activity&#x7ED3;&#x675F;&#x65F6;&#x4ECE;Activity&#x4E2D;&#x83B7;&#x53D6;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x4E00;&#x9879;Activity&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x5728;&#x8054;&#x7CFB;&#x4EBA;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x4EBA;&#xFF0C;&#x5F53;&#x5B83;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x4EBA;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x8BF7;&#x8C03;&#x7528;startActivityForResult&#xFF08;Intent&#xFF0C;int&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;integer&#x53C2;&#x6570;&#x6807;&#x8BC6;&#x8BE5;&#x8C03;&#x7528;&#x3002;&#x6B64;&#x6807;&#x8BC6;&#x7B26;&#x7528;&#x4E8E;&#x6D88;&#x9664;&#x6765;&#x81EA;&#x540C;&#x4E00;Activity&#x7684;&#x591A;&#x6B21;startActivityForResult&#xFF08;Intent&#xFF0C;int&#xFF09;&#x8C03;&#x7528;&#x4E4B;&#x95F4;&#x7684;&#x6B67;&#x4E49;&#x3002;&#x5B83;&#x4E0D;&#x662F;&#x5168;&#x5C40;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x4E0E;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;Activity&#x51B2;&#x7A81;&#x7684;&#x98CE;&#x9669;&#x3002;&#x7ED3;&#x679C;&#x901A;&#x8FC7;onActivityResult&#xFF08;int&#xFF0C;int&#xFF0C;Intent&#xFF09;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x5F53;&#x5B50;Activity&#x9000;&#x51FA;&#x65F6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8C03;&#x7528;setResult&#xFF08;int&#xFF09;&#x5C06;&#x6570;&#x636E;&#x8FD4;&#x56DE;&#x5230;&#x5176;&#x7236;&#x7EA7;&#x3002;&#x5B50;Activity&#x5FC5;&#x987B;&#x59CB;&#x7EC8;&#x63D0;&#x4F9B;&#x7ED3;&#x679C;&#x4EE3;&#x7801;&#xFF0C;&#x8BE5;&#x7ED3;&#x679C;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x662F;&#x6807;&#x51C6;&#x7ED3;&#x679C;RESULT_CANCELED&#xFF0C;RESULT_OK&#x6216;&#x4ECE;RESULT_FIRST_USER&#x5F00;&#x59CB;&#x7684;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5B50;Activity&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6027;&#x5730;&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x7684;Intent&#x5BF9;&#x8C61;&#x3002;&#x7236;Activity&#x4F7F;&#x7528;onActivityResult&#xFF08;int&#xFF0C;int&#xFF0C;Intent&#xFF09;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x7236;Activity&#x6700;&#x521D;&#x63D0;&#x4F9B;&#x7684;&#x6574;&#x6570;&#x6807;&#x8BC6;&#x7B26;&#x6765;&#x63A5;&#x6536;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5B50;Activity&#x56E0;&#x4EFB;&#x4F55;&#x539F;&#x56E0;&#xFF08;&#x4F8B;&#x5982;&#x5D29;&#x6E83;&#xFF09;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x7236;Activity&#x5C06;&#x6536;&#x5230;&#x4EE3;&#x7801;&#x4E3A;RESULT_CANCELED&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> : <span class="hljs-type">Activity</span></span>() {
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onKeyDown</span><span class="hljs-params">(keyCode: <span class="hljs-type">Int, event: KeyEvent?</span>)</span>: <span class="hljs-keyword">Boolean</span> {</span>
+        <span class="hljs-keyword">if</span> (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+            <span class="hljs-comment">// When the user center presses, let them pick a contact.</span>
+            startActivityForResult(
+                    Intent(Intent.ACTION_PICK,Uri.parse(<span class="hljs-string">&quot;content://contacts&quot;</span>)),
+                    PICK_CONTACT_REQUEST)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onActivityResult</span><span class="hljs-params">(requestCode: <span class="hljs-type">Int, resultCode: Int, intent: Intent?</span>)</span> {</span>
+        <span class="hljs-keyword">when</span> (requestCode) {
+            PICK_CONTACT_REQUEST -&gt;
+                <span class="hljs-keyword">if</span> (resultCode == RESULT_OK) {
+                    startActivity(Intent(Intent.ACTION_VIEW, intent?.data))
+                }
+        }
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span> {
+        internal <span class="hljs-variable"><span class="hljs-keyword">val</span> PICK_CONTACT_REQUEST</span> = <span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>java</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+     <span class="hljs-comment">// ...</span>
+
+     <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> PICK_CONTACT_REQUEST = <span class="hljs-number">0</span>;
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onKeyDown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> keyCode, KeyEvent event)</span> </span>{
+         <span class="hljs-keyword">if</span> (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+             <span class="hljs-comment">// When the user center presses, let them pick a contact.</span>
+             startActivityForResult(
+                 <span class="hljs-keyword">new</span> Intent(Intent.ACTION_PICK,
+                 <span class="hljs-keyword">new</span> Uri(<span class="hljs-string">&quot;content://contacts&quot;</span>)),
+                 PICK_CONTACT_REQUEST);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+         }
+         <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+     }
+
+     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onActivityResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> requestCode, <span class="hljs-keyword">int</span> resultCode,
+             Intent data)</span> </span>{
+         <span class="hljs-keyword">if</span> (requestCode == PICK_CONTACT_REQUEST) {
+             <span class="hljs-keyword">if</span> (resultCode == RESULT_OK) {
+                 <span class="hljs-comment">// A contact was picked.  Here we will just display it</span>
+                 <span class="hljs-comment">// to the user.</span>
+                 startActivity(<span class="hljs-keyword">new</span> Intent(Intent.ACTION_VIEW, data));
+             }
+         }
+     }
+ }
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x534F;&#x8C03;activity">&#x534F;&#x8C03;Activity</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;Activity&#x542F;&#x52A8;&#x53E6;&#x4E00;&#x4E2A;Activity&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4F1A;&#x7ECF;&#x5386;&#x751F;&#x547D;&#x5468;&#x671F;&#x8F6C;&#x6362;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;Activity&#x505C;&#x6B62;&#x8FD0;&#x884C;&#x5E76;&#x8FDB;&#x5165;&#x6682;&#x505C;&#x6216;&#x505C;&#x6B62;&#x72B6;&#x6001;&#xFF0C;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x53E6;&#x4E00;&#x4E2A;Activity&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E9B;Activity&#x5171;&#x4EAB;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x6216;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x7B2C;&#x4E00;&#x4E2A;Activity&#x5728;&#x521B;&#x5EFA;&#x7B2C;&#x4E8C;&#x4E2A;Activity&#x4E4B;&#x524D;&#x672A;&#x5B8C;&#x5168;&#x505C;&#x6B62;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;&#x7684;&#x8FC7;&#x7A0B;&#x4E0E;&#x505C;&#x6B62;&#x7B2C;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x91CD;&#x53E0;&#x3002;</p>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x660E;&#x786E;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F53;&#x4E24;&#x4E2A;Activity&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF08;app&#xFF09;&#x4E2D;&#x800C;&#x53E6;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x542F;&#x52A8;&#x53E6;&#x4E00;&#x4E2A;&#x65F6;&#x3002;&#x4EE5;&#x4E0B;&#x662F;ActivityA&#x542F;&#x52A8;ActivityB&#x65F6;&#x53D1;&#x751F;&#x7684;&#x64CD;&#x4F5C;&#x987A;&#x5E8F;&#xFF1A;</p>
+<ol>
+<li><code>A.onPause()</code> </li>
+<li><code>B.onCreate()</code>, <code>B.onStart()</code>, &#x548C; <code>B.onResume()</code> &#x88AB;&#x987A;&#x5E8F;&#x6267;&#x884C;&#xFF08;Activity&#x6B64;&#x65F6;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#xFF09;</li>
+<li>A Activity&#x4E0D;&#x518D;&#x53EF;&#x89C1;&#xFF0C; <code>A.onStop()</code> &#x88AB;&#x8C03;&#x7528;</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03;&#x5E8F;&#x5217;&#x5141;&#x8BB8;&#x60A8;&#x7BA1;&#x7406;&#x4ECE;&#x4E00;&#x4E2A;Activity&#x5230;&#x53E6;&#x4E00;&#x4E2A;Activity&#x7684;&#x8F6C;&#x6362;&#x4FE1;&#x606F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Activity介绍.html" class="navigation navigation-prev " aria-label="Previous page: Activity介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Activity的状态变化.html" class="navigation navigation-next " aria-label="Next page: Activity的状态变化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Activity的生命周期","level":"1.2.2","depth":2,"next":{"title":"Activity的状态变化","level":"1.2.3","depth":2,"path":"Activity/Activity的状态变化.md","ref":"./Activity/Activity的状态变化.md","articles":[]},"previous":{"title":"Activity介绍","level":"1.2.1","depth":2,"path":"Activity/Activity介绍.md","ref":"./Activity/Activity介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Activity/Activity的生命周期.md","mtime":"2019-06-06T13:16:58.710Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T04:32:08.722Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

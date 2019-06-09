@@ -1,0 +1,1259 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>测试你的Activity · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="理解Task和回退栈.html" />
+    
+    
+    <link rel="prev" href="Activity的状态变化.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Activity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Activity介绍.html">
+            
+                <a href="Activity介绍.html">
+            
+                    
+                    Activity介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Activity的生命周期.html">
+            
+                <a href="Activity的生命周期.html">
+            
+                    
+                    Activity的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Activity的状态变化.html">
+            
+                <a href="Activity的状态变化.html">
+            
+                    
+                    Activity的状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="测试你的Activity.html">
+            
+                <a href="测试你的Activity.html">
+            
+                    
+                    测试你的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="理解Task和回退栈.html">
+            
+                <a href="理解Task和回退栈.html">
+            
+                    
+                    理解Task和回退栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="进程和应用程序的生命周期.html">
+            
+                <a href="进程和应用程序的生命周期.html">
+            
+                    
+                    进程和应用程序的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Parcelable和Bundle.html">
+            
+                <a href="Parcelable和Bundle.html">
+            
+                    
+                    Parcelable和Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    Fragment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="Fragment/Fragment概述.html">
+            
+                <a href="Fragment/Fragment概述.html">
+            
+                    
+                    Fragment(概述)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="Fragment/创建Fragment.html">
+            
+                <a href="Fragment/创建Fragment.html">
+            
+                    
+                    创建Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="Fragment/测试Fragment.html">
+            
+                <a href="Fragment/测试Fragment.html">
+            
+                    
+                    测试Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="Fragment/构建灵活的UI.html">
+            
+                <a href="Fragment/构建灵活的UI.html">
+            
+                    
+                    构建灵活的UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.5" data-path="Fragment/与其他Fragment通信.html">
+            
+                <a href="Fragment/与其他Fragment通信.html">
+            
+                    
+                    与其他Fragment通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    与其他应用交互
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                    
+                    将用户导航到另一个APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                    
+                    接收另一个Activity返回的结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                    
+                    允许其他应用启动您的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" >
+            
+                <span>
+            
+                    
+                    处理Android APP Link
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="Handling-Android-App-Links/概述.html">
+            
+                <a href="Handling-Android-App-Links/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                <a href="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                    
+                    创建指向您内容的DeepLinks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="Handling-Android-App-Links/验证App-Links.html">
+            
+                <a href="Handling-Android-App-Links/验证App-Links.html">
+            
+                    
+                    验证App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                <a href="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                    
+                    为Instant APPs创建App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="加载器.html">
+            
+                <a href="加载器.html">
+            
+                    
+                    加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="最近任务界面.html">
+            
+                <a href="最近任务界面.html">
+            
+                    
+                    最近任务界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="多窗口支持(分屏">
+            
+                <span>
+            
+                    
+                    多窗口支持-分屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" >
+            
+                <span>
+            
+                    
+                    App快捷启动方式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.14.1" data-path="AppShortCuts/概述.html">
+            
+                <a href="AppShortCuts/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.2" data-path="AppShortCuts/创建快捷方式.html">
+            
+                <a href="AppShortCuts/创建快捷方式.html">
+            
+                    
+                    创建快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.3" data-path="AppShortCuts/管理快捷方式.html">
+            
+                <a href="AppShortCuts/管理快捷方式.html">
+            
+                    
+                    管理快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.4" data-path="AppShortCuts/快捷方式的最佳做法.html">
+            
+                <a href="AppShortCuts/快捷方式的最佳做法.html">
+            
+                    
+                    快捷方式的最佳做法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" >
+            
+                <span>
+            
+                    
+                    应用小部件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.15.1" data-path="AppWidgets/App小部件概述.html">
+            
+                <a href="AppWidgets/App小部件概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.2" data-path="AppWidgets/构建应用程序小部件.html">
+            
+                <a href="AppWidgets/构建应用程序小部件.html">
+            
+                    
+                    构建应用程序小部件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.3" data-path="AppWidgets/构建应用程序小部件主机(Host">
+            
+                <span>
+            
+                    
+                    构建应用程序小部件主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../应用程序架构指南.html">
+            
+                <a href="../应用程序架构指南.html">
+            
+                    
+                    应用程序架构指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    架构组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                    
+                    给你的项目中添加架构组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                    
+                    布局和绑定表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                    
+                    使用可观察的数据对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                    
+                    生成的绑定类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    Intent和Intent过滤器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                    
+                    通用Intent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    用户界面
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../UserInterface/使用RecyclerView创建列表.html">
+            
+                <a href="../UserInterface/使用RecyclerView创建列表.html">
+            
+                    
+                    使用RecyclerView创建列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    后台任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Service
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../BackGroundTasks/Service/Service——概述.html">
+            
+                <a href="../BackGroundTasks/Service/Service——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                <a href="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                    
+                    创建后台Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                <a href="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                    
+                    向后台Service发送工作请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                <a href="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                    
+                    绑定Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                <a href="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                    
+                    AIDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../BackGroundTasks/BroadCast.html">
+            
+                <a href="../BackGroundTasks/BroadCast.html">
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    将操作分配到多个线程执行
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                    
+                    指定线程中运行的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（3）为多线程创建管理者(manager">
+            
+                <span>
+            
+                    
+                    为多线程创建管理者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                    
+                    在线程池中运行代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                    
+                    与UI线程进行通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    最佳实践
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Performance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../BestPractices/Performance/进程和线程——概述.html">
+            
+                <a href="../BestPractices/Performance/进程和线程——概述.html">
+            
+                    
+                    进程和线程——概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >测试你的Activity</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D4B;&#x8BD5;&#x4F60;&#x7684;activity">&#x6D4B;&#x8BD5;&#x4F60;&#x7684;Activity</h1>
+<p><a href="https://developer.android.com/guide/components/activities/testing" target="_blank">&#x539F;&#x6587;&#xFF08;&#x82F1;&#x6587;&#xFF09;&#x5730;&#x5740;</a></p>
+<p>Activity&#x4F5C;&#x4E3A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x53D1;&#x751F;&#x8BBE;&#x5907;&#x7EA7;&#x4E8B;&#x4EF6;&#x65F6;&#x6D4B;&#x8BD5;Activity&#x7684;&#x4E0D;&#x540C;&#x884C;&#x4E3A;&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x5176;&#x4ED6;APP&#xFF08;&#x6BD4;&#x5982;&#x8BBE;&#x5907;&#x6765;&#x7535;APP&#xFF09;&#x4E2D;&#x65AD;&#x4E86;&#x4F60;&#x7684;Activity</li>
+<li>&#x8BBE;&#x5907;&#x9500;&#x6BC1;&#x5E76;&#x91CD;&#x5EFA;&#x4E86;&#x4F60;&#x7684;Activity</li>
+<li>&#x7528;&#x6237;&#x5C06;&#x4F60;&#x7684;Activity&#x653E;&#x7F6E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A97;&#x53E3;&#x73AF;&#x5883;&#xFF0C;&#x6BD4;&#x5982;&#x753B;&#x4E2D;&#x753B;&#xFF08;picture-in-picture &#xFF0C;PIP &#xFF09;&#x6216;&#x8005;&#x591A;&#x7A97;&#x53E3;&#x6A21;&#x5F0F;&#x3002;</li>
+</ul>
+<p>&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;&#x662F;&#x4FDD;&#x8BC1;&#x4F60;&#x7684;Activity&#x5728;&#x54CD;&#x5E94;&#x6587;&#x7AE0; <a href="Activity/Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;.md">Activity&#x7684;&#x751F;&#x547D;&#x5468;&#x671F; </a> &#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x8868;&#x73B0;&#x6B63;&#x5E38;&#x3002;</p>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x63CF;&#x8FF0;&#x5982;&#x4F55;&#x8BC4;&#x4F30;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7EF4;&#x62A4;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x80FD;&#x529B;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x8BC4;&#x4F30;&#x826F;&#x597D;&#x7684;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;Activity&#x5728;&#x5176;&#x751F;&#x547D;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#x4F1A;&#x5904;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<h2 id="&#x9A71;&#x52A8;&#xFF08;drive&#xFF09;&#x4E00;&#x4E2A;activity&#x7684;&#x72B6;&#x6001;">&#x9A71;&#x52A8;&#xFF08;Drive&#xFF09;&#x4E00;&#x4E2A;Activity&#x7684;&#x72B6;&#x6001;</h2>
+<p>&#x6D4B;&#x8BD5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;Activity&#x7684;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x70B9;&#x662F;&#x5C06;Activity&#x7F6E;&#x4E8E;&#x7279;&#x5B9A;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;ActivityScenario&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x662F;AndroidX Test&#x5E93;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6B64;&#x7C7B;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;Activity&#x7F6E;&#x4E8E;&#x6A21;&#x62DF;&#x672C;&#x6587;&#x7AE0;&#x5F00;&#x5934;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#x8BBE;&#x5907;&#x7EA7;&#x4E8B;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>ActivityScenario&#x662F;&#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684;API&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF08;local unit tests &#xFF09;&#x548C;&#x8BBE;&#x5907;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#xFF08;on-device integration tests&#xFF09;&#x4E2D;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x3002;&#x5047;&#x8BBE;&#x4F60;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x5728;&#x8FD0;&#x884C;&#x5728;&#x7EBF;&#x7A0B;A&#xFF0C;&#x88AB;&#x6D4B;&#x8BD5;&#x7684;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5728;&#x7EBF;&#x7A0B;B&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5728;&#x771F;&#x673A;&#x8FD8;&#x662F;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF0C;ActivityScenario&#x90FD;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5373;&#x53EF;&#x4EE5;&#x5728;A&#x7EBF;&#x7A0B;&#x548C;B&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x540C;&#x6B65;&#x4E8B;&#x4EF6;&#x3002;&#x8BE5;API&#x8FD8;&#x7279;&#x522B;&#x9002;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#x88AB;&#x6D4B;&#x8BD5;&#x7684;Activity&#x5728;&#x9500;&#x6BC1;&#x6216;&#x521B;&#x5EFA;&#x65F6;&#x7684;&#x884C;&#x4E3A;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E0E;&#x6B64;API&#x76F8;&#x5173;&#x7684;&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;activity">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Activity</h3>
+<p>&#x4E3A;&#x4E86;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x5728;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x4E0B;&#x7684;Activity&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+    }
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x5B8C;Activity&#x4E4B;&#x540E;ActivityScenario&#x4F1A;&#x5C06;Activity&#x8FC7;&#x6E21;&#x5230;Resumed&#x72B6;&#x6001;&#xFF0C;&#x8BE5;&#x72B6;&#x6001;&#x8868;&#x540D;&#x4F60;&#x7684;Activity&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x4E14;&#x5BF9;&#x7528;&#x6237;&#x53EF;&#x89C1;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5730;&#x4F7F;&#x7528; <a href="https://developer.android.com/training/testing/espresso" target="_blank">Espresso UI tests</a>&#x4E0E;&#x4F60;Activity&#x4E0A;&#x7684;View&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ActivityScenarioRule&#x5728;&#x6BCF;&#x4E00;&#x4E2A;test&#x4E4B;&#x524D;&#x81EA;&#x52A8;&#x5730;&#x8C03;&#x7528;ActivityScenario.launch&#xFF0C;&#x5728;&#x6D4B;&#x8BD5;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;ActivityScenario.close&#x3002;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5EF6;&#x65F6;&#x4E86;&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#xFF08;rule&#xFF09;&#x5E76;&#x4E14;&#x83B7;&#x53D6;scenario &#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+  @<span class="hljs-keyword">get</span>:Rule <span class="hljs-variable"><span class="hljs-keyword">var</span> activityScenarioRule</span> = activityScenarioRule<span class="hljs-type">&lt;MyActivity&gt;</span>()
+
+  @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = activityScenarioRule.scenario
+    }
+}
+</code></pre>
+<h3 id="&#x5C06;activity&#x9A71;&#x52A8;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x72B6;&#x6001;">&#x5C06;Activity&#x9A71;&#x52A8;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x72B6;&#x6001;</h3>
+<p>&#x4E3A;&#x4E86;&#x5C06;Activity&#x8F6C;&#x6362;&#x5230;&#x6BD4;&#x5982;Created&#x6216;&#x8005;Started&#x8FD9;&#x7C7B;&#x72B6;&#x6001;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x8C03;&#x7528;moveToState&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x60A8;&#x7684;Activity&#x56E0;&#x4E3A;&#x88AB;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x8005;&#x7CFB;&#x7EDF;&#x7EC8;&#x7AEF;&#x800C;&#x88AB;&#x505C;&#x6B62;&#x6216;&#x6682;&#x505C;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;moveToState&#xFF08;&#xFF09;&#x7684;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+        scenario.moveToState(State.CREATED)
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x8B66;&#x544A;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x5C1D;&#x8BD5;&#x5C06;&#x88AB;&#x6D4B;&#x8BD5;&#x4E2D;&#x7684;Activity&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4E5F;&#x5C31;&#x662F;Activity&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#x65F6;A&#xFF0C;&#x4F60;&#x53C8;&#x5728;&#x6B64;&#x65F6;&#x8C03;&#x7528;&#x4E86;moveToState&#xFF08;A&#xFF09;&#xFF09;&#xFF0C;&#x5219;ActivityScenario&#x5C06;&#x4F1A;&#x5FFD;&#x7565;&#x6B64;&#x8BF7;&#x6C42;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
+</blockquote>
+<h3 id="&#x91CD;&#x5EFA;activity">&#x91CD;&#x5EFA;Activity</h3>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;&#x8D44;&#x6E90;&#x4E0D;&#x8DB3;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x4F1A;&#x9500;&#x6BC1;Activity&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x4F60;&#x7684;Activity&#x65F6;&#x5C06;&#x4F1A;&#x91CD;&#x5EFA;Activity&#xFF0C;&#x4E3A;&#x4E86;&#x6A21;&#x62DF;&#x8FD9;&#x4E2A;&#x573A;&#x666F;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x8C03;&#x7528;recreate&#xFF08;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+        scenario.recreate()
+    }
+}
+</code></pre>
+<p>ActivityScenario&#x7C7B;&#x4F1A;&#x7EF4;&#x62A4;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x7684;Activity&#x7684;&#x5B9E;&#x4F8B;&#x7684;&#x72B6;&#x6001;&#x548C;&#x4F7F;&#x7528;@NonConfigurationInstance&#x6CE8;&#x91CA;&#x7684;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5C06;&#x52A0;&#x8F7D;&#x5230;&#x4F60;&#x6B63;&#x5728;&#x6D4B;&#x8BD5;&#x7684;Activity&#x7684;&#x5FC3;&#x5B9E;&#x4F8B;&#x4E2D;&#x3002;</p>
+<h3 id="&#x63A5;&#x6536;activity&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;">&#x63A5;&#x6536;Activity&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</h3>
+<p>&#x5728;&#x4F60;&#x8FD0;&#x884C;&#x5E76;&#x4E14;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;Activity&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x63A5;&#x6536;&#x5230;&#x8BE5;Activity&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testResult</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+        onView(withId(R.id.finish)).perform(click())
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> resultCode</span> = scenario.result.resultCode
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> resultData</span> = scenario.result.resultData
+    }
+}
+</code></pre>
+<h3 id="&#x89E6;&#x53D1;activity&#x4E2D;&#x7684;&#x64CD;&#x4F5C;">&#x89E6;&#x53D1;Activity&#x4E2D;&#x7684;&#x64CD;&#x4F5C;</h3>
+<p>ActivityScenario&#x4E2D;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x963B;&#x585E;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;API&#x9700;&#x8981;&#x60A8;&#x5728;&#x6D4B;&#x8BD5;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x4ED6;&#x4EEC;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x89E6;&#x53D1;&#x4F60;&#x88AB;&#x6D4B;&#x8BD5;Activity&#x4E2D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528;Espresso&#x89C6;&#x56FE;&#x5339;&#x914D;&#x5668;&#x4E0E;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+        onView(withId(R.id.refresh)).perform(click())
+    }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x8C03;&#x7528;Activity&#x672C;&#x8EAB;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;ActivityAction&#x5B89;&#x5168;&#x5730;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-kotlin">@RunWith(AndroidJUnit4::<span class="hljs-class"><span class="hljs-keyword">class</span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestSuite</span> </span>{
+    @Test <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testEvent</span><span class="hljs-params">()</span> {</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> scenario</span> = launchActivity<span class="hljs-type">&lt;MyActivity&gt;</span>()
+        scenario.onActivity { activity -&gt;
+          activity.handleSwipeToRefresh()
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E2D;&#xFF0C;&#x4E0D;&#x8981;&#x4FDD;&#x7559;&#x4F20;&#x9012;&#x7ED9;onActivity&#xFF08;&#xFF09;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x5F15;&#x7528;&#x4F1A;&#x6D88;&#x8017;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x4E14;&#x5F15;&#x7528;&#x672C;&#x8EAB;&#x53EF;&#x80FD;&#x662F;&#x9648;&#x65E7;&#x7684;&#xFF08;&#x5931;&#x6548;&#x7684;&#xFF09;&#xFF0C;&#x56E0;&#x4E3A;&#x6846;&#x67B6;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4F20;&#x9012;&#x7ED9;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x7684;Activity&#x3002;</p>
+</blockquote>
+<p>&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x7EBF;&#x7A0B;&#x5982;&#x4F55;&#x5728;Android test&#x4E2D;&#x5DE5;&#x4F5C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x53C2;&#x8003; <a href="https://developer.android.com/training/testing/fundamentals#threads" target="_blank">Understand threads in tests</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Activity的状态变化.html" class="navigation navigation-prev " aria-label="Previous page: Activity的状态变化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="理解Task和回退栈.html" class="navigation navigation-next " aria-label="Next page: 理解Task和回退栈">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"测试你的Activity","level":"1.2.4","depth":2,"next":{"title":"理解Task和回退栈","level":"1.2.5","depth":2,"path":"Activity/理解Task和回退栈.md","ref":"./Activity/理解Task和回退栈.md","articles":[]},"previous":{"title":"Activity的状态变化","level":"1.2.3","depth":2,"path":"Activity/Activity的状态变化.md","ref":"./Activity/Activity的状态变化.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Activity/测试你的Activity.md","mtime":"2019-06-06T13:16:58.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T04:32:08.722Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1194 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Parcelable和Bundle · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="进程和应用程序的生命周期.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Activity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Activity介绍.html">
+            
+                <a href="Activity介绍.html">
+            
+                    
+                    Activity介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Activity的生命周期.html">
+            
+                <a href="Activity的生命周期.html">
+            
+                    
+                    Activity的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Activity的状态变化.html">
+            
+                <a href="Activity的状态变化.html">
+            
+                    
+                    Activity的状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="测试你的Activity.html">
+            
+                <a href="测试你的Activity.html">
+            
+                    
+                    测试你的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="理解Task和回退栈.html">
+            
+                <a href="理解Task和回退栈.html">
+            
+                    
+                    理解Task和回退栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="进程和应用程序的生命周期.html">
+            
+                <a href="进程和应用程序的生命周期.html">
+            
+                    
+                    进程和应用程序的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="Parcelable和Bundle.html">
+            
+                <a href="Parcelable和Bundle.html">
+            
+                    
+                    Parcelable和Bundle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    Fragment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="Fragment/Fragment概述.html">
+            
+                <a href="Fragment/Fragment概述.html">
+            
+                    
+                    Fragment(概述)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="Fragment/创建Fragment.html">
+            
+                <a href="Fragment/创建Fragment.html">
+            
+                    
+                    创建Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="Fragment/测试Fragment.html">
+            
+                <a href="Fragment/测试Fragment.html">
+            
+                    
+                    测试Fragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.4" data-path="Fragment/构建灵活的UI.html">
+            
+                <a href="Fragment/构建灵活的UI.html">
+            
+                    
+                    构建灵活的UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.5" data-path="Fragment/与其他Fragment通信.html">
+            
+                <a href="Fragment/与其他Fragment通信.html">
+            
+                    
+                    与其他Fragment通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    与其他应用交互
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——将用户导航到另一个APP.html">
+            
+                    
+                    将用户导航到另一个APP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.3" data-path="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——接收另一个Activity返回的结果.html">
+            
+                    
+                    接收另一个Activity返回的结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.4" data-path="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                <a href="Interacting-With-Other-Apps/与其他APP交互——允许其他应用启动您的Activity.html">
+            
+                    
+                    允许其他应用启动您的Activity
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" >
+            
+                <span>
+            
+                    
+                    处理Android APP Link
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="Handling-Android-App-Links/概述.html">
+            
+                <a href="Handling-Android-App-Links/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                <a href="Handling-Android-App-Links/创建指向您内容的Deep-Links.html">
+            
+                    
+                    创建指向您内容的DeepLinks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="Handling-Android-App-Links/验证App-Links.html">
+            
+                <a href="Handling-Android-App-Links/验证App-Links.html">
+            
+                    
+                    验证App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                <a href="Handling-Android-App-Links/为Instant-APPs创建App-Links.html">
+            
+                    
+                    为Instant APPs创建App Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="加载器.html">
+            
+                <a href="加载器.html">
+            
+                    
+                    加载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="最近任务界面.html">
+            
+                <a href="最近任务界面.html">
+            
+                    
+                    最近任务界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="多窗口支持(分屏">
+            
+                <span>
+            
+                    
+                    多窗口支持-分屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" >
+            
+                <span>
+            
+                    
+                    App快捷启动方式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.14.1" data-path="AppShortCuts/概述.html">
+            
+                <a href="AppShortCuts/概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.2" data-path="AppShortCuts/创建快捷方式.html">
+            
+                <a href="AppShortCuts/创建快捷方式.html">
+            
+                    
+                    创建快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.3" data-path="AppShortCuts/管理快捷方式.html">
+            
+                <a href="AppShortCuts/管理快捷方式.html">
+            
+                    
+                    管理快捷方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14.4" data-path="AppShortCuts/快捷方式的最佳做法.html">
+            
+                <a href="AppShortCuts/快捷方式的最佳做法.html">
+            
+                    
+                    快捷方式的最佳做法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" >
+            
+                <span>
+            
+                    
+                    应用小部件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.15.1" data-path="AppWidgets/App小部件概述.html">
+            
+                <a href="AppWidgets/App小部件概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.2" data-path="AppWidgets/构建应用程序小部件.html">
+            
+                <a href="AppWidgets/构建应用程序小部件.html">
+            
+                    
+                    构建应用程序小部件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15.3" data-path="AppWidgets/构建应用程序小部件主机(Host">
+            
+                <span>
+            
+                    
+                    构建应用程序小部件主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../应用程序架构指南.html">
+            
+                <a href="../应用程序架构指南.html">
+            
+                    
+                    应用程序架构指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    架构组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-给你的项目中添加组件.html">
+            
+                    
+                    给你的项目中添加架构组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-布局和绑定表达式.html">
+            
+                    
+                    布局和绑定表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-使用可观察的数据对象.html">
+            
+                    
+                    使用可观察的数据对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                <a href="../ArchitectureComponents/Android架构组件-生成的绑定类.html">
+            
+                    
+                    生成的绑定类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    Intent和Intent过滤器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                <a href="../Intent-And-Intent-Filter/Intent和IntentFilters——通用Intent.html">
+            
+                    
+                    通用Intent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    用户界面
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../UserInterface/使用RecyclerView创建列表.html">
+            
+                <a href="../UserInterface/使用RecyclerView创建列表.html">
+            
+                    
+                    使用RecyclerView创建列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    后台任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Service
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../BackGroundTasks/Service/Service——概述.html">
+            
+                <a href="../BackGroundTasks/Service/Service——概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                <a href="../BackGroundTasks/Service/Service——创建后台服务.html">
+            
+                    
+                    创建后台Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                <a href="../BackGroundTasks/Service/Service——向后台Service发送工作请求.html">
+            
+                    
+                    向后台Service发送工作请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                <a href="../BackGroundTasks/Service/Service——绑定（bound）Service.html">
+            
+                    
+                    绑定Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                <a href="../BackGroundTasks/Service/Service——AIDL.html">
+            
+                    
+                    AIDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../BackGroundTasks/BroadCast.html">
+            
+                <a href="../BackGroundTasks/BroadCast.html">
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    将操作分配到多个线程执行
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（1）概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（2）指定线程中运行的代码.html">
+            
+                    
+                    指定线程中运行的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（3）为多线程创建管理者(manager">
+            
+                <span>
+            
+                    
+                    为多线程创建管理者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（4）在线程池中的线程中运行代码.html">
+            
+                    
+                    在线程池中运行代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                <a href="../BackGroundTasks/SendingOperationsToMultipleThreads/将操作发送到多个线程——（5）与UI线程通信.html">
+            
+                    
+                    与UI线程进行通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    最佳实践
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Performance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../BestPractices/Performance/进程和线程——概述.html">
+            
+                <a href="../BestPractices/Performance/进程和线程——概述.html">
+            
+                    
+                    进程和线程——概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Parcelable和Bundle</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="parcelable&#x548C;bundle">Parcelable&#x548C;Bundle</h1>
+<p><a href="https://developer.android.com/guide/components/activities/parcelables-and-bundles#java" target="_blank">&#x539F;&#x6587;(&#x82F1;&#x6587;)&#x5730;&#x5740;</a></p>
+<p>Parcelable&#x548C;Bundle&#x5BF9;&#x8C61;&#x65E8;&#x5728;&#x8DE8;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#xFF0C;&#x4F8B;&#x5982;IPC / Binder&#x4E8B;&#x52A1;&#xFF0C;&#x5177;&#x6709;Intent&#x7684;Activity&#x4E4B;&#x95F4;&#xFF0C;&#x4EE5;&#x53CA;&#x8DE8;&#x914D;&#x7F6E;&#x66F4;&#x6539;&#x5B58;&#x50A8;&#x77AC;&#x6001;&#x3002;&#x6B64;&#x6587;&#x6863;&#x4ECB;&#x7ECD;&#x6709;&#x5173;&#x4F7F;&#x7528;Parcelable&#x548C;Bundle&#x5BF9;&#x8C61;&#x7684;&#x5EFA;&#x8BAE;&#x548C;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;Parcel&#x4E0D;&#x662F;&#x901A;&#x7528;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x673A;&#x5236;&#xFF0C;&#x60A8;&#x7EDD;&#x4E0D;&#x5E94;&#x5C06;&#x4EFB;&#x4F55;Parcel&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x6216;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x53D1;&#x9001;&#x3002;</p>
+</blockquote>
+<h2 id="&#x4E0D;&#x540C;activity&#x4E4B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;">&#x4E0D;&#x540C;Activity&#x4E4B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;</h2>
+<p>&#x5F53;app&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Intent&#x5BF9;&#x8C61;&#x4EE5;&#x901A;&#x8FC7;startActivity(android.content.Intent)&#x53BB;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Activity&#x65F6;&#xFF0C;app&#x53EF;&#x4EE5;&#x901A;&#x8FC7;putExtra(java.lang.String,java.lang.String)&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7ED9;&#x65B0;&#x7684;Activity&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x8BE5;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li><p>kotlin</p>
+<pre><code class="lang-kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> intent</span> = Intent(this, MyActivity::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>).<span class="hljs-title">apply</span> </span>{
+    putExtra(<span class="hljs-string">&quot;media_id&quot;</span>, <span class="hljs-string">&quot;a1b2c3&quot;</span>)
+    <span class="hljs-comment">// ...</span>
+}
+startActivity(intent)
+</code></pre>
+</li>
+<li><p>java</p>
+<pre><code class="lang-java">Intent intent = <span class="hljs-keyword">new</span> Intent(<span class="hljs-keyword">this</span>, MyActivity.class);
+intent.putExtra(<span class="hljs-string">&quot;media_id&quot;</span>, <span class="hljs-string">&quot;a1b2c3&quot;</span>);
+<span class="hljs-comment">// ...</span>
+startActivity(intent);
+</code></pre>
+</li>
+</ul>
+<p>&#x7CFB;&#x7EDF;&#x5305;&#x88F9;&#xFF08;&#x7F16;&#x7801;&#xFF0C;parcels&#xFF09;Intent&#x7684;&#x5E95;&#x5C42;Bundle&#x3002;&#x7136;&#x540E;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x521B;&#x5EFA;&#x65B0;Activity&#xFF0C;&#x4E4B;&#x540E;&#x89E3;&#x5305;&#xFF08;&#x89E3;&#x7801;&#xFF0C;un-parcels&#xFF09;Bundle&#xFF0C;&#x5E76;&#x5C06;Intent&#x4F20;&#x9012;&#x7ED9;&#x65B0;Activity&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x60A8;&#x4F7F;&#x7528;Bundle&#x7C7B;&#x6765;&#x4F20;&#x9012;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5DF2;&#x77E5;&#x7684;&#x539F;&#x8BED;&#xFF08;primitives&#xFF09;&#x5BF9;&#x8C61;&#x3002; Bundle&#x7C7B;&#x9488;&#x5BF9;&#x4F7F;&#x7528;parcel&#x7684;&#x7F16;&#x7801;&#x548C;&#x89E3;&#x7801;&#x8FDB;&#x884C;&#x4E86;&#x9AD8;&#x5EA6;&#x4F18;&#x5316;&#x3002;</p>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x6765;&#x8DE8;Activity&#x53D1;&#x9001;&#x590D;&#x5408;&#x5BF9;&#x8C61;&#x6216;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x5E94;&#x8BE5;&#x5B9E;&#x73B0;Parcelable&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x6B63;&#x786E;&#x7684;writeToParcel&#xFF08;android.os.Parcel&#xFF0C;int&#xFF09;&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x8FD8;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;CREATOR&#x7684;&#x975E;&#x7A7A;&#x5B57;&#x6BB5;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x5B9E;&#x73B0;Parcelable.Creator&#x63A5;&#x53E3;&#xFF0C;&#x5176;createFromParcel&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x5C06;Parcel&#x8F6C;&#x6362;&#x56DE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x3002;&#x6709;&#x5173;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.android.com/reference/android/os/Parcelable.html" target="_blank">Parcelable</a>&#x5BF9;&#x8C61;&#x7684;&#x53C2;&#x8003;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x901A;&#x8FC7;intent&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5E94;&#x6CE8;&#x610F;&#x5C06;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A;&#x51E0;KB&#x3002;&#x53D1;&#x9001;&#x8FC7;&#x5927;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x629B;&#x51FA;TransactionTooLargeException&#x5F02;&#x5E38;&#x3002;</p>
+<h2 id="&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;">&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;</h2>
+<p>&#x5728;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x53D1;&#x9001;&#x6570;&#x636E;&#x548C;&#x5728;Activity&#x4E4B;&#x95F4;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x7C7B;&#x4F3C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x53D1;&#x9001;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x60A8;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;parcelables&#x3002;&#x5982;&#x679C;&#x60A8;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;Parcelable&#x5BF9;&#x8C61;&#x4ECE;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A;&#x90FD;&#x5B58;&#x5728;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7248;&#x672C;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x8DE8;&#x4E24;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x5E93;&#x3002;&#x5982;&#x679C;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x5C1D;&#x8BD5;&#x5411;&#x7CFB;&#x7EDF;&#x53D1;&#x9001;&#x81EA;&#x5B9A;&#x4E49;parcelable&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x89E3;&#x7801;&#xFF08;unmarshal&#xFF09;&#x5B83;&#x4E0D;&#x77E5;&#x9053;&#x7684;&#x7C7B;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x4F7F;&#x7528;AlarmManager&#x7C7B;&#x8BBE;&#x7F6E;alarm&#xFF08;&#x8B66;&#x62A5;&#xFF09;&#xFF0C;&#x5E76;&#x5728;alarm Intent&#x4E0A;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;Parcelable&#x3002;&#x5F53;&#x95F9;&#x949F;&#x54CD;&#x8D77;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x4FEE;&#x6539;Intent&#x7684;&#x7684;Extras&#x4E2D;&#x7684;Bundle&#x4EE5;&#x6DFB;&#x52A0;&#x91CD;&#x590D;&#x8BA1;&#x6570;&#x3002;&#x6B64;&#x4FEE;&#x6539;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x4ECE;Extras&#x4E2D;&#x89E3;&#x6790;&#x81EA;&#x5B9A;&#x4E49;&#x7684;Parcelable&#x5BF9;&#x8C61;&#x3002;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;&#x8FD9;&#x79CD;&#x89E3;&#x6790;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x6536;&#x5230;&#x4FEE;&#x6539;&#x540E;&#x7684;alarm Intent&#x65F6;&#x5D29;&#x6E83;&#xFF0C;&#x56E0;&#x4E3A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E0C;&#x671B;&#x63A5;&#x6536;&#x4E0D;&#x518D;&#x5B58;&#x5728;&#x7684;Extra&#x6570;&#x636E;&#x3002;</p>
+<p>Binder&#x4E8B;&#x52A1;&#x7F13;&#x51B2;&#x533A;&#x5177;&#x6709;&#x6709;&#x9650;&#x7684;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#xFF0C;&#x76EE;&#x524D;&#x662F;1MB&#xFF0C;&#x7531;&#x8FDB;&#x7A0B;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x7684;&#x6240;&#x6709;&#x4E8B;&#x52A1;&#x5171;&#x4EAB;&#x3002;&#x7531;&#x4E8E;&#x6B64;&#x9650;&#x5236;&#x662F;&#x5728;&#x8FDB;&#x7A0B;&#x7EA7;&#x522B;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x6BCF;&#x4E2A;Activity&#x7EA7;&#x522B;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x4E9B;&#x4E8B;&#x52A1;&#x5305;&#x62EC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7ED1;&#x5B9A;&#x4E8B;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;onSaveInstanceState&#xFF0C;startActivity&#x4EE5;&#x53CA;&#x4E0E;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x4F55;&#x4EA4;&#x4E92;&#x3002;&#x8D85;&#x51FA;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x65F6;&#xFF0C;&#x5C06;&#x629B;&#x51FA;TransactionTooLargeException&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;savedInstanceState&#x7684;&#x7279;&#x5B9A;&#x60C5;&#x51B5;&#xFF0C;&#x6570;&#x636E;&#x91CF;&#x5E94;&#x4FDD;&#x6301;&#x8F83;&#x5C0F;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x8981;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5BFC;&#x822A;&#x56DE;&#x8BE5;Activity&#xFF08;&#x5373;&#x4F7F;Activity&#x7684;&#x8FDB;&#x7A0B;&#x88AB;&#x7EC8;&#x6B62;&#xFF09;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x5C31;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#x3002;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x60A8;&#x5C06;&#x4FDD;&#x5B58;&#x7684;&#x72B6;&#x6001;&#x4FDD;&#x5B58;&#x5728;&#x5C11;&#x4E8E;50k&#x7684;&#x6570;&#x636E;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5728;Android 7.0(API 24)&#x53CA;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x629B;&#x51FA;TransactionTooLargeException&#x5F02;&#x5E38;&#xFF0C;&#x5728;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;Android&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x7CFB;&#x7EDF;&#x7D27;&#x7D27;&#x4F1A;&#x5728;logcat&#x6253;&#x5370;&#x4E00;&#x6761;&#x8B66;&#x544A;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="进程和应用程序的生命周期.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 进程和应用程序的生命周期">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Parcelable和Bundle","level":"1.2.7","depth":2,"next":{"title":"Fragment","level":"1.2.8","depth":2,"ref":"","articles":[{"title":"Fragment(概述)","level":"1.2.8.1","depth":3,"path":"Activity/Fragment/Fragment概述.md","ref":"./Activity/Fragment/Fragment概述.md","articles":[]},{"title":"创建Fragment","level":"1.2.8.2","depth":3,"path":"Activity/Fragment/创建Fragment.md","ref":"./Activity/Fragment/创建Fragment.md","articles":[]},{"title":"测试Fragment","level":"1.2.8.3","depth":3,"path":"Activity/Fragment/测试Fragment.md","ref":"./Activity/Fragment/测试Fragment.md","articles":[]},{"title":"构建灵活的UI","level":"1.2.8.4","depth":3,"path":"Activity/Fragment/构建灵活的UI.md","ref":"./Activity/Fragment/构建灵活的UI.md","articles":[]},{"title":"与其他Fragment通信","level":"1.2.8.5","depth":3,"path":"Activity/Fragment/与其他Fragment通信.md","ref":"./Activity/Fragment/与其他Fragment通信.md","articles":[]}]},"previous":{"title":"进程和应用程序的生命周期","level":"1.2.6","depth":2,"path":"Activity/进程和应用程序的生命周期.md","ref":"./Activity/进程和应用程序的生命周期.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Activity/Parcelable和Bundle.md","mtime":"2019-06-06T13:16:58.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-09T04:32:08.722Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
